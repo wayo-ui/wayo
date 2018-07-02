@@ -6,6 +6,7 @@ const SourceDir = Path.resolve(__dirname,'../src');
 const DistDir = Path.join(__dirname,'../dist');
 
 module.exports = {
+  Appname: 'Wayo',
   Version,
   ExampleDir,
   SourceDir,

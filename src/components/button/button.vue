@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'WAYOButton',
+  name: `${APPNAME}Button`,
   props: {
     /**
      * @prop 类型
@@ -58,6 +58,13 @@ export default {
       type: String,
       default: ''
     }
-  }
+  },
+  data(){
+    return {};
+  },
+  mounted(){
+
+  },
+  methods: {}
 }
 </script>

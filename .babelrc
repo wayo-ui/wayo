@@ -18,7 +18,8 @@
     "stage-3"
   ],
   "plugins": [
-    "transform-es5-property-mutators"
+    "transform-es5-property-mutators",
+    "syntax-dynamic-import"
   ],
   "comments": false
 }

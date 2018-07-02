@@ -35,7 +35,8 @@ module.exports = Merge(BasicWebpackConfig,{
       'process.env': {
         NODE_ENV: "'production'"
       },
-      'VERSION': JSON.stringify(`${Config.Version}`)
+      'VERSION': JSON.stringify(`${Config.Version}`),
+      'APPNAME': JSON.stringify(`${Config.Appname}`)
     }),
     new UglifyJsPlugin({
       uglifyOptions: {

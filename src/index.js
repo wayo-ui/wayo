@@ -20,7 +20,7 @@ import Button from './components/button';
 // import Tabbar from './components/tabbar';
 // import Tag from './components/tag';
 // import Toast from './components/toast';
-const Components = [
+const Components = {
   // Affix,
   // Badge,
   Button,
@@ -45,12 +45,12 @@ const Components = [
   // Tabbar,
   // Tag,
   // Toast
-];
+};
 
 const install = function(Vue, opts = {}) {
-  Components.map(component => {
-    Vue.component(component.name, component);
-  });
+  for(const key in Components){
+    Vue.component(Components[key].name, Components[key]);
+  }
 };
 
 // auto install
@@ -59,7 +59,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: VERSION||'0.0.0', 
+  version: VERSION, 
   install,
   ...Components
 };

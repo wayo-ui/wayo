@@ -38,7 +38,8 @@ module.exports = Merge(BasicWebpackConfig, {
       'process.env': {
         NODE_ENV: "'development'"
       },
-      'VERSION': JSON.stringify(`${Config.Version}`)
+      'VERSION': JSON.stringify(`${Config.Version}`),
+      'APPNAME': JSON.stringify(`${Config.Appname}`)
     }),
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NamedModulesPlugin(),
