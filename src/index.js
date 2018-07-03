@@ -9,13 +9,14 @@ import Button from './components/button';
 // import Container from './components/container';
 // import Dialog from './components/dialog';
 // import Grid from './components/grid';
-// import Icon from './components/icon';
+import Icon from './components/icon';
 // import Imageviewer from './components/imageviewer';
 // import Lazyload from './components/lazyload';
 // import List from './components/list';
 // import Loading from './components/loading';
 // import PullRefresh from './components/pull-refresh';
 // import Rate from './components/rate';
+import Segment from './components/segment';
 // import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
 // import Tag from './components/tag';
@@ -32,7 +33,7 @@ const Components = {
   // Cell,
   // CellGroup: Cell.Group,
   // Dialog,
-  // Icon,
+  Icon,
   // Imageviewer,
   // InputNumber,
   // Lazyload,
@@ -40,6 +41,8 @@ const Components = {
   // Loading,
   // PullRefresh,
   // Rate,
+  Segment,
+  SegmentButton: Segment.Button,
   // Tabs: Tabs,
   // TabPanel: Tabs.Panel,
   // Tabbar,

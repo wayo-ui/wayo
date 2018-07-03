@@ -1,5 +1,6 @@
 <template>
-  <button :class="type">
+  <button 
+    :class="`wayo-button wayo-button-${type} wayo-button_size_${size} ${disabled?'wayo-button_disabled':''}`">
     <slot></slot>
   </button>
 </template>
@@ -11,25 +12,25 @@ export default {
     /**
      * @prop 类型
      * @type {string}
-     * @default primary
+     * @default default
      */
     type: {
       type: String,
-      default: 'primary',
+      default: 'default',
       validator: val => {
-        return ['primary','info','success','warning','danger'].indexOf(val)!==-1;
+        return ['default','primary','info','success','warning','danger'].indexOf(val)!==-1;
       }
     },
     /**
      * @prop 尺寸
      * @type {string}
-     * @default middle
+     * @default normal
      */
     size: {
       type: String,
-      default: 'middle',
+      default: 'normal',
       validator: val => {
-        return ['middle','large','small','mini','expand'].indexOf(val)!==-1;
+        return ['normal','large','small','mini','fit'].indexOf(val)!==-1;
       }
     },
     /**

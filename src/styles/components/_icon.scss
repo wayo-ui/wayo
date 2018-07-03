@@ -1,0 +1,82 @@
+$font-path: "fonts";
+$font-family: "WayoIcons";
+
+@font-face {
+  font-family: $font-family;
+  src : url($font-path+"/icomoon.ttf") format("truetype"),
+  url($font-path+"/icomoon.woff") format("woff"),
+  url($font-path+"/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wayo-icon {
+    display: inline-block;
+    color: $color-heavy-grey;
+    font-size: 20px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+.wayo-icon-cny::before{
+  content: "\e911";
+}
+.wayo-icon-phone::before{
+  content: "\e900";
+}
+.wayo-icon-location::before{
+  content: "\e901";
+}
+.wayo-icon-arrow-right::before{
+  content: "\e902";
+}
+.wayo-icon-scene::before{
+  content: "\e903";
+}
+.wayo-icon-clock::before{
+  content: "\e904";
+}
+.wayo-icon-bus::before{
+  content: "\e905";
+}
+.wayo-icon-hotel::before{
+  content: "\e906";
+}
+.wayo-icon-food::before{
+  content: "\e907";
+}
+.wayo-icon-cinema::before{
+  content: "\e908";
+}
+.wayo-icon-more::before{
+  content: "\e909";
+}
+.wayo-icon-station::before{
+  content: "\e90a";
+}
+.wayo-icon-nav::before{
+  content: "\e90b";
+}
+.wayo-icon-share::before{
+  content: "\e90c";
+}
+.wayo-icon-star-stroke::before{
+  content: "\e90d";
+}
+.wayo-icon-location-mistake::before{
+  content: "\e90e";
+}
+.wayo-icon-location-around::before{
+  content: "\e90f";
+}
+.wayo-icon-star-fill::before{
+  content: "\e910";
+}

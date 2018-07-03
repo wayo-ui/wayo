@@ -22,8 +22,13 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
       options: {
-        limit: 10000,
-        name: 'assets/[name].[hash:8].[ext]'
+        name: 'assets/[name].[ext]'
+      }
+    }, {
+      test: /fonts\/\w+\.(svg|ttf|woff)(\?.*)?$/,
+      loader: 'file-loader',
+      options: {
+        name: 'assets/fonts/[name].[ext]'
       }
     }, {
       test: /\.vue$/,

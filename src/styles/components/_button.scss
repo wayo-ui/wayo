@@ -1,0 +1,71 @@
+.wayo-button{
+  display: inline-block;
+  color: $color-white;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-image: none;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  @include border-radius(4px);
+  &-default{
+    color: $color-tomato;
+    background-color: $color-white;
+    border: solid 1px $color-tomato;
+  }
+  &-primary{
+    background-color: $color-tomato;
+  }
+  &-info{
+    background-color: $color-sky-blue;
+  }
+  &-success{
+    background-color: $color-tomato;
+  }
+  &-warning{
+    background-color: $color-orange;
+  }
+  &-danger{
+    background-color: $color-red;
+  }
+  // &_disabled{}
+  &_size{
+    &_normal{
+      min-width: 70px;
+      padding: 0 20px;
+      font-size: 14px;
+      height: 35px;
+      line-height: 33px;
+    }
+    &_large{
+      height: 25px;
+      min-width: 70px;
+      padding: 0 20px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+    &_small{
+      height: 25px;
+      min-width: 70px;
+      padding: 0 20px;
+      line-height: 23px;
+      font-size: 14px;
+    }
+    &_mini{
+      height: 25px;
+      min-width: 70px;
+      padding: 0 20px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+    &_fit{
+      height: 25px;
+      width: 100%;
+      padding: 0 20px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+  }
+}

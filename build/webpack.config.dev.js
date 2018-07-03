@@ -22,7 +22,11 @@ module.exports = Merge(BasicWebpackConfig, {
   module: {
     rules: [{
       test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader']
+      use: [
+        'style-loader', 
+        'css-loader', 
+        'sass-loader'
+      ]
     },{
       test: /\.html$/,
       loader: 'html-loader'

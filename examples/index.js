@@ -7,11 +7,23 @@ Vue.use(VueRouter);
 Vue.use(Wayo);
 
 const Router = new VueRouter({
-  esModule: false,
-  mode: 'history',
+  mode: 'hash',
   routes: [{
+    path: '/',
+    name: 'home',
+    component: () => import('./routers/home.vue')
+  },{
     path: '/button',
+    name: 'button',
     component: () => import('./routers/button.vue')
+  },{
+    path: '/icon',
+    name: 'icon',
+    component: () => import('./routers/icon.vue')
+  },{
+    path: '/segment',
+    name: 'segment',
+    component: () => import('./routers/segment.vue')
   }]
 });
 
