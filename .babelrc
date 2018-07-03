@@ -21,5 +21,14 @@
     "transform-es5-property-mutators",
     "syntax-dynamic-import"
   ],
-  "comments": false
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env","stage-3"],
+      "plugins": [
+        "transform-es5-property-mutators",
+        "syntax-dynamic-import"
+      ]
+    }
+  }
 }

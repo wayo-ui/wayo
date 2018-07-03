@@ -1,8 +1,9 @@
 <template>
-  <button>
+  <button :class="type">
     <slot></slot>
   </button>
 </template>
+
 <script>
 export default {
   name: `${APPNAME}Button`,

@@ -7,3 +7,7 @@ npm-debug.log*
 /docs
 /__test__
 /build
+jest.config.json
+.babelrc
+.eslintrc
+.eslintignore

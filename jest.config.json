@@ -1,0 +1,27 @@
+{
+  "browser": true,
+  "bail": true,
+  "cacheDirectory": ".tmp",
+  "moduleFileExtensions": ["js","vue","json"],
+  "verbose": false,
+  "globals": {
+    "NODE_ENV": "test",
+    "VERSION": "0.0.1",
+    "APPNAME": "Wayo"
+  },
+  "setupFiles": [
+    "<rootDir>/__mocks__/browser.js",
+    "<rootDir>/__mocks__/globals.js"
+  ],
+  "modulePaths": ["<rootDir>/node_modules", "<rootDir>/src"],
+  "transform": {
+    "^.+\\.vue$": "vue-jest",
+    "^.+\\.js$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1"
+  },
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/jest-serializer-vue"
+  ]
+}
