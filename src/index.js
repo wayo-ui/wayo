@@ -10,6 +10,7 @@ import Button from './components/button';
 // import Dialog from './components/dialog';
 // import Grid from './components/grid';
 import Icon from './components/icon';
+import Image from './components/image';
 // import Imageviewer from './components/imageviewer';
 // import Lazyload from './components/lazyload';
 // import List from './components/list';
@@ -34,6 +35,7 @@ const Components = {
   // CellGroup: Cell.Group,
   // Dialog,
   Icon,
+  Image,
   // Imageviewer,
   // InputNumber,
   // Lazyload,

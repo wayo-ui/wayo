@@ -24,6 +24,10 @@ const Router = new VueRouter({
     path: '/segment',
     name: 'segment',
     component: () => import('./routers/segment.vue')
+  },{
+    path: '/image',
+    name: 'image',
+    component: () => import('./routers/image.vue')
   }]
 });
 

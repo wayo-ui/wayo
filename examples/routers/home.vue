@@ -15,6 +15,7 @@
           <li class="subitem"><router-link to="/button">Button</router-link></li>
           <li class="subitem"><router-link to="/icon">Icons</router-link></li>
           <li class="subitem"><router-link to="/segment">Segment</router-link></li>
+          <li class="subitem"><router-link to="/image">Image</router-link></li>
         </ul>
       </nav>
     </li>
