@@ -28,6 +28,10 @@ const Router = new VueRouter({
     path: '/image',
     name: 'image',
     component: () => import('./routers/image.vue')
+  },{
+    path: '/tag',
+    name: 'tag',
+    component: () => import('./routers/tag.vue')
   }]
 });
 

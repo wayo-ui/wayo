@@ -1,0 +1,42 @@
+.wayo-tag{
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  &-default{
+    color: $color-heavyer-grey;
+    background-color: $color-lightest-grey;
+  }
+  &-fit{
+    width: 100%;
+  }
+  &-text{
+    padding: 0 !important;
+    height: auto !important;
+    line-height: 1 !important;
+  }
+  &-round{
+    @include border-radius(50% unquote("/") 100%);
+  }
+  &_size{
+    &_default{
+      font-size:12px;
+      padding: 0 13px;
+      height: 24px;
+      line-height: 24px;
+    }
+    &_large{
+      font-size:13px;
+      padding: 0 27px;
+      height: 30px;
+      line-height: 30px;
+    }
+    &_small{
+      font-size:11px;
+      padding: 0 6px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+}

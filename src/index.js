@@ -20,7 +20,7 @@ import Image from './components/image';
 import Segment from './components/segment';
 // import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
-// import Tag from './components/tag';
+import Tag from './components/tag';
 // import Toast from './components/toast';
 const Components = {
   // Affix,
@@ -48,7 +48,7 @@ const Components = {
   // Tabs: Tabs,
   // TabPanel: Tabs.Panel,
   // Tabbar,
-  // Tag,
+  Tag,
   // Toast
 };
 
