@@ -16,7 +16,7 @@ import Image from './components/image';
 // import List from './components/list';
 // import Loading from './components/loading';
 // import PullRefresh from './components/pull-refresh';
-// import Rate from './components/rate';
+import Rate from './components/rate';
 import Segment from './components/segment';
 // import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
@@ -42,7 +42,7 @@ const Components = {
   // List,
   // Loading,
   // PullRefresh,
-  // Rate,
+  Rate,
   Segment,
   SegmentButton: Segment.Button,
   // Tabs: Tabs,

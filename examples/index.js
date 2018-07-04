@@ -32,6 +32,10 @@ const Router = new VueRouter({
     path: '/tag',
     name: 'tag',
     component: () => import('./routers/tag.vue')
+  },{
+    path: '/rate',
+    name: 'rate',
+    component: () => import('./routers/rate.vue')
   }]
 });
 

@@ -1,0 +1,24 @@
+.wayo-rate{
+  line-height: 1;
+  font-size: 1px;
+}
+.wayo-rate__icon{
+  margin-right: 2px;
+}
+.wayo-rate__halfbox{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: 1px;
+  @extend .wayo-rate__icon;
+}
+.wayo-rate__icon-half{
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.wayo-rate__score{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
