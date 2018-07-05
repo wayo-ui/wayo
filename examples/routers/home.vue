@@ -18,6 +18,7 @@
           <li class="subitem"><router-link to="/image">Image</router-link></li>
           <li class="subitem"><router-link to="/tag">Tag</router-link></li>
           <li class="subitem"><router-link to="/rate">Rate</router-link></li>
+          <li class="subitem"><router-link to="/flex">Flex</router-link></li>
         </ul>
       </nav>
     </li>

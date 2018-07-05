@@ -8,7 +8,7 @@ import Button from './components/button';
 // import Cell from './components/cell';
 // import Container from './components/container';
 // import Dialog from './components/dialog';
-// import Grid from './components/grid';
+import Flex from './components/flex';
 import Icon from './components/icon';
 import Image from './components/image';
 // import Imageviewer from './components/imageviewer';
@@ -34,6 +34,8 @@ const Components = {
   // Cell,
   // CellGroup: Cell.Group,
   // Dialog,
+  FlexBox: Flex.Box,
+  FlexCell: Flex.Cell,
   Icon,
   Image,
   // Imageviewer,

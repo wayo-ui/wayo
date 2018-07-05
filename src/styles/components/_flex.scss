@@ -1,0 +1,68 @@
+.wayo-flex-box{
+  @include display-flex;
+  @include align-content(center);
+  &_direction{
+    &_row{
+      @include flex-direction(row);
+    }
+    &_column{
+      @include flex-direction(column);
+    }
+    &_row-reverse{
+      @include flex-direction(row-reverse);
+    }
+    &_column-reverse{
+      @include flex-direction(column-reverse);
+    }
+  }
+  &_wrap{
+    @include flex-wrap(wrap);
+  }
+  &_justify{
+    &_start{
+      @include justify-content(flex-start);
+    }
+    &_end{
+      @include justify-content(flex-end);
+    }
+    &_center{
+      @include justify-content(center);
+    }
+    &_space-between{
+      @include justify-content(space-between);
+    }
+    &_space-around{
+      @include justify-content(space-around);
+    }
+    &_space-evenly{
+      @include justify-content(space-evenly);
+    }
+  }
+  &_align{
+    &_start{
+      @include align-items(flex-start);
+    }
+    &_end{
+      @include align-items(flex-end);
+    }
+    &_center{
+      @include align-items(center);
+    }
+    &_space-between{
+      @include align-items(space-between);
+    }
+    &_space-around{
+      @include align-items(space-around);
+    }
+    &_space-evenly{
+      @include align-items(space-evenly);
+    }
+  }
+}
+
+.wayo-flex-cell{
+  width: 100%;
+  @include flex-shrink(1);
+  @include flex-grow(0);
+  @include flex-basis(0);
+}

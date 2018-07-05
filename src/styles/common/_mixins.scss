@@ -1,4 +1,4 @@
-@mixin coverbg(){
+@mixin coverbg() {
   content: '';
   display: block;
   background-color: #000;
@@ -10,6 +10,7 @@
   opacity: 0.6;
   z-index: -1;
 }
+
 @mixin nonstyleList() {
   list-style: none;
   padding: 0;
@@ -55,10 +56,9 @@
 
 @mixin display-flex() {
   display: -webkit-box;
-  display: box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -o-flex;
   display: flex;
 }
 
@@ -70,19 +70,84 @@
   flex-wrap: $rule;
 }
 
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-basis: $width;
+  flex-basis: $width;
+}
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -ms-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
 @mixin flex($rule) {
   -webkit-box-flex: $rule;
+  -moz-box-flex: $rule;
   -webkit-flex: $rule;
-  -moz-flex: $rule;
-  -o-flex: $rule;
+  -ms-flex: $rule;
   flex: $rule;
 }
 
-@mixin justify-content($rule) {
-  -webkit-justify-content: $rule;
-  -moz-justify-content: $rule;
-  -o-justify-content: $rule;
-  justify-content: $rule;
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
 }
 
 @mixin animation($rule) {

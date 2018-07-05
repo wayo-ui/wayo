@@ -36,6 +36,10 @@ const Router = new VueRouter({
     path: '/rate',
     name: 'rate',
     component: () => import('./routers/rate.vue')
+  },{
+    path: '/flex',
+    name: 'flex',
+    component: () => import('./routers/flex.vue')
   }]
 });
 

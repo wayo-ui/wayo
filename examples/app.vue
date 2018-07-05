@@ -14,7 +14,7 @@ import {COMPONENTS_NAME} from './_constants';
 export default {
   computed: {
     title(){
-      return COMPONENTS_NAME[this.$route.name];
+      return COMPONENTS_NAME[this.$route.name]||this.$route.name;
     },
     showHeader(){
       return this.$route.name!=='home';
