@@ -19,6 +19,8 @@
           <li class="subitem"><router-link to="/tag">Tag</router-link></li>
           <li class="subitem"><router-link to="/rate">Rate</router-link></li>
           <li class="subitem"><router-link to="/flex">Flex</router-link></li>
+          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
+          <li class="subitem"><router-link to="/separator">Separator</router-link></li>
         </ul>
       </nav>
     </li>

@@ -1,5 +1,5 @@
 <template>
-  <i :class="`wayo-icon wayo-icon-${name}`" :style="`color:${color};`"></i>
+  <i :class="`wayo-icon wayo-icon-${name}`" :style="`color:${color||'#6d6d6d'};`"></i>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
       default: ''
     },
     color: {
-      type: String,
+      type: [String,undefined],
       default: '#6d6d6d'
     }
   }

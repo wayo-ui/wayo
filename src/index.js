@@ -12,12 +12,14 @@ import Flex from './components/flex';
 import Icon from './components/icon';
 import Image from './components/image';
 // import Imageviewer from './components/imageviewer';
+import Lath from './components/lath';
 // import Lazyload from './components/lazyload';
 // import List from './components/list';
 // import Loading from './components/loading';
 // import PullRefresh from './components/pull-refresh';
 import Rate from './components/rate';
 import Segment from './components/segment';
+import Separator from './components/separator';
 // import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
 import Tag from './components/tag';
@@ -40,6 +42,7 @@ const Components = {
   Image,
   // Imageviewer,
   // InputNumber,
+  Lath,
   // Lazyload,
   // List,
   // Loading,
@@ -47,6 +50,7 @@ const Components = {
   Rate,
   Segment,
   SegmentButton: Segment.Button,
+  Separator,
   // Tabs: Tabs,
   // TabPanel: Tabs.Panel,
   // Tabbar,

@@ -40,6 +40,15 @@ const Router = new VueRouter({
     path: '/flex',
     name: 'flex',
     component: () => import('./routers/flex.vue')
+  },{
+    path: '/lath',
+    name: 'lath',
+    component: () => import('./routers/lath.vue')
+  }
+  ,{
+    path: '/separator',
+    name: 'separator',
+    component: () => import('./routers/separator.vue')
   }]
 });
 
