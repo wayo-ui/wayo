@@ -8,6 +8,7 @@
 
 <script>
 const AVAILABLE_JUSTIFY_AND_ALIGN = [
+  'unset',
   'start',
   'end',
   'center',
@@ -59,7 +60,7 @@ export default {
      */
     align: {
       type: String,
-      default: 'start',
+      default: 'unset',
       validator: val => {
         return AVAILABLE_JUSTIFY_AND_ALIGN.indexOf(val)!==-1;
       }
