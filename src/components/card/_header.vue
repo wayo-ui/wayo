@@ -1,6 +1,5 @@
 <template>
-<div class="wayo-card">
-  <wayo-separator class="wayo-card__separator-top" absolute/>
+<div class="wayo-card__header">
   <slot></slot>
   <wayo-separator class="wayo-card__separator-bottom" absolute/>
 </div>
@@ -10,12 +9,9 @@
 import WayoSeparator from '@components/separator';
 
 export default {
-  name: `${APPNAME}Card`,
-  props: {
-    
-  },
+  name: `${APPNAME}CardHeader`,
   components: {
     WayoSeparator
   }
-};
+}
 </script>

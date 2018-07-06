@@ -21,12 +21,18 @@
           <li class="subitem"><router-link to="/flex">Flex</router-link></li>
           <li class="subitem"><router-link to="/lath">Lath</router-link></li>
           <li class="subitem"><router-link to="/separator">Separator</router-link></li>
+          <li class="subitem"><router-link to="/card">Card</router-link></li>
         </ul>
       </nav>
     </li>
     <li class="list list_busi"
       :class="{'expand': expandedList.indexOf('busi')!==-1}">
       <p class="title" @click="toggleExpand('busi')">业务组件</p>
+      <nav class="panel">
+        <ul class="sublist">
+          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
+        </ul>
+      </nav>
     </li>
   </ul>
 </section>

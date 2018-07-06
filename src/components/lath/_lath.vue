@@ -2,7 +2,7 @@
 <div class="wayo-lath" 
   :class="{'wayo-lath_icon':icon}"
   :style="extraStyles">
-  <wayo-separator absolute class="wayo-lath__separator-top"></wayo-separator>
+  <wayo-separator v-if="borderTop" absolute class="wayo-lath__separator-top"></wayo-separator>
   <wayo-icon class="wayo-lath__icon-head" v-if="icon"
     :class="{'wayo-lath__icon-head_middle':single_line_content&&!subtitle}" 
     :name="icon" 
@@ -34,7 +34,7 @@
     :name="tailIcon" 
     :color="tailIconColor"/>
   </div>
-  <wayo-separator absolute class="wayo-lath__separator-bottom"></wayo-separator>
+  <wayo-separator v-if="borderBottom" absolute class="wayo-lath__separator-bottom"></wayo-separator>
 </div>
 </template>
 
@@ -95,6 +95,24 @@ export default {
     contentExpandLabel: {
       type: String,
       default: '更多'
+    },
+    /**
+     * @prop 上描边
+     * @type {boolean}
+     * @default `true`
+     */
+    borderTop: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * @prop 下描边
+     * @type {boolean}
+     * @default `true`
+     */
+    borderBottom: {
+      type: Boolean,
+      default: false
     },
     /**
      * @prop 头部图标

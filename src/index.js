@@ -3,7 +3,7 @@ import '@styles/index.scss';
 // import Affix from './components/affix';
 // import Badge from './components/badge';
 import Button from './components/button';
-// import Card from './components/card';
+import Card from './components/card';
 // import Carousel from './components/carousel';
 // import Cell from './components/cell';
 // import Container from './components/container';
@@ -29,7 +29,10 @@ const Components = {
   // Badge,
   Button,
   // ButtonGroup: Button.Group,
-  // Card,
+  Card,
+  CardTitle: Card.Title,
+  CardHeader: Card.Header,
+  CardContent: Card.Content,
   // Carousel,
   // CarouselItem: Carousel.Item,
   // Cascader,

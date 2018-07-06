@@ -2,7 +2,7 @@
 <section>
   <h4>栅格</h4>
   <wayo-flex-box class="box">
-    <wayo-flex-cell class="cell">
+    <wayo-flex-cell class="cell" :span="12">
       span: 12
     </wayo-flex-cell>
   </wayo-flex-box>

@@ -1,5 +1,6 @@
 .wayo-separator{
   display: inline-block;
+  z-index: 1;
   &_direction{
     &_row{
       width: 100%;

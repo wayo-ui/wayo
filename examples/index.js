@@ -44,11 +44,14 @@ const Router = new VueRouter({
     path: '/lath',
     name: 'lath',
     component: () => import('./routers/lath.vue')
-  }
-  ,{
+  },{
     path: '/separator',
     name: 'separator',
     component: () => import('./routers/separator.vue')
+  },{
+    path: '/card',
+    name: 'card',
+    component: () => import('./routers/card.vue')
   }]
 });
 

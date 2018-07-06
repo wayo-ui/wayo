@@ -1,0 +1,40 @@
+.wayo-card{
+  position: relative;
+  min-height: 40px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: $color-white;
+  &__title{
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: $color-light-black;
+  }
+  &__content{
+    font-size: 13px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: $color-heavyer-grey;
+  }
+  &__header{
+    position: relative;
+    padding: 0 15px;
+    line-height: 45px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+  }
+  &__separator{
+    &-top{
+      left: 0;
+      top: 0;
+    }
+    &-bottom{
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
