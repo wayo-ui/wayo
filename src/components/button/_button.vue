@@ -1,11 +1,13 @@
 <template>
-  <button 
-    :class="`wayo-button wayo-button-${type} wayo-button_size_${size} ${disabled?'wayo-button_disabled':''}`">
+  <button :class="classes" :style="styles">
+    <wayo-icon v-if="icon" :name="icon"/>
     <slot></slot>
   </button>
 </template>
 
 <script>
+import WayoIcon from '@components/icon';
+
 export default {
   name: `${APPNAME}Button`,
   props: {
@@ -52,6 +54,15 @@ export default {
       default: false
     },
     /**
+     * @prop 圆形按钮
+     * @type {boolean}
+     * @default false
+     */
+    circle: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * @prop 图标
      * @type {string}
      * @default ''
@@ -59,14 +70,56 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    /**
+     * @prop 背景色
+     * @type {string|undefined}
+     * @default ''
+     */
+    bgColor: {
+      type: [String,undefined],
+      default: undefined
+    },
+    /**
+     * @prop 字体颜色
+     * @type {string|undefined}
+     * @default ''
+     */
+    fontColor: {
+      type: [String,undefined],
+      default: undefined
+    },
+    /**
+     * @prop border颜色
+     * @type {string|undefined}
+     * @default ''
+     */
+    borderColor: {
+      type: [String,undefined],
+      default: undefined
     }
   },
-  data(){
-    return {};
+  computed: {
+    classes(){
+      const List = [
+        'wayo-button',
+        `wayo-button-${this.type}`,
+        `wayo-button_size_${this.size}`,
+      ];
+      this.disabled&&List.push('wayo-button_disabled');
+      this.circle&&!this.$slots.default&&List.push('wayo-button_circle');
+      return List.join(' ');
+    },
+    styles(){
+      const List = [];
+      this.bgColor&List.push(`background-color: ${this.bgColor};`);
+      this.fontColor&List.push(`color: ${this.fontColor};`);
+      this.borderColor&List.push(`border-color: ${this.borderColor};`);
+      return List.join('');
+    }
   },
-  mounted(){
-
-  },
-  methods: {}
-}
+  components: {
+    WayoIcon
+  }
+};
 </script>

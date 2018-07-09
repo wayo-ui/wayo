@@ -1,4 +1,4 @@
-import '@styles/index.scss';
+import './styles/index.scss';
 
 // import Affix from './components/affix';
 // import Badge from './components/badge';

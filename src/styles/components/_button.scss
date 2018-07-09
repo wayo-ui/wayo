@@ -30,6 +30,13 @@
   &-danger{
     background-color: $color-red;
   }
+  &_circle{
+    min-width: inherit !important;
+    height: inherit !important;
+    line-height: 1 !important;
+    padding: 10px !important;
+    @include border-radius(50%);
+  }
   // &_disabled{}
   &_size{
     &_normal{
