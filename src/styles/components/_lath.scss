@@ -19,9 +19,11 @@
     }
   }
   &__tail{
-    font-size: 1px;
+    font-size: 13px;
     position: absolute;
     right: 10px;
+    line-height: 1;
+    color: $color-warm-grey;
     @include middle-column();
     &-label{
       font-size: 13px;
@@ -41,7 +43,7 @@
     }
   }
   &__head{
-    float: left;
+    display: inline-block;
     margin-right: 10px;
   }
   &__title{
@@ -49,7 +51,6 @@
     font-size: 15px;
     line-height: 1;
     display: block;
-    font-weight: bold;
   }
   &__subtitle{
     color: $color-heavyer-grey;

@@ -34,7 +34,16 @@ $font-family: "WayoIcons";
   content: "\e901";
 }
 .wayo-icon-arrow-right::before{
+  content: "\e915";
+}
+.wayo-icon-arrow-left::before{
+  content: "\e913";
+}
+.wayo-icon-arrow-top::before{
   content: "\e902";
+}
+.wayo-icon-arrow-down::before{
+  content: "\e914";
 }
 .wayo-icon-scene::before{
   content: "\e903";
@@ -80,4 +89,19 @@ $font-family: "WayoIcons";
 }
 .wayo-icon-star-fill::before{
   content: "\e910";
+}
+.wayo-icon-business::before{
+  content: "\e916";
+}
+.wayo-icon-food-2::before{
+  content: "\e917";
+}
+.wayo-icon-gym::before{
+  content: "\e918";
+}
+.wayo-icon-park::before{
+  content: "\e919";
+}
+.wayo-icon-wifi::before{
+  content: "\e91a";
 }

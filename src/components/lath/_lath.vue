@@ -30,7 +30,6 @@
   <div class="wayo-lath__tail" v-if="tailIcon||tailLabel">
     <span class="wayo-lath__tail-label">{{tailLabel}}</span>
     <wayo-icon class="wayo-lath__tail-icon" v-if="tailIcon"
-    style="font-size:20px;"
     :name="tailIcon" 
     :color="tailIconColor"/>
   </div>

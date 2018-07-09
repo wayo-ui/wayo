@@ -14,8 +14,24 @@
       <label class="cell__label">icon-phone</label>
     </wayo-flex-cell>
     <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="hotel"/>
+      <label class="cell__label">icon-hotel</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="location"/>
       <label class="cell__label">icon-location</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="arrow-left"/>
+      <label class="cell__label">icon-arrow-left</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="arrow-top"/>
+      <label class="cell__label">icon-arrow-top</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="arrow-down"/>
+      <label class="cell__label">icon-arrow-down</label>
     </wayo-flex-cell>
     <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="arrow-right"/>
@@ -72,6 +88,26 @@
     <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="location-around"/>
       <label class="cell__label">icon-location-around</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="business"/>
+      <label class="cell__label">icon-business</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="food-2"/>
+      <label class="cell__label">icon-food-2</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="gym"/>
+      <label class="cell__label">icon-gym</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="park"/>
+      <label class="cell__label">icon-park</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="wifi"/>
+      <label class="cell__label">icon-wifi</label>
     </wayo-flex-cell>
   </wayo-flex-box>
 </section>
