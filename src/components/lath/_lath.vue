@@ -1,5 +1,6 @@
 <template>
 <div class="wayo-lath" 
+  v-on="$listeners"
   :class="{'wayo-lath_icon':icon}"
   :style="extraStyles">
   <wayo-separator v-if="borderTop" absolute class="wayo-lath__separator-top"></wayo-separator>
@@ -191,7 +192,7 @@ export default {
   },
   methods: {
     adapteContent(){
-      if(!this.content){
+      if(!this.content||!this.$refs.content_entity){
         return;
       }
       const RealHeight = this.$refs.content_entity.offsetHeight;

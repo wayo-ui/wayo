@@ -30,11 +30,11 @@ export default {
     /**
      * @prop 高度
      * @type {number}
-     * @default 70
+     * @default 0
      */
     height: {
       type: Number,
-      default: 70
+      default: 0
     },
     /**
      * @prop 图片url
@@ -43,10 +43,7 @@ export default {
      */
     src: {
       type: String,
-      required: true,
-      validator: val => {
-        return /\.(png|jpe?g|gif|svg|webp)$/.test(val);
-      }
+      required: true
     },
     /**
      * @prop 图片alt
@@ -86,7 +83,7 @@ export default {
     size(){
       return {
         width: this.width,
-        height: this.height===70&&this.width!==70?this.width:this.height
+        height: this.height||this.width
       };
     }
   },

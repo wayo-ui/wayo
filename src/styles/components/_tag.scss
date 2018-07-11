@@ -15,6 +15,7 @@
     padding: 0 !important;
     height: auto !important;
     line-height: 1 !important;
+    font-weight: normal !important;
   }
   &-round{
     @include border-radius(50% unquote("/") 100%);

@@ -9,6 +9,7 @@
   border: none;
   overflow: hidden;
   white-space: nowrap;
+  line-height: 1;
   @include border-radius(4px);
   &-default{
     color: $color-tomato;
@@ -41,17 +42,13 @@
   &_size{
     &_normal{
       min-width: 70px;
-      padding: 0 20px;
-      font-size: 14px;
-      height: 35px;
-      line-height: 33px;
+      padding: 10px 20px;
+      font-size: 13px;
     }
     &_large{
-      height: 25px;
       min-width: 70px;
-      padding: 0 20px;
-      line-height: 25px;
-      font-size: 13px;
+      padding: 10px 20px;
+      font-size: 14px;
     }
     &_small{
       height: 25px;

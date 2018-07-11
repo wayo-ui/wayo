@@ -14,6 +14,7 @@ module.exports = Merge(BasicWebpackConfig, {
   devServer: {
     hot: true,
     port: 9998,
+    host: '0.0.0.0',
     inline: true,
     clientLogLevel: 'error',
     contentBase: Path.resolve(__dirname,'../debug'),

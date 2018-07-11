@@ -7,7 +7,7 @@
   <wayo-rate :score='4'/>
   <wayo-rate :score='4.6'/>
   <h4>显示分值</h4>
-  <wayo-rate :score='4' :show-score="true"/>
+  <wayo-rate :score='3.2' :show-score="true"/>
   <wayo-rate :score='4.5' score-label="分" :show-score="true"/>
   <h4>自定义颜色</h4>
   <wayo-rate :score='4' :show-score="true" chosen-color="#067ffa"/>

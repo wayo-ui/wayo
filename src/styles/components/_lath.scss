@@ -9,12 +9,13 @@
     padding-left: 35px;
   }
   &__icon-head{
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     top: 22.5px;
-    left: 12px;
+    left: 15px;
     @include transform(translateY(-50%));
     &_middle{
+      margin-top: -1px;
       @include middle-column();
     }
   }
@@ -61,8 +62,8 @@
   }
   &__content{
     font-size: 13px;
-    line-height: 17px;
-    margin: -2px 0;
+    // line-height: 17px;
+    // margin: -2px 0 0 5px;
     position: relative;
     color: $color-black;
     &_single-line{
@@ -71,6 +72,7 @@
     }
     &-entity{
       overflow: hidden;
+      margin: 0;
     }
     &-action{
       position: absolute;

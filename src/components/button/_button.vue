@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :style="styles">
+  <button :class="classes" :style="styles" v-on="$listeners">
     <wayo-icon v-if="icon" :name="icon"/>
     <slot></slot>
   </button>
