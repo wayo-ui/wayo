@@ -1,15 +1,25 @@
 <template>
 <section>
   <h4>标题</h4>
-  <wayo-lath title="标题"></wayo-lath>
-  <wayo-lath class="item" subtitle="副标题"></wayo-lath>
-  <wayo-lath title="标题" subtitle="副标题" class="item"></wayo-lath>
-  <h4>描边</h4>
-  <wayo-lath title="标题" border-top border-bottom></wayo-lath>
+  <wayo-lath border-top border-bottom>
+    <wayo-lath-header title="标题"></wayo-lath-header>
+  </wayo-lath>
+  <wayo-lath class="item" border-top border-bottom>
+    <wayo-lath-header subtitle="副标题"></wayo-lath-header>
+  </wayo-lath>
+  <wayo-lath class="item" border-top border-bottom>
+    <wayo-lath-header title="标题" subtitle="副标题" ></wayo-lath-header>
+  </wayo-lath>
   <h4>内容</h4>
-  <wayo-lath content="内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath>
-  <wayo-lath class="item" content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath>
-  <wayo-lath class="item" content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath>
+  <wayo-lath>
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+  </wayo-lath>
+  <wayo-lath class="item">
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+  </wayo-lath>
+  <wayo-lath class="item">
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+  </wayo-lath>
   <h4>自定义内容</h4>
   <wayo-lath>
     <div slot="content" class="custom-content">
@@ -37,14 +47,39 @@
     </div>
   </wayo-lath>
   <h4>图标</h4>
-  <wayo-lath icon="star-fill"></wayo-lath>
-  <wayo-lath class="item" title="标题" icon="location"></wayo-lath>
-  <wayo-lath title="标题" subtitle="副标题" class="item" icon="bus" icon-color="red"></wayo-lath>
-  <wayo-lath class="item" icon="phone" title="标题" subtitle="副标题" content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath>
+  <wayo-lath icon="star-fill" border-top border-bottom>
+    <wayo-lath-header title="标题"></wayo-lath-header>
+  </wayo-lath>
+  <wayo-lath icon="location" border-bottom>
+    <wayo-lath-header subtitle="副标题" ></wayo-lath-header>
+  </wayo-lath>
+  <wayo-lath border-bottom icon="bus" icon-color="red" icon-position="top">
+    <wayo-lath-header title="标题" subtitle="副标题" ></wayo-lath-header>
+  </wayo-lath>
+  <wayo-lath  border-bottom icon="phone" icon-position="top">
+    <wayo-lath-header title="标题" subtitle="副标题"></wayo-lath-header>
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+  </wayo-lath>
   <h4>尾部</h4>
-  <wayo-lath class="item" title="标题" icon="location" tail-icon="arrow-right"></wayo-lath>
-  <wayo-lath class="item" title="标题" icon="location" tail-icon="arrow-right" tail-label="打开"></wayo-lath>
-  <wayo-lath class="item" title="标题"  subtitle="副标题" icon="location" content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" tail-icon="arrow-right" tail-label="打开"></wayo-lath>
+  <wayo-lath border-top border-bottom icon="location" >
+    <wayo-lath-header subtitle="副标题"></wayo-lath-header>
+    <wayo-lath-tail icon="arrow-right"></wayo-lath-tail>
+  </wayo-lath>
+  <wayo-lath  border-bottom icon="location">
+    <wayo-lath-header title="标题"></wayo-lath-header>
+    <wayo-lath-tail icon="arrow-right" label="打开"></wayo-lath-tail>
+  </wayo-lath>
+  <wayo-lath  border-bottom icon="location" icon-position="top">
+    <wayo-lath-header title="标题" subtitle="副标题"></wayo-lath-header>
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+    <wayo-lath-tail icon="arrow-right" label="打开"></wayo-lath-tail>
+  </wayo-lath>
+  <h4>平铺布局</h4>
+  <wayo-lath  border-bottom icon="location" icon-position="top" inline>
+    <wayo-lath-header title="标题" subtitle="副标题"></wayo-lath-header>
+    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+    <wayo-lath-tail icon="arrow-right" label="打开"></wayo-lath-tail>
+  </wayo-lath>
 </section>
 </template>
 <script>

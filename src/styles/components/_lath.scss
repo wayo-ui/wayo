@@ -4,18 +4,35 @@
   box-sizing: border-box;
   padding: 15px;
   overflow: hidden;
+  line-height: 1;
   background-color: $color-white;
+  &_inline{
+    @include display-flex;
+    .wayo-lath__head{
+      margin-right: 10px;
+    }
+    .wayo-lath__content{
+      margin-top: 0 !important;
+      @include flex(1);
+    }
+  }
+  &_content_header{
+    .wayo-lath__content{
+      margin-top: 10px;
+    }
+  }
   &_icon{
-    padding-left: 35px;
+    padding-left: 40px;
   }
   &__icon-head{
     font-size: 16px;
-    position: absolute;
-    top: 22.5px;
     left: 15px;
-    @include transform(translateY(-50%));
+    &_top{
+      position: absolute;
+      top: 22.5px;
+      @include transform(translateY(-50%));
+    }
     &_middle{
-      margin-top: -1px;
       @include middle-column();
     }
   }
@@ -43,10 +60,6 @@
       left: 0;
     }
   }
-  &__head{
-    display: inline-block;
-    margin-right: 10px;
-  }
   &__title{
     color: $color-black;
     font-size: 15px;
@@ -62,17 +75,17 @@
   }
   &__content{
     font-size: 13px;
-    // line-height: 17px;
-    // margin: -2px 0 0 5px;
     position: relative;
     color: $color-black;
     &_single-line{
-      line-height: 1;
-      margin: 0;
+      line-height: 1 !important;
+      margin: 0 !important;
     }
     &-entity{
       overflow: hidden;
       margin: 0;
+      line-height: 17px;
+      margin: -2px 0;
     }
     &-action{
       position: absolute;

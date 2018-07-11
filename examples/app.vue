@@ -2,7 +2,7 @@
 <div class="ex" :class="{'sub':showHeader}">
   <header class="ex-header" v-show="showHeader">
     <div class="header-back" @click="onBack">
-      <wayo-icon name="arrow-right"/>
+      <wayo-icon name="arrow-right" :size="20"/>
     </div>
     <span class="header-title">{{title}}</span>
   </header>
