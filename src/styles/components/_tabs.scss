@@ -1,0 +1,76 @@
+.wayo-tab{
+  position: relative;
+  overflow: hidden;
+  background-color: $color-white;
+}
+.wayo-tab__separator{
+  &-top{
+    top: 0;
+    left: 0;
+  }
+  &-bottom{
+    bottom: 0;
+    left: 0;
+  }
+  &-nav{
+    @extend .wayo-tab__separator-bottom;
+  }
+}
+.wayo-tab__nav{
+  position: relative;
+  white-space: nowrap;
+  transition: all 0.1s ease-in-out;
+  // &_segment{
+  //   text-align: center;
+  // }
+  &-pointer{
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-tomato;
+    transition: all 0.1s ease-in-out;
+    z-index: 10;
+  }
+}
+.wayo-tab-bar{
+  font-size: 14px;
+  line-height: 1;
+  padding: 14px 18px;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-black;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  &_active{
+    color: $color-tomato;
+  }
+  &__label{
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &_segment{
+    color: $color-tomato;
+    background-color: $color-white;
+    border: solid 1px $color-tomato;
+    padding: 5px 15px;
+    &:nth-child(n+2){
+      border-left: none;
+    }
+    &:first-child{
+      @include border-radius(4px 0 0 4px);
+    }
+    &:last-child{
+      @include border-radius(0 4px 4px 0);
+    }
+    &.wayo-tab-bar_active{
+      color: $color-white;
+      background-color: $color-tomato;
+    }
+  }
+}
+.wayo-tab__content{
+  position: relative;
+}

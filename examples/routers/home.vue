@@ -22,6 +22,7 @@
           <li class="subitem"><router-link to="/lath">Lath</router-link></li>
           <li class="subitem"><router-link to="/separator">Separator</router-link></li>
           <li class="subitem"><router-link to="/card">Card</router-link></li>
+          <li class="subitem"><router-link to="/tabs">Tabs</router-link></li>
         </ul>
       </nav>
     </li>

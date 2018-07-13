@@ -52,6 +52,10 @@ const Router = new VueRouter({
     path: '/card',
     name: 'card',
     component: () => import('./routers/card.vue')
+  },{
+    path: '/tabs',
+    name: 'tabs',
+    component: () => import('./routers/tabs.vue')
   }]
 });
 

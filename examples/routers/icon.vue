@@ -109,6 +109,10 @@
       <wayo-icon name="wifi"/>
       <label class="cell__label">icon-wifi</label>
     </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="meeting"/>
+      <label class="cell__label">icon-meeting</label>
+    </wayo-flex-cell>
   </wayo-flex-box>
 </section>
 </template>

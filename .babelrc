@@ -19,7 +19,8 @@
   ],
   "plugins": [
     "transform-es5-property-mutators",
-    "syntax-dynamic-import"
+    "syntax-dynamic-import",
+    "transform-vue-jsx"
   ],
   "comments": false,
   "env": {
@@ -27,7 +28,8 @@
       "presets": ["env","stage-3"],
       "plugins": [
         "transform-es5-property-mutators",
-        "syntax-dynamic-import"
+        "syntax-dynamic-import",
+        "transform-vue-jsx"
       ]
     }
   }
