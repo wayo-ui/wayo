@@ -11,3 +11,4 @@ jest.config.json
 .babelrc
 .eslintrc
 .eslintignore
+/bin
