@@ -157,8 +157,11 @@ export default {
   mounted(){
     // 渲染完成之后显示第一个面板，同时获取最外层容器尺寸
     this.$nextTick().then(() => {
-      this.showPanel(this.panels[Object.keys(this.panels)[0]].name);
-      this.boxWidth = this.$el.clientWidth;
+      const FirstPanel = this.panels[Object.keys(this.panels)[0]];
+      if(FirstPanel){
+        this.showPanel(FirstPanel.name);
+        this.boxWidth = this.$el.clientWidth;
+      }
     });
   },
   render(h){

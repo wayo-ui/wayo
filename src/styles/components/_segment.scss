@@ -7,6 +7,17 @@
   .wayo-segment-button{
     margin: 0;
   }
+  &_disabled{
+    .wayo-segment-button{
+      &-default{
+        border-color: $color-soft-grey;
+        color: $color-soft-grey;
+      }
+      &-primary{
+        background-color: $color-soft-grey;
+      }
+    }
+  }
   &_direct{
     &_horizontal{
       font-size: 0;

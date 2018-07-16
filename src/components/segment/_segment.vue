@@ -1,7 +1,8 @@
 <template>
 <div 
   class="wayo-segment"
-  :class="classname">
+  :class="classname"
+  v-on="$listeners">
   <slot></slot>
 </div>
 </template>
@@ -13,7 +14,7 @@ export default {
     /**
      * @prop 方向
      * @type {string}
-     * @default horizontal
+     * @default `horizontal`
      */
     direction: {
       type: String,
@@ -21,14 +22,25 @@ export default {
       validator: val => {
         return ['horizontal','vertical'].indexOf(val)!==-1;
       }
+    },
+    /**
+     * @prop 禁用
+     * @type {boolean}
+     * @default `false`
+     */
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     classname(){
+      const List = [];
       if(this.$slots.default.length>1){
-        return `wayo-segment_direct_${this.direction}`;
+        List.push(`wayo-segment_direct_${this.direction}`);
       }
-      return '';
+      this.disabled&&List.push('wayo-segment_disabled');
+      return List.join(' ');
     }
   }
 };
