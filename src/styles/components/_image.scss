@@ -8,13 +8,11 @@
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    background-color: $color-lightest-grey;
+    background-image: url($asset-path+'/img-placeholder.png');
+    background-size: 100%;
+    background-position: center;
     border: solid 1px $color-light-grey;
     @include border-radius(2px);
-  }
-  &__alt{
-    font-size: 12px;
-    color: $color-light-grey;
   }
   &__info{
     position: absolute;

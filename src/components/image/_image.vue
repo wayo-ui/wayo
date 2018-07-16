@@ -1,10 +1,9 @@
 <template>
   <div class="wayo-image" :style="`width:${size.width}px;`">
     <div class="wayo-image__box" 
-      :style="`width:${size.width}px;height:${size.height}px;line-height:${size.height-2}px;`">
+      :style="styles">
       <img class="wayo-image__img" v-show="loaded" 
       :src="src"/>
-      <span class="wayo-image__alt">{{alt}}</span>
       <div class="wayo-image__info" v-if="info">
         <span class="wayo-image__info-placeholder">{{info}}</span>
         <p class="wayo-image__info-content">{{info}}</p>
@@ -46,11 +45,11 @@ export default {
       required: true
     },
     /**
-     * @prop 图片alt
+     * @prop 占位图片url
      * @type {string}
-     * @default ''
+     * @default ``
      */
-    alt: {
+    placeholder: {
       type: String,
       default: ''
     },
@@ -85,6 +84,15 @@ export default {
         width: this.width,
         height: this.height||this.width
       };
+    },
+    styles(){
+      const List = [
+        `width:${this.size.width}px;`,
+        `height:${this.size.height}px;`,
+        `line-height:${this.size.height-2}px;`
+      ];
+      this.placeholder&&List.push(`background-image: url(${this.placeholder})`);
+      return List.join('');
     }
   },
   watch:{
