@@ -32,6 +32,11 @@
     transition: all 0.1s ease-in-out;
     z-index: 10;
   }
+  &_flex{
+    .wayo-tab-bar{
+      width: 25%;
+    }
+  }
 }
 .wayo-tab-bar{
   font-size: 14px;

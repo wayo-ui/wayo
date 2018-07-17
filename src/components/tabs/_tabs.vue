@@ -44,6 +44,15 @@ export default {
       default: false
     },
     /**
+     * @prop 各个标签的宽度严格相等
+     * @type {boolean}
+     * @default `false`
+     */
+    flex: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * @prop 标签对齐方式
      * @type {string}
      * @default `left`
@@ -169,6 +178,7 @@ export default {
     const Nav = (
       <div ref="nav" class={{
         'wayo-tab__nav': true,
+        'wayo-tab__nav_flex': this.flex,
         'wayo-tab__nav_segment': this.segment
       }}
       style={{
