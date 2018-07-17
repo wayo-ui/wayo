@@ -1,6 +1,7 @@
 <template>
   <div class="wayo-image" :style="`width:${size.width}px;`">
     <div class="wayo-image__box" 
+      :class="{'wayo-image__box_border':border}"
       :style="styles">
       <img class="wayo-image__img" v-show="loaded" 
       :src="src"/>
@@ -70,6 +71,15 @@ export default {
     info: {
       type: String,
       default: ''
+    },
+    /**
+     * @prop 是否显示边框
+     * @type {boolean}
+     * @default `true`
+     */
+    border: {
+      type: Boolean,
+      default: true
     }
   },
   data(){

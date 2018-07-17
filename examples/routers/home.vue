@@ -23,6 +23,8 @@
           <li class="subitem"><router-link to="/separator">Separator</router-link></li>
           <li class="subitem"><router-link to="/card">Card</router-link></li>
           <li class="subitem"><router-link to="/tabs">Tabs</router-link></li>
+          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
+          <li class="subitem"><router-link to="/toast">Toast</router-link></li>
         </ul>
       </nav>
     </li>
@@ -31,8 +33,7 @@
       <p class="title" @click="toggleExpand('busi')">业务组件</p>
       <nav class="panel">
         <ul class="sublist">
-          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
-          <li class="subitem"><router-link to="/toast">Toast</router-link></li>
+          <li class="subitem"><router-link to="/showcase">Showcase</router-link></li>
         </ul>
       </nav>
     </li>

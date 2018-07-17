@@ -95,6 +95,7 @@ export default {
   methods: {
     /**
      * @method addBar 添加标签，子组件调用
+     * @param {Object} opts 标签属性
      */
     addBar(opts){
       this.barOptsList.push(opts);

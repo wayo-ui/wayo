@@ -20,6 +20,7 @@ import Lath from './components/lath';
 import Rate from './components/rate';
 import Segment from './components/segment';
 import Separator from './components/separator';
+import Showcase from './components/showcase';
 import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
 import Tag from './components/tag';
@@ -58,6 +59,8 @@ const Components = {
   Segment,
   SegmentButton: Segment.Button,
   Separator,
+  Showcase,
+  ShowcaseItem: Showcase.Item,
   Tab: Tabs.Tab,
   Tabs: Tabs.Tabs,
   // TabPanel: Tabs.Panel,

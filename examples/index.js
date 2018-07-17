@@ -60,6 +60,10 @@ const Router = new VueRouter({
     path: '/toast',
     name: 'toast',
     component: () => import('./routers/toast.vue')
+  },{
+    path: '/showcase',
+    name: 'showcase',
+    component: () => import('./routers/showcase.vue')
   }]
 });
 

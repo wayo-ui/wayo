@@ -9,10 +9,13 @@
     position: relative;
     text-align: center;
     background-image: url($asset-path+'/img-placeholder.png');
+    background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    border: solid 1px $color-light-grey;
-    @include border-radius(2px);
+    &_border{
+      border: solid 1px $color-light-grey;
+      @include border-radius(2px);
+    }
   }
   &__info{
     position: absolute;

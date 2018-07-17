@@ -1,0 +1,92 @@
+.wayo-showcase{
+  position: relative;
+}
+.wayo-showcase__nav{
+  overflow: hidden;
+  background-image: url($asset-path+'/showcase-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  box-sizing: border-box;
+  position: relative;
+  &::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    border-style: solid;
+    border-width: 0 10px 4px 10px;
+    border-color: transparent transparent $color-white transparent;
+    margin-left: -10px;
+  }
+}
+.wayo-showcase__navbar{
+  line-height: 1;
+  font-size: 1px;
+  transition: all 0.2s ease-in-out;
+  padding: 30px 10px 15px 10px;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: bottom;
+  &_active{
+    padding: 10px 5px 10px 5px;
+    .wayo-showcase__thumb-box{
+      border: solid 1px $color-white;
+      @include border-radius(2px);
+    }
+  }
+}
+.wayo-showcase__nav-wrapper{
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1px;
+  line-height: 1;
+}
+.wayo-showcase__thumb-box{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url($asset-path+'/img-placeholder.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-lightest-grey;
+    z-index: -1;
+  }
+}
+.wayo-showcase__thumb-img{
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.wayo-showcase__panel{
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $color-white;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 13px;
+}
+.wayo-showcase__content-wrapper{
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  font-size: 1px;
+  line-height: 1;
+}
