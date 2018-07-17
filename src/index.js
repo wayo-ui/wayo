@@ -23,6 +23,7 @@ import Separator from './components/separator';
 import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
 import Tag from './components/tag';
+import Toast from './components/toast';
 // import Toast from './components/toast';
 const Components = {
   // Affix,
@@ -62,7 +63,7 @@ const Components = {
   // TabPanel: Tabs.Panel,
   // Tabbar,
   Tag,
-  // Toast
+  Toast
 };
 
 const install = function(Vue, opts = {}) {

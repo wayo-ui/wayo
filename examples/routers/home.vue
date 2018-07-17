@@ -32,6 +32,7 @@
       <nav class="panel">
         <ul class="sublist">
           <li class="subitem"><router-link to="/lath">Lath</router-link></li>
+          <li class="subitem"><router-link to="/toast">Toast</router-link></li>
         </ul>
       </nav>
     </li>

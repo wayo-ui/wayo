@@ -20,7 +20,8 @@
   "plugins": [
     "transform-es5-property-mutators",
     "syntax-dynamic-import",
-    "transform-vue-jsx"
+    "transform-vue-jsx",
+    "transform-class-properties"
   ],
   "comments": false,
   "env": {
@@ -29,7 +30,8 @@
       "plugins": [
         "transform-es5-property-mutators",
         "syntax-dynamic-import",
-        "transform-vue-jsx"
+        "transform-vue-jsx",
+        "transform-class-properties"
       ]
     }
   }

@@ -56,6 +56,10 @@ const Router = new VueRouter({
     path: '/tabs',
     name: 'tabs',
     component: () => import('./routers/tabs.vue')
+  },{
+    path: '/toast',
+    name: 'toast',
+    component: () => import('./routers/toast.vue')
   }]
 });
 
