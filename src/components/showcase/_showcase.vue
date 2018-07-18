@@ -39,7 +39,7 @@ export default {
       // 操作区padding-top
       navPaddingTop: 30,
       // 操作区图片宽度
-      thumbWidth: 100,
+      thumbWidth: 95,
       // 当前激活的索引值
       activeIndex: 0,
       // 最外层容器宽度
@@ -85,6 +85,7 @@ export default {
     onBarClicked(index){
       if(index!==this.activeIndex){
         this.showItem(index);
+        this.$emit('active-change',index-1);
       }
     }
   },

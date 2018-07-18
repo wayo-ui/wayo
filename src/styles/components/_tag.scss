@@ -4,20 +4,21 @@
   text-align: center;
   box-sizing: border-box;
   white-space: nowrap;
-  &-default{
-    color: $color-heavyer-grey;
-    background-color: $color-lightest-grey;
-  }
-  &-fit{
-    width: 100%;
-  }
   &-text{
+    background: none !important;
     padding: 0 !important;
     height: auto !important;
     line-height: 1 !important;
     font-weight: normal !important;
   }
-  &-round{
+  &_fit{
+    width: 100%;
+  }
+  &_plain{
+    background: none !important;
+    border: solid 1px;
+  }
+  &_round{
     @include border-radius(50% unquote("/") 100%);
   }
   &_size{
@@ -26,18 +27,27 @@
       padding: 0 13px;
       height: 24px;
       line-height: 24px;
+      &.wayo-tag_plain{
+        line-height: 22px;
+      }
     }
     &_large{
       font-size:13px;
       padding: 0 27px;
       height: 30px;
       line-height: 30px;
+      &.wayo-tag_plain{
+        line-height: 28px;
+      }
     }
     &_small{
       font-size:11px;
       padding: 0 6px;
       height: 16px;
       line-height: 16px;
+      &.wayo-tag_plain{
+        line-height: 14px;
+      }
     }
   }
 }

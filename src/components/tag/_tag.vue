@@ -1,6 +1,5 @@
 <template>
-<div class="wayo-tag"
-  :class="`wayo-tag-${type} wayo-tag_size_${size} ${round?'wayo-tag-round':''} ${fit?'wayo-tag-fit':''}`"
+<div :class="classes"
   :style="style">
   <slot></slot>
 </div>
@@ -21,6 +20,9 @@ const BORDER_RADIUS = {
   large: 15,
   small: 8
 };
+const REG_COLOR_HEX = /^#[0-9a-fA-F]{6}$/;
+const REG_COLOR_RGBA = /(#([0-9a-f]{3}){1,2}|rgba\(\d{1,3}%?(,\s?\d{1,3}%?){2},\s?(1|0|0?\.\d+)\)|(rgb|hsl)\(\d{1,3}%?(,\s?\d{1,3}%?){2}\))/i;
+
 export default {
   name: `${APPNAME}Tag`,
   props: {
@@ -58,6 +60,15 @@ export default {
       default: false
     },
     /**
+     * @prop 镂空
+     * @type {boolean}
+     * @default `false`
+     */
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * @prop 是否满宽
      * @type {boolean}
      * @default `false`
@@ -73,7 +84,10 @@ export default {
      */
     textColor: {
       type: String,
-      default: ''
+      default: '#5f5f5f',
+      validator: val => {
+        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     },
     /**
      * @prop 背景颜色
@@ -82,21 +96,40 @@ export default {
      */
     bgColor: {
       type: String,
-      default: ''
+      default: '#f4f4f4',
+      validator: val => {
+        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     }
   },
   computed: {
+    classes(){
+      const List = [
+        'wayo-tag',
+        `wayo-tag-${this.type}`,
+        `wayo-tag_size_${this.size}`,
+      ];
+      this.round&&List.push('wayo-tag_round');
+      this.fit&&List.push('wayo-tag_fit');
+      this.plain&&List.push('wayo-tag_plain');
+      return List.join(' ');
+    },
     style(){
       const Styles = [];
-      this.textColor&&Styles.push(`color:${this.textColor};`);
-      this.bgColor&&Styles.push(`background-color:${this.bgColor};`);
-      if(this.fit&&this.round){
+      Styles.push(`color:${this.textColor};`);
+      if(!this.plain){
+        Styles.push(`background-color:${this.bgColor};`);
+      }else{
+        Styles.push(`border-color:${this.textColor};`);
+      }
+      
+      if(this.round){
         const Radius = BORDER_RADIUS[this.size];
         Styles.push(`
         -webkit-border-radius:${Radius}px;
         -moz-border-radius:${Radius}px;
         -o-border-radius:${Radius}px;
-        -webkit-border-radius:${Radius}px;`);
+        border-radius:${Radius}px;`);
       }
       return Styles.join('');
     }

@@ -1,12 +1,15 @@
 .wayo-showcase{
   position: relative;
+  &_hidden{
+    display: none;
+  }
 }
 .wayo-showcase__nav{
   overflow: hidden;
   background-image: url($asset-path+'/showcase-bg.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 100%;
+  background-size: 100% 100%;
   box-sizing: border-box;
   position: relative;
   &::after{

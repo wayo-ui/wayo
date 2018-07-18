@@ -32,10 +32,6 @@ export default {
         {this.$slots.default}
       </div>;
   },
-  updated(){
-    // 更新时强制重新渲染父组件
-    this.$parent.$forceUpdate();
-  },
   methods: {
     /**
      * @method show 激活

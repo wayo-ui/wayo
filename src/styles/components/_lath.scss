@@ -29,7 +29,7 @@
     left: 15px;
     &_top{
       position: absolute;
-      top: 22.5px;
+      top: 21.5px;
       @include transform(translateY(-50%));
     }
     &_middle{

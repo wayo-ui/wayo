@@ -62,8 +62,6 @@ export default {
         }        
       }
       
-      
-
       return Styles.join('');
     }
   }
