@@ -1,0 +1,57 @@
+.wayo-slides{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.wayo-slides__indicators{
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 5px;
+  font-size: 1px;
+  line-height: 1;
+  @include transform(translateX(-50%));
+}
+.wayo-slides__indicator {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $color-lightest-grey;
+  &_active{
+    background-color: $color-tomato;
+  }
+  &_type{
+    &_circle{
+      width: 6px;
+      height: 6px;
+      margin: 0 4px;
+      @include border-radius(50%);
+    }
+    &_square{
+      height: 3px;
+      width: 30px;
+      margin: 0 2px;
+    }
+  }
+}
+.wayo-slides__content{
+  position: relative;
+  font-size: 1px;
+  line-height: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.wayo-slides__wrapper{
+  white-space: nowrap;
+  overflow: visible;
+  &_animate{
+    transition: all 0.4s ease-in-out,
+  }
+}
+.wayo-slide__contentitem{
+  font-size: 13px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  min-height: 40px;
+}

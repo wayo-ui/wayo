@@ -21,6 +21,7 @@ import Rate from './components/rate';
 import Segment from './components/segment';
 import Separator from './components/separator';
 import Showcase from './components/showcase';
+import Slides from './components/slides';
 import Tabs from './components/tabs';
 // import Tabbar from './components/tabbar';
 import Tag from './components/tag';
@@ -61,6 +62,8 @@ const Components = {
   Separator,
   Showcase,
   ShowcaseItem: Showcase.Item,
+  Slides,
+  Slide: Slides.Slide,
   Tab: Tabs.Tab,
   Tabs: Tabs.Tabs,
   // TabPanel: Tabs.Panel,

@@ -64,6 +64,10 @@ const Router = new VueRouter({
     path: '/showcase',
     name: 'showcase',
     component: () => import('./routers/showcase.vue')
+  },{
+    path: '/slides',
+    name: 'slides',
+    component: () => import('./routers/slides.vue')
   }]
 });
 

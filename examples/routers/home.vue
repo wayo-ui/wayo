@@ -25,6 +25,7 @@
           <li class="subitem"><router-link to="/tabs">Tabs</router-link></li>
           <li class="subitem"><router-link to="/lath">Lath</router-link></li>
           <li class="subitem"><router-link to="/toast">Toast</router-link></li>
+          <li class="subitem"><router-link to="/slides">Slides</router-link></li>
         </ul>
       </nav>
     </li>
