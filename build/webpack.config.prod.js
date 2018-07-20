@@ -2,6 +2,7 @@ const Webpack = require('webpack');
 const Merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const Config = require('./config');
 const BasicWebpackConfig = require('./webpack.config.base.js');
 
@@ -30,6 +31,9 @@ module.exports = Merge(BasicWebpackConfig,{
   },
   plugins: [
     new Webpack.BannerPlugin(`WAYO version ${Config.version}`),
+    new CleanWebpackPlugin(Config.DistDir,{
+      root: Config.RootDir
+    }),
     new ExtractTextPlugin("wayo.min.css"),
     new Webpack.DefinePlugin({
       'process.env': {

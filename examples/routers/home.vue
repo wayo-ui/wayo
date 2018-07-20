@@ -12,20 +12,19 @@
       <p class="title" @click="toggleExpand('base')">基础组件</p>
       <nav class="panel">
         <ul class="sublist">
-          <li class="subitem"><router-link to="/button">Button</router-link></li>
-          <li class="subitem"><router-link to="/icon">Icons</router-link></li>
-          <li class="subitem"><router-link to="/segment">Segment</router-link></li>
-          <li class="subitem"><router-link to="/image">Image</router-link></li>
-          <li class="subitem"><router-link to="/tag">Tag</router-link></li>
-          <li class="subitem"><router-link to="/rate">Rate</router-link></li>
-          <li class="subitem"><router-link to="/flex">Flex</router-link></li>
-          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
-          <li class="subitem"><router-link to="/separator">Separator</router-link></li>
-          <li class="subitem"><router-link to="/card">Card</router-link></li>
-          <li class="subitem"><router-link to="/tabs">Tabs</router-link></li>
-          <li class="subitem"><router-link to="/lath">Lath</router-link></li>
-          <li class="subitem"><router-link to="/toast">Toast</router-link></li>
-          <li class="subitem"><router-link to="/slides">Slides</router-link></li>
+          <li class="subitem"><router-link to="/button">Button-按钮</router-link></li>
+          <li class="subitem"><router-link to="/icon">Icons-矢量图标</router-link></li>
+          <li class="subitem"><router-link to="/segment">Segment-分割按钮</router-link></li>
+          <li class="subitem"><router-link to="/image">Image-图片</router-link></li>
+          <li class="subitem"><router-link to="/tag">Tag-标签</router-link></li>
+          <li class="subitem"><router-link to="/rate">Rate-评分</router-link></li>
+          <li class="subitem"><router-link to="/flex">Flex-弹性容器</router-link></li>
+          <li class="subitem"><router-link to="/separator">Separator-1像素直线</router-link></li>
+          <li class="subitem"><router-link to="/card">Card-卡片</router-link></li>
+          <li class="subitem"><router-link to="/tabs">Tabs-标签页</router-link></li>
+          <li class="subitem"><router-link to="/lath">Lath-满宽横条</router-link></li>
+          <li class="subitem"><router-link to="/toast">Toast-短提示</router-link></li>
+          <li class="subitem"><router-link to="/slides">Slides-幻灯片</router-link></li>
         </ul>
       </nav>
     </li>
@@ -34,7 +33,7 @@
       <p class="title" @click="toggleExpand('busi')">业务组件</p>
       <nav class="panel">
         <ul class="sublist">
-          <li class="subitem"><router-link to="/showcase">Showcase</router-link></li>
+          <li class="subitem"><router-link to="/showcase">Showcase-橱窗</router-link></li>
         </ul>
       </nav>
     </li>

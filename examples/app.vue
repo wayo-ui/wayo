@@ -30,6 +30,8 @@ export default {
 <style lang="scss" scoped>
 @import '~@styles/common/index.scss';
 .ex{
+  max-width: 414px;
+  margin: 0 auto;
   &.sub{
     padding-top: 70px;
   }
@@ -42,7 +44,6 @@ export default {
   top: 0;
   text-align: center;
   font-size: 18px;
-  letter-spacing: 3px;
   height: 60px;
   line-height: 60px;
   border-bottom: solid 1px #999;

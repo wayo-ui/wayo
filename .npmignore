@@ -12,3 +12,4 @@ jest.config.json
 .eslintrc
 .eslintignore
 /bin
+/dist

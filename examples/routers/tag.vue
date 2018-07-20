@@ -1,5 +1,5 @@
 <template>
-<section>
+<section style="background-color: #fff;padding: 20px;">
   <h4>类型</h4>
   <wayo-tag>默认</wayo-tag>
   <wayo-tag type="text">文字</wayo-tag>
@@ -19,8 +19,8 @@
     <wayo-tag fit round>满宽</wayo-tag>
   </div>
   <h4>自定义</h4>
-  <wayo-tag size="large" text-color="red">字体颜色</wayo-tag>
-  <wayo-tag size="large" bg-color="#000000" text-color="red">背景色</wayo-tag>
+  <wayo-tag size="large" text-color="#d82c2c">字体颜色</wayo-tag>
+  <wayo-tag size="large" bg-color="#000000" text-color="#d82c2c">背景色</wayo-tag>
 </section>
 </template>
 <script>
