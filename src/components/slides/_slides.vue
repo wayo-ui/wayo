@@ -84,7 +84,9 @@ export default {
       // slide总数
       itemCount: 0,
       // 自动切换计时器
-      timer: undefined,
+      timer_autoplay: undefined,
+      // 恢复动画计时器
+      timer_resetLock: undefined,
       // 最外层容器宽度
       boxWidth: 0,
       // 是否处于拖拽状态
@@ -92,22 +94,31 @@ export default {
       // 拖拽起点X坐标
       panStartX: 0,
       // 拖拽当前X坐标
-      panCurrentX: 0
+      panCurrentX: 0,
+      // 禁用wrapper动画
+      lockAnimtion: false
     };
   },
   computed: {
+    /**
+     * @computed 循环模式（开启自动切换或循环切换）
+     * @type {boolean}
+     */
+    isLoop(){
+      return this.autoplay || this.loop;
+    },
     /**
      * @computed 拖拽产生的偏移量，负值向右，正值向左
      * @type {number}
      */
     manualTranslate(){
       const Dist = this.panStartX - this.panCurrentX;
-      // 非循环模式下第一个slide禁止向右拖拽
-      if(!this.loop&&this.activeIndex===0&&Dist<0){
+      // 非自动/循环模式下第一个slide禁止向右拖拽
+      if(!this.isLoop&&this.activeIndex===0&&Dist<0){
         return 0;
       }
-      // 非循环模式下最后一个slide禁止向左拖拽
-      if(!this.loop&&this.activeIndex===this.itemCount-1&&Dist>0){
+      // 非自动/循环模式下最后一个slide禁止向左拖拽
+      if(!this.isLoop&&this.activeIndex===this.itemCount-1&&Dist>0){
         return 0;
       }
       return Dist;
@@ -120,8 +131,48 @@ export default {
       // 激活默认索引的slide
       this.activeItem(this.initialIndex);
       // 开启自动切换模式
-      this.autoplay&&this.play();
+      this.play();
     });
+  },
+  watch: {
+    manualTranslate(val){
+      // 只在开启循环模式下做出响应
+      if(!this.isLoop){
+        return;
+      }
+      switch(true){
+        // 当激活第一张slide同时向右拖拽时
+        // 将最后一张slide偏移至第一张slide左侧
+        case this.activeIndex === 0&&val<0:
+          this.items[this.itemCount-1].translate(`-${this.itemCount}00%`);
+          break;
+        // 当激活第一张slide同时向左拖拽时
+        // 将最后一张slide复位
+        case this.activeIndex === 0&&val>0:
+          this.items[this.itemCount-1].recover();
+          break;
+        // 当激活最后一张slide同时向左拖拽时
+        // 将第一张slide偏移至最后一张slide右侧
+        case this.activeIndex === this.itemCount-1&&val>0:
+          this.items[0].translate(`${this.itemCount}00%`);
+          break;
+        // 当激活最后一张slide同时向右拖拽时
+        // 将第一张slide复位
+        case this.activeIndex === this.itemCount-1&&val<0:
+          this.items[0].recover();
+          break;
+      }
+    },
+    activeIndex(val){
+      // 只处理自动模式且无手动拖拽行为
+      if(!this.autoplay||this.manualTranslate!==0){
+        return;
+      }
+      // 自动模式下切换至最后一张slide时将第一张偏移至其右侧
+      if(val >= this.itemCount){
+        this.items[0].translate(`${this.itemCount}00%`);
+      }
+    }
   },
   methods: {
     /**
@@ -144,14 +195,13 @@ export default {
     activeItem(index){
       const TargetIndex = (() => {
         if(index>=this.itemCount){
-          return this.loop||this.autoplay?0:this.itemCount-1;
+          return this.isLoop?index:this.itemCount-1;
         }
         if(index<0){
-          return this.loop||this.autoplay?this.itemCount-1:0;
+          return this.isLoop?index:0;
         }
         return index;
       })();
-
       if(this.activeIndex!==TargetIndex){
         this.activeIndex = TargetIndex;
       }
@@ -160,7 +210,7 @@ export default {
      * @method pause 暂停自动切换
      */
     pause(){
-      clearTimeout(this.timer);
+      this.timer_autoplay&&clearTimeout(this.timer_autoplay);
     },
     /**
      * @method resume 恢复自动切换
@@ -172,7 +222,10 @@ export default {
      * @method play 开启自动切换
      */
     play(){
-      this.timer = setTimeout(() => {
+      if(!this.autoplay){
+        return;
+      }
+      this.timer_autoplay = setTimeout(() => {
         this.activeNext();
         this.play();
       },this.interval);
@@ -182,13 +235,13 @@ export default {
      * @param {EventObject} ev touchstart事件对象
      */
     onPanStart(ev){
-      const Event = ev || window.event;
-      Event.preventDefault();
-      Event.stopPropagation();
+      ev.preventDefault();
+      ev.stopPropagation();
+
       this.isPanning = true;
       // 暂停自动切换
       this.pause();
-      const Touches = Event.changedTouches||Event.touches;
+      const Touches = ev.changedTouches||ev.touches;
       this.panStartX = Touches[0].clientX;
       this.panCurrentX = Touches[0].clientX;
     },
@@ -197,13 +250,14 @@ export default {
      * @param {EventObject} ev touchmove事件对象
      */
     onPanMove(ev){
-      const Event = ev || window.event;
-      Event.preventDefault();
-      Event.stopPropagation();
+      ev.preventDefault();
+      ev.stopPropagation();
+
       if(!this.isPanning){
         return;
       }
-      const Touches = Event.changedTouches||Event.touches;
+
+      const Touches = ev.changedTouches||ev.touches;
       this.panCurrentX = Touches[0].clientX;
     },
     /**
@@ -211,12 +265,13 @@ export default {
      * @param {EventObject} ev touchend或者touchcancel事件对象
      */
     onPanEnd(ev){
-      const Event = ev || window.event;
-      Event.preventDefault();
-      Event.stopPropagation();
+      ev.preventDefault();
+      ev.stopPropagation();
+
       if(!this.isPanning){
         return;
       }
+
       const PanGutter = Math.abs(this.manualTranslate/this.boxWidth);
 
       let panIndex = 0;
@@ -225,13 +280,33 @@ export default {
         PanGutter-panIndex>=0.2&&panIndex++;
         panIndex *= this.manualTranslate/Math.abs(this.manualTranslate);
       }
-      
       this.isPanning = false;
       this.panCurrentX = 0;
       this.panStartX = 0;
       this.activeItem(this.activeIndex+panIndex);
       // 重新启动自动切换
       this.resume();
+    },
+    onWrapperTransitionEnd(){
+      // 非循环模式下不作处理
+      if(!this.isLoop){
+        return;
+      }
+      if(this.activeIndex<0){
+        this.lockAnimtion = true;
+        this.items[this.itemCount-1].recover();
+        this.activeItem(this.itemCount-1);
+      }else if(this.activeIndex>=this.itemCount){
+        this.lockAnimtion = true;
+        this.items[0].recover();
+        this.activeItem(0);
+      }
+
+      this.timer_resetLock&&clearTimeout(this.timer_resetLock);
+      this.timer_resetLock = setTimeout(() => {
+        this.lockAnimtion =false;
+      },200);
+
     }
   },
   render(h){
@@ -261,21 +336,23 @@ export default {
     const Wrapper = (() => {
       if(this.autoplay||this.animation==='slide'){
         const Translate = this.activeIndex*this.boxWidth+this.manualTranslate;
+
         return <div 
           class={{
             'wayo-slides__wrapper': true,
-            'wayo-slides__wrapper_animate': this.manualTranslate===0
+            'wayo-slides__wrapper_animate': !this.lockAnimtion&&this.manualTranslate===0
           }}
           style={{
-            '-webkit-transform': `translate3d(-${Translate}px,0,0)`,
-            '-moz-transform': `translate3d(-${Translate}px,0,0)`,
-            '-o-transform': `translate3d(-${Translate}px,0,0)`,
-            'transform': `translate3d(-${Translate}px,0,0)`
+            '-webkit-transform': `translate3d(${-Translate}px,0,0)`,
+            '-moz-transform': `translate3d(${-Translate}px,0,0)`,
+            '-o-transform': `translate3d(${-Translate}px,0,0)`,
+            'transform': `translate3d(${-Translate}px,0,0)`
           }}
           onTouchstart={this.onPanStart}
           onTouchmove={this.onPanMove}
           onTouchend={this.onPanEnd}
-          onTouchcancel={this.onPanEnd}>
+          onTouchcancel={this.onPanEnd}
+          onTransitionend={this.onWrapperTransitionEnd}>
           {VNodes}
         </div>;
       }
@@ -285,7 +362,7 @@ export default {
         </div>;
       }
     })();
-    
+
     // 内容容器
     const SlideItems = (
       <div class="wayo-slides__content">

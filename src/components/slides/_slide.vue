@@ -1,5 +1,7 @@
 <template>
-<div class="wayo-slide__contentitem" @transitionend="onTransitionEnd">
+<div class="wayo-slide__contentitem" 
+  :style="styles"
+  @transitionend="onTransitionEnd">
   <slot></slot>
 </div>
 </template>
@@ -19,13 +21,35 @@ export default {
       default: ''
     }
   },
+  data(){
+    return {
+      translateX: ''
+    };
+  },
+  computed: {
+    styles(){
+      let list = [];
+      if(this.translateX){
+        list = list.concat([
+          `-webkit-transform:translateX(${this.translateX});`,
+          `-moz-transform:translateX(${this.translateX});`,
+          `-o-transform:translateX(${this.translateX});`,
+          `transform:translateX(${this.translateX});`
+        ]);
+      }
+      return list.join('');
+    }
+  },
   mounted() {
     // 父组件添加子组件指针
     this.$parent.addItem(this);
   },
   methods: {
-    active(){
-      
+    recover(){
+      this.translateX = '';
+    },
+    translate(dist){
+      this.translateX = dist;
     },
     onTransitionEnd(ev){
 

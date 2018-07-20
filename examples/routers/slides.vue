@@ -32,7 +32,13 @@
     </wayo-slides>
   </wayo-card>
   <h4>自动切换(同时强制开启循环模式)</h4>
-  
+  <wayo-card>
+    <wayo-slides autoplay>
+      <wayo-slide class="slides__item slides__item-1">1</wayo-slide>
+      <wayo-slide class="slides__item slides__item-2">2</wayo-slide>
+      <wayo-slide class="slides__item slides__item-3">3</wayo-slide>
+    </wayo-slides>
+  </wayo-card>
 </section>
 </template>
 
@@ -44,9 +50,9 @@ export default {
 
 <style lang="scss" scoped>
 .slides__item{
-  height: 60px;
+  height: 80px;
   text-align: center;
-  line-height: 60px;
+  line-height: 80px;
   &-1{
     background-color: #6fa3f3;
   }
