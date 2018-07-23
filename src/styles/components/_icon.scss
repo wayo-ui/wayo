@@ -44,6 +44,21 @@ $font-family: "WayoIcons";
 .wayo-icon-arrow-down::before{
   content: "\e914";
 }
+.wayo-icon-arrow-long-right::before{
+  content: "\e922";
+}
+.wayo-icon-arrow-long-left::before{
+  content: "\e921";
+}
+.wayo-icon-arrow-long-top::before{
+  content: "\e91e";
+}
+.wayo-icon-arrow-long-bottom::before{
+  content: "\e920";
+}
+.wayo-icon-cry::before{
+  content: "\e91c";
+}
 .wayo-icon-scene::before{
   content: "\e903";
 }
@@ -112,4 +127,7 @@ $font-family: "WayoIcons";
 }
 .wayo-icon-cry::before{
   content: "\e91c";
+}
+.wayo-icon-subway::before{
+  content: "\e91f";
 }

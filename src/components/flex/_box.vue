@@ -1,11 +1,3 @@
-<template>
-<div 
-  :class="classes"
-  :style="`height:${isNaN(height)?height:height+'px'};`">
-  <slot></slot>
-</div>
-</template>
-
 <script>
 const AVAILABLE_JUSTIFY_AND_ALIGN = [
   'unset',
@@ -81,7 +73,10 @@ export default {
      */
     gutter: {
       type: Number,
-      default: 0
+      default: 0,
+      validator: val => {
+        return val>=0;
+      }
     }
   },
   computed: {
@@ -94,7 +89,34 @@ export default {
       ];
       this.wrap&&List.push('wayo-flex-box_wrap');
       return List.join(' ');
+    },
+    styles(){
+      const List = [`height:${isNaN(this.height)?this.height:this.height+'px'};`];
+      if(this.gutter>0){
+        if(/row/.test(this.direction)){
+          List.push(`margin-left:${-this.gutter/2}px;`);
+          List.push(`margin-right:${-this.gutter/2}px;`);
+        }else{
+          List.push(`margin-top:${-this.gutter/2}px;`);
+          List.push(`margin-bottom:${-this.gutter/2}px;`);
+        }
+      }
+      return List.join('');
     }
+  },
+  mounted() {
+    if(this.gutter>0){
+      this.$children.forEach(el=>{
+        el.padding = this.gutter/2;
+      });
+    }
+  },
+  render(h){
+    return <div 
+        class={this.classes}
+        style={this.styles}>
+        {this.$slots.default}
+    </div>;
   }
 };
 </script>

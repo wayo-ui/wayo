@@ -62,6 +62,7 @@
 
 .wayo-flex-cell{
   width: 100%;
+  box-sizing: border-box;
   @include flex-shrink(1);
   @include flex-grow(0);
   @include flex-basis(0);

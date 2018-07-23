@@ -42,6 +42,11 @@ export default {
       }
     }
   },
+  data(){
+    return {
+      padding: 0
+    };
+  },
   computed: {
     styles(){
       const Styles = [];
@@ -59,7 +64,17 @@ export default {
           ParentHeight!==0&&Styles.push(`${MarginType}:${this.offset/MAX_SPAN*ParentHeight}px;`);
         }else{
           Styles.push(`${MarginType}:${this.offset/MAX_SPAN*100}%;`);
-        }        
+        }
+      }
+
+      if(this.padding>0){
+        if(/row/.test(this.$parent.direction)){
+          Styles.push(`padding-left:${this.padding}px;`);
+          Styles.push(`padding-right:${this.padding}px;`);
+        }else{
+          Styles.push(`padding-top:${this.padding}px;`);
+          Styles.push(`padding-bottom:${this.padding}px;`);
+        }
       }
       
       return Styles.join('');
