@@ -1,5 +1,5 @@
 <template>
-<div class="wayo-slide__contentitem" 
+<div class="wayo-slide__contentitem" v-on="$listeners"
   :style="styles"
   @transitionend="onTransitionEnd">
   <slot></slot>

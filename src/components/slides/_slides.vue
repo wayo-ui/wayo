@@ -334,7 +334,7 @@ export default {
 
     // 内容实体
     const Wrapper = (() => {
-      if(this.autoplay||this.animation==='slide'){
+      if(VNodes.length>1&&(this.autoplay||this.animation==='slide')){
         const Translate = this.activeIndex*this.boxWidth+this.manualTranslate;
 
         return <div 
@@ -356,7 +356,7 @@ export default {
           {VNodes}
         </div>;
       }
-      if(this.animation === 'none'||this.animation === 'fade'){
+      if(VNodes.length<=1||this.animation === 'none'||this.animation === 'fade'){
         return <div class="wayo-slides__wrapper">
           {VNodes}
         </div>;
