@@ -193,17 +193,29 @@ export default {
      * @param {number} index 激活目标索引值
      */
     activeItem(index){
-      const TargetIndex = (() => {
+      if(this.isLoop&&this.activeIndex!==index){
+        this.activeIndex = index;
         if(index>=this.itemCount){
-          return this.isLoop?index:this.itemCount-1;
+          this.$emit('change',0);
+        }else if(index<0){
+          this.$emit('change',this.itemCount-1);
+        }else{
+          this.$emit('change',this.activeIndex);
         }
-        if(index<0){
-          return this.isLoop?index:0;
+      }else{
+        const TargetIndex = (() => {
+          if(index>=this.itemCount){
+            return this.itemCount-1;
+          }
+          if(index<0){
+            return 0;
+          }
+          return index;
+        })();
+        if(this.activeIndex!==TargetIndex){
+          this.activeIndex = TargetIndex;
+          this.$emit('change',TargetIndex);
         }
-        return index;
-      })();
-      if(this.activeIndex!==TargetIndex){
-        this.activeIndex = TargetIndex;
       }
     },
     /**
@@ -271,7 +283,10 @@ export default {
       if(!this.isPanning){
         return;
       }
-
+      if(this.boxWidth === 0){
+        // 再次取最外层容器宽度，以防止display:none造成的首次获取为0
+        this.boxWidth = this.$el.clientWidth;
+      }
       const PanGutter = Math.abs(this.manualTranslate/this.boxWidth);
 
       let panIndex = 0;

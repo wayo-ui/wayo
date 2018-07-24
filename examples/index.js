@@ -68,6 +68,10 @@ const Router = new VueRouter({
     path: '/slides',
     name: 'slides',
     component: () => import('./routers/slides.vue')
+  },{
+    path: '/imageviewer',
+    name: 'imageviewer',
+    component: () => import('./routers/imageviewer.vue')
   }]
 });
 

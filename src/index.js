@@ -11,7 +11,7 @@ import Card from './components/card';
 import Flex from './components/flex';
 import Icon from './components/icon';
 import Image from './components/image';
-// import Imageviewer from './components/imageviewer';
+import ImageViewer from './components/imageviewer';
 import Lath from './components/lath';
 // import Lazyload from './components/lazyload';
 // import List from './components/list';
@@ -46,7 +46,7 @@ const Components = {
   FlexCell: Flex.Cell,
   Icon,
   Image,
-  // Imageviewer,
+  ImageViewer,
   // InputNumber,
   Lath,
   LathHeader: Lath.Header,

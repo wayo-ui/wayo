@@ -1,5 +1,5 @@
 <template>
-  <div class="wayo-image" :style="`width:${size.width}px;`">
+  <div class="wayo-image" :style="`width:${this.fit?'inherit':size.width+'px'};`">
     <div class="wayo-image__box" 
       :class="{'wayo-image__box_border':border}"
       :style="styles">
@@ -80,6 +80,15 @@ export default {
     border: {
       type: Boolean,
       default: true
+    },
+    /**
+     * @prop 是否占满容器宽度
+     * @type {boolean}
+     * @default `false`
+     */
+    fit: {
+      type: Boolean,
+      default: false
     }
   },
   data(){
@@ -96,11 +105,14 @@ export default {
       };
     },
     styles(){
-      const List = [
-        `width:${this.size.width}px;`,
-        `height:${this.size.height}px;`,
-        `line-height:${this.size.height-2}px;`
-      ];
+      const List = [];
+      if(!this.fit){
+        List.push(`width:${this.size.width}px;`);
+        List.push(`height:${this.size.height}px;`);
+        List.push(`line-height:${this.size.height-2}px;`);
+      }else{
+        List.push('width: inherit;');
+      }
       this.placeholder&&List.push(`background-image: url(${this.placeholder})`);
       return List.join('');
     }

@@ -34,6 +34,7 @@
       <nav class="panel">
         <ul class="sublist">
           <li class="subitem"><router-link to="/showcase">Showcase-橱窗</router-link></li>
+          <li class="subitem"><router-link to="/imageviewer">Imageviewer-图片浏览</router-link></li>
         </ul>
       </nav>
     </li>
