@@ -4,7 +4,7 @@ import <%=UpperName%> from '../../src/components/<%=name%>';
 
 const LocalVue = createLocalVue();
 
-const Wrapper = shallow(Button, {
+const Wrapper = shallow(<%=UpperName%>, {
   localVue: LocalVue
 });
 

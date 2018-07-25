@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@constants';
-import WayoSlides from '@components/slides';
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
+import WayoSlides from '@/components/slides';
 
 export default {
   name: `${APPNAME}ImageViewer`,

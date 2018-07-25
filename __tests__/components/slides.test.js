@@ -4,7 +4,7 @@ import Slides from '../../src/components/slides';
 
 const LocalVue = createLocalVue();
 
-const Wrapper = shallow(Button, {
+const Wrapper = shallow(Slides, {
   localVue: LocalVue
 });
 

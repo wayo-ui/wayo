@@ -6,8 +6,10 @@
 </template>
 
 <script>
-import WayoSeparator from '@components/separator';
-
+import WayoSeparator from '@/components/separator';
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}CardHeader`,
   components: {

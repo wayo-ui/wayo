@@ -23,7 +23,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.config.dev.js",
     "build": "./node_modules/.bin/webpack --config ./build/webpack.config.prod.js",
     "build-example": "./node_modules/.bin/webpack --config ./build/webpack.config.example.js",
-    "test": "./node_modules/.bin/jest --coverage --config ./jest.config.json",
+    "test": "./node_modules/.bin/jest --config ./jest.config.json",
     "lint": "",
     "prepublish": "",
     "publish": "",
@@ -37,6 +37,8 @@
     "vue": "^2.5.16"
   },
   "devDependencies": {
+    "@vue/server-test-utils": "^1.0.0-beta.21",
+    "@vue/test-utils": "^1.0.0-beta.21",
     "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^23.2.0",
@@ -76,6 +78,7 @@
     "vue-jest": "^2.6.0",
     "vue-loader": "^15.2.4",
     "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "vue-test-utils": "^1.0.0-beta.11",

@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}CardContent`
 }

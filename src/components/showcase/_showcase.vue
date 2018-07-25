@@ -1,5 +1,5 @@
 <script>
-import {REG_COLOR_HEX,REG_COLOR_RGBA,REG_IMAGE_URL} from '@constants';
+import {REG_COLOR_HEX,REG_COLOR_RGBA,REG_IMAGE_URL} from '@/constants';
 import ShowcaseBar from './_showcase-bar.vue';
 
 const MAX_NAV_HEIGHT = 160;

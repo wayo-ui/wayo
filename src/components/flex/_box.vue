@@ -8,7 +8,9 @@ const AVAILABLE_JUSTIFY_AND_ALIGN = [
   'space-around',
   'space-evenly'
 ];
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}FlexBox`,
   props: {
@@ -80,6 +82,10 @@ export default {
     }
   },
   computed: {
+    /**
+     * @computed classname
+     * @type {string}
+     */
     classes(){
       const List = [
         'wayo-flex-box',
@@ -90,6 +96,10 @@ export default {
       this.wrap&&List.push('wayo-flex-box_wrap');
       return List.join(' ');
     },
+    /**
+     * @computed styles
+     * @type {string}
+     */
     styles(){
       const List = [`height:${isNaN(this.height)?this.height:this.height+'px'};`];
       if(this.gutter>0){
@@ -112,9 +122,15 @@ export default {
     }
   },
   render(h){
+    const Attributes= {
+      attrs: this.$attrs,
+      on: this.$listeners
+    };
+
     return <div 
         class={this.classes}
-        style={this.styles}>
+        style={this.styles}
+        {...Attributes}>
         {this.$slots.default}
     </div>;
   }

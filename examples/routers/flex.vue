@@ -52,6 +52,18 @@
       span: 3
     </wayo-flex-cell>
   </wayo-flex-box>
+  <h4>列间距</h4>
+  <wayo-flex-box :gutter="20" justify="center">
+    <wayo-flex-cell :span="3" class="cell">
+      span: 3
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="3" class="cell">
+      span: 3
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="3" class="cell">
+      span: 3
+    </wayo-flex-cell>
+  </wayo-flex-box>
   <h4>列偏移</h4>
   <wayo-flex-box class="box">
     <wayo-flex-cell :span="6" :offset="4" class="cell">

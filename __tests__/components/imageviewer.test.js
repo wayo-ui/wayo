@@ -1,10 +1,10 @@
 import 'babel-polyfill';
 import { shallow,createLocalVue } from 'vue-test-utils';
-import Imagepreviewer from '../../src/components/imagepreviewer';
+import ImageViewer from '../../src/components/imageviewer';
 
 const LocalVue = createLocalVue();
 
-const Wrapper = shallow(Button, {
+const Wrapper = shallow(ImageViewer, {
   localVue: LocalVue
 });
 

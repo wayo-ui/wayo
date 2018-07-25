@@ -384,8 +384,13 @@ export default {
         {Wrapper}
       </div>
     );
+    
+    const Attributes= {
+      attrs: this.$attrs,
+      on: this.$listeners
+    };
 
-    return <div class="wayo-slides">
+    return <div class="wayo-slides" {...Attributes}>
       {[Indicators,SlideItems]}
     </div>;
   },

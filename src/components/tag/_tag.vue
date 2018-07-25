@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@constants';
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
 
 const Types = [
   'default',

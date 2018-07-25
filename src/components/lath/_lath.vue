@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import WayoSeparator from '@components/separator';
-import WayoIcon from '@components/icon';
+import WayoSeparator from '@/components/separator';
+import WayoIcon from '@/components/icon';
 
 export default {
   name: `${APPNAME}Lath`,

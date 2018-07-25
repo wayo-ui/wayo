@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnapShot Cases loading&icon 1`] = `
+<button class="wayo-button wayo-button-primary wayo-button_size_default wayo-button_loading">
+  <svg width="42px" height="42px" transform="scale(0.4)" class="wayo-button__loading-icon">
+    <circle cx="21" cy="21" r="20" fill="none" stroke-width="2" stroke="#ffffff" class="wayo-button__loading-path"></circle>
+  </svg> wayo</button>
+`;
+
+exports[`SnapShot Cases non loading & icon 1`] = `
+<button class="wayo-button wayo-button-primary wayo-button_size_default">
+  <i class="wayo-button__icon wayo-icon wayo-icon-bus"></i> wayo</button>
+`;
+
+exports[`SnapShot Cases non loading & non icon 1`] = `
+<button class="wayo-button wayo-button-primary wayo-button_size_default">
+  <!---->wayo</button>
+`;

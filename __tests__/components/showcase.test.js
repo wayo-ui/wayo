@@ -4,7 +4,7 @@ import Showcase from '../../src/components/showcase';
 
 const LocalVue = createLocalVue();
 
-const Wrapper = shallow(Button, {
+const Wrapper = shallow(Showcase, {
   localVue: LocalVue
 });
 

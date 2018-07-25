@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@constants';
-import WayoIcon from '@components/icon';
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
+import WayoIcon from '@/components/icon';
 
 /**
  * @vue
@@ -138,6 +138,10 @@ export default {
     }
   },
   computed: {
+    /**
+     * @computed classname
+     * @type {string}
+     */
     classes(){
       const List = [
         'wayo-button',
@@ -152,6 +156,10 @@ export default {
       this.circle&&!this.$slots.default&&List.push('wayo-button_circle');
       return List.join(' ');
     },
+    /**
+     * @computed 自定义样式
+     * @type {string}
+     */
     styles(){
       const List = [];
       this.bgColor&List.push(`background-color: ${this.bgColor};`);
@@ -159,6 +167,10 @@ export default {
       this.borderColor&List.push(`border: solid 1px ${this.borderColor};`);
       return List.join('');
     },
+    /**
+     * @computed 加载icon缩放比
+     * @type {number}
+     */
     loadingPathScale(){
       switch(this.size){
         case 'default': 
@@ -169,6 +181,10 @@ export default {
           return 0.3;
       }
     },
+    /**
+     * @computed 加载icon颜色
+     * @type {string}
+     */
     loadingPathColor(){
       if(this.fontColor){
         return this.fontColor;

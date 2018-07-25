@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import WayoIcon from '@components/icon';
+import WayoIcon from '@/components/icon';
 
 export default {
   name: `${APPNAME}Rate`,

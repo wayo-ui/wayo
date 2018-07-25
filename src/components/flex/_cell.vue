@@ -13,7 +13,9 @@ const MARGINTYPE = {
   'column': 'margin-top',
   'column-reverse': 'margin-bottom'
 };
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}FlexCell`,
   props: {
@@ -48,6 +50,10 @@ export default {
     };
   },
   computed: {
+    /**
+     * @computed styles
+     * @type {string}
+     */
     styles(){
       const Styles = [];
 
@@ -69,11 +75,11 @@ export default {
 
       if(this.padding>0){
         if(/row/.test(this.$parent.direction)){
-          Styles.push(`padding-left:${this.padding}px;`);
-          Styles.push(`padding-right:${this.padding}px;`);
+          Styles.push(`margin-left:${this.padding}px;`);
+          Styles.push(`margin-right:${this.padding}px;`);
         }else{
-          Styles.push(`padding-top:${this.padding}px;`);
-          Styles.push(`padding-bottom:${this.padding}px;`);
+          Styles.push(`margin-top:${this.padding}px;`);
+          Styles.push(`margin-bottom:${this.padding}px;`);
         }
       }
       

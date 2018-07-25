@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnapShot Cases image 1`] = `
+<div class="wayo-image" style="width: 70px;">
+  <div class="wayo-image__box wayo-image__box_border" style="width: 70px; height: 70px; line-height: 68px;">
+    <img src="" class="wayo-image__img" style="display: none;">
+    <!---->
+  </div>
+  <!---->
+</div>
+`;

@@ -2,7 +2,7 @@
 <script>
 import Bar from './_tab-bar.vue';
 import Pointer from './_tab-nav-pointer.vue';
-import Separator from '@components/separator';
+import Separator from '@/components/separator';
 
 export default {
   name: `${APPNAME}Tabs`,
@@ -210,7 +210,11 @@ export default {
       </div>
     );
 
-    return <div class="wayo-tab">
+    const Attributes= {
+      attrs: this.$attrs,
+      on: this.$listeners
+    };
+    return <div class="wayo-tab" {...Attributes}>
       {this.borderTop&&<Separator class="wayo-tab__separator-top" absolute></Separator>}
       {[Nav,Panels]}
       {this.borderBottom&&<Separator class="wayo-tab__separator-bottom" absolute></Separator>}

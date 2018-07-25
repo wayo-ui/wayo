@@ -1,5 +1,7 @@
 <template>
-  <div class="wayo-image" :style="`width:${this.fit?'inherit':size.width+'px'};`">
+  <div class="wayo-image" 
+    :style="`width:${this.fit?'inherit':size.width+'px'};`"
+    v-on="$listeners">
     <div class="wayo-image__box" 
       :class="{'wayo-image__box_border':border}"
       :style="styles">
@@ -15,6 +17,9 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Image`,
   props: {
@@ -98,12 +103,20 @@ export default {
     };
   },
   computed: {
+    /**
+     * @computed 尺寸
+     * @type {Object}
+     */
     size(){
       return {
         width: this.width,
         height: this.height||this.width
       };
     },
+    /**
+     * @computed styles
+     * @type {string}
+     */
     styles(){
       const List = [];
       if(!this.fit){
@@ -113,7 +126,7 @@ export default {
       }else{
         List.push('width: inherit;');
       }
-      this.placeholder&&List.push(`background-image: url(${this.placeholder})`);
+      this.placeholder&&List.push(`background-image: url(${this.placeholder});`);
       return List.join('');
     }
   },
@@ -126,6 +139,9 @@ export default {
     this.loadImage();
   },
   methods: {
+    /**
+     * @method loadImage 加载图片
+     */
     loadImage(){
       this.loaded = false;
       const TmpImage = new Image();

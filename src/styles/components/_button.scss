@@ -1,6 +1,6 @@
 /* blocks */
 .wayo-button{
-  font-size: 1em;
+  font-size: $font-size-common;
   display: inline-block;
   color: $color-white;
   box-sizing: border-box;
@@ -112,24 +112,24 @@
 .wayo-button_size{
   &_default{
     padding: 5px 15px;
-    font-size: 13px;
+    font-size: $font-size-middle;
     min-height: 30px;
   }
   &_large{
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: $font-size-large;
   }
   &_small{
     min-height: 25px;
     padding: 0 5px;
-    font-size: 12px;
+    font-size: $font-size-small;
     line-height: 1;
   }
   &_fit{
     width: 100%;
     padding: 10px 20px;
     line-height: 1;
-    font-size: 13px;
+    font-size: $font-size-large;
   }
 }
 

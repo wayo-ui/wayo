@@ -22,7 +22,7 @@
 .wayo-stripe_size{
   &_default{
     .wayo-stripe-button{
-      font-size: 13px;
+      font-size: $font-size-middle;
       padding: 0 15px;
       height: 25px;
       line-height: 25px;
@@ -30,7 +30,7 @@
   }
   &_small{
     .wayo-stripe-button{
-      font-size: 11px;
+      font-size: $font-size-mini;
       padding: 0 10px;
       height: 20px;
       line-height: 20px;
@@ -38,7 +38,7 @@
   }
   &_large{
     .wayo-stripe-button{
-      font-size: 15px;
+      font-size: $font-size-large;
       padding: 0 20px;
       height: 30px;
       line-height: 30px;

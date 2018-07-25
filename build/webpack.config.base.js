@@ -71,9 +71,7 @@ module.exports = {
     extensions: ['.js', '.vue'],
     alias: {
       '@': Config.SourceDir,
-      '@constants': `${Config.SourceDir}/constants`,
       '@styles': `${Config.SourceDir}/styles`,
-      '@components': `${Config.SourceDir}/components`,
       '@utils': `${Config.SourceDir}/utils`,
       '@mixins': `${Config.SourceDir}/mixins`,
       '@locale': `${Config.SourceDir}/locale`,
