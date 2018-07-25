@@ -57,7 +57,12 @@ export default {
     styles(){
       const Styles = [];
 
-      const Basis = `${(this.span/MAX_SPAN*100)}%`;
+      const Basis = this.padding<=0?`${(this.span/MAX_SPAN*100)}%`:(() => {
+        if(this.$parent.width===0){
+          this.$parent.calWidth();
+        }
+        return `${(this.span/MAX_SPAN*this.$parent.availableWidth).toFixed(2)-0.01}px`;
+      })();
       Styles.push(`-webkit-flex-basis:${Basis};`);
       Styles.push(`-moz-flex-basis:${Basis};`);
       Styles.push(`-ms-flex-basis:${Basis};`);

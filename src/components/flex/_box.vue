@@ -81,6 +81,13 @@ export default {
       }
     }
   },
+  data(){
+    return {
+      width: 0,
+      childrenCount: 0,
+      availableWidth: 0
+    };
+  },
   computed: {
     /**
      * @computed classname
@@ -116,12 +123,25 @@ export default {
   },
   mounted() {
     if(this.gutter>0){
+      this.calWidth();
       this.$children.forEach(el=>{
         el.padding = this.gutter/2;
       });
     }
   },
+  methods: {
+    calWidth(){
+      this.width = this.$el.clientWidth;
+      this.availableWidth = this.width-(this.childrenCount-1)*this.gutter;
+    }
+  },
   render(h){
+    const VNodes = this.$slots&&this.$slots.default&&this.$slots.default.filter(item => {
+      return /^vue\-component\-\d+\-WayoFlexCell$/.test(item.tag);
+    });
+
+    this.childrenCount = VNodes.length;
+
     const Attributes= {
       attrs: this.$attrs,
       on: this.$listeners
@@ -131,7 +151,7 @@ export default {
         class={this.classes}
         style={this.styles}
         {...Attributes}>
-        {this.$slots.default}
+        {VNodes}
     </div>;
   }
 };

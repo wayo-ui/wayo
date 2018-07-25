@@ -15,22 +15,35 @@ module.exports = Merge(BasicWebpackConfig,{
   output: {
     path: Config.DistDir,
     filename: '[name].min.js',
-    publicPath: '/',
+    publicPath: './',
     library: 'WAYO',
     libraryTarget: 'umd',
     umdNamedDefine: true
+  },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
   module: {
     rules: [{
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader','sass-loader']
+        use: [{
+          loader: 'css-loader',
+          options: {
+            minimize: true
+          }
+        },'sass-loader']
       })
     }]
   },
   plugins: [
-    new Webpack.BannerPlugin(`WAYO version ${Config.version}`),
+    new Webpack.BannerPlugin(`WAYO version ${Config.Version}`),
     new CleanWebpackPlugin(Config.DistDir,{
       root: Config.RootDir
     }),
