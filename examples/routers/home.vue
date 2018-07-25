@@ -14,7 +14,7 @@
         <ul class="sublist">
           <li class="subitem"><router-link to="/button">Button-按钮</router-link></li>
           <li class="subitem"><router-link to="/icon">Icons-矢量图标</router-link></li>
-          <li class="subitem"><router-link to="/segment">Segment-分割按钮</router-link></li>
+          <li class="subitem"><router-link to="/stripe">stripe-条纹按钮</router-link></li>
           <li class="subitem"><router-link to="/image">Image-图片</router-link></li>
           <li class="subitem"><router-link to="/tag">Tag-标签</router-link></li>
           <li class="subitem"><router-link to="/rate">Rate-评分</router-link></li>

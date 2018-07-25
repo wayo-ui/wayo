@@ -89,6 +89,9 @@ $font-family: "WayoIcons";
 .wayo-icon-share::before{
   content: "\e90c";
 }
+.wayo-icon-share-fill::before{
+  content: "\ea82";
+}
 .wayo-icon-star-stroke::before{
   content: "\e90d";
 }
@@ -130,4 +133,58 @@ $font-family: "WayoIcons";
 }
 .wayo-icon-subway::before{
   content: "\e91f";
+}
+.wayo-icon-camera::before{
+  content: "\e923";
+}
+.wayo-icon-mic::before{
+  content: "\e924";
+}
+.wayo-icon-compass-left::before{
+  content: "\e949";
+}
+.wayo-icon-compass-right::before{
+  content: "\e94a";
+}
+.wayo-icon-compass-circle::before{
+  content: "\e94b";
+}
+.wayo-icon-map-fill::before{
+  content: "\e94c";
+}
+.wayo-icon-map::before{
+  content: "\e94d";
+}
+.wayo-icon-loading{
+  @include animation(rotating 2s linear infinite);
+  &::before{
+    content: "\e97c";
+  }
+}
+.wayo-icon-search::before{
+  content: "\e986";
+}
+.wayo-icon-gift::before{
+  content: "\e99f";
+}
+.wayo-icon-sphere::before{
+  content: "\e9c9";
+}
+.wayo-icon-earth::before{
+  content: "\e9ca";
+}
+.wayo-icon-plus::before{
+  content: "\ea0a";
+}
+.wayo-icon-minus::before{
+  content: "\ea9b";
+}
+.wayo-icon-close-circle::before{
+  content: "\ea0d";
+}
+.wayo-icon-close::before{
+  content: "\ea0f";
+}
+.wayo-icon-checkmark::before{
+  content: "\ea10";
 }

@@ -70,6 +70,10 @@
       <label class="cell__label">icon-share</label>
     </wayo-flex-cell>
     <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="share-fill"/>
+      <label class="cell__label">icon-share-fill</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="star-stroke"/>
       <label class="cell__label">icon-star-stroke</label>
     </wayo-flex-cell>
@@ -112,6 +116,86 @@
     <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="meeting"/>
       <label class="cell__label">icon-meeting</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="smile"/>
+      <label class="cell__label">icon-smile</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="cry"/>
+      <label class="cell__label">icon-cry</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="subway"/>
+      <label class="cell__label">icon-subway</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="camera"/>
+      <label class="cell__label">icon-camera</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="mic"/>
+      <label class="cell__label">icon-mic</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="compass-left"/>
+      <label class="cell__label">icon-compass-left</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="compass-right"/>
+      <label class="cell__label">icon-compass-right</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="compass-circle"/>
+      <label class="cell__label">icon-compass-circle</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="map-fill"/>
+      <label class="cell__label">icon-map-fill</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="map"/>
+      <label class="cell__label">icon-map</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="loading"/>
+      <label class="cell__label">icon-loading</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="search"/>
+      <label class="cell__label">icon-search</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="gift"/>
+      <label class="cell__label">icon-gift</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="sphere"/>
+      <label class="cell__label">icon-sphere</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="earth"/>
+      <label class="cell__label">icon-earth</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="plus"/>
+      <label class="cell__label">icon-plus</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="minus"/>
+      <label class="cell__label">icon-minus</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="close-circle"/>
+      <label class="cell__label">icon-close-circle</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="close"/>
+      <label class="cell__label">icon-close</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="checkmark"/>
+      <label class="cell__label">icon-checkmark</label>
     </wayo-flex-cell>
   </wayo-flex-box>
 </section>

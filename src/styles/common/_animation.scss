@@ -1,0 +1,119 @@
+@import './_mixins.scss';
+
+@-webkit-keyframes rotating{
+  0%{
+    @include transform(rotate(0));
+  }
+  50%{
+    @include transform(rotate(180deg));
+  }
+  100%{
+    @include transform(rotate(360deg));
+  }
+}
+@-moz-keyframes rotating{
+  0%{
+    @include transform(rotate(0));
+  }
+  50%{
+    @include transform(rotate(180deg));
+  }
+  100%{
+    @include transform(rotate(360deg));
+  }
+}
+@-o-keyframes rotating{
+  0%{
+    @include transform(rotate(0));
+  }
+  50%{
+    @include transform(rotate(180deg));
+  }
+  100%{
+    @include transform(rotate(360deg));
+  }
+}
+@keyframes rotating{
+  0%{
+    @include transform(rotate(0));
+  }
+  50%{
+    @include transform(rotate(180deg));
+  }
+  100%{
+    @include transform(rotate(360deg));
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 32;
+    stroke-dasharray: 2,60;
+  }
+  33% {
+    stroke-dashoffset: -92;
+    stroke-dasharray: 2,60;
+  }
+  66% {
+    stroke-dashoffset: -154;
+    stroke-dasharray: 42,20;
+  }
+  100% {
+    stroke-dasharray: 2,60;
+    stroke-dashoffset: -278;
+  }
+}
+@-moz-keyframes dash {
+  0% {
+    stroke-dashoffset: 32;
+    stroke-dasharray: 2,60;
+  }
+  33% {
+    stroke-dashoffset: -92;
+    stroke-dasharray: 2,60;
+  }
+  66% {
+    stroke-dashoffset: -154;
+    stroke-dasharray: 42,20;
+  }
+  100% {
+    stroke-dasharray: 2,60;
+    stroke-dashoffset: -278;
+  }
+}
+@-o-keyframes dash {
+  0% {
+    stroke-dashoffset: 32;
+    stroke-dasharray: 2,60;
+  }
+  33% {
+    stroke-dashoffset: -92;
+    stroke-dasharray: 2,60;
+  }
+  66% {
+    stroke-dashoffset: -154;
+    stroke-dasharray: 42,20;
+  }
+  100% {
+    stroke-dasharray: 2,60;
+    stroke-dashoffset: -278;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 32;
+    stroke-dasharray: 2,60;
+  }
+  33% {
+    stroke-dashoffset: -92;
+    stroke-dasharray: 2,60;
+  }
+  66% {
+    stroke-dashoffset: -154;
+    stroke-dasharray: 42,20;
+  }
+  100% {
+    stroke-dasharray: 2,60;
+    stroke-dashoffset: -278;
+  }
+}

@@ -18,7 +18,7 @@ import Lath from './components/lath';
 // import Loading from './components/loading';
 // import PullRefresh from './components/pull-refresh';
 import Rate from './components/rate';
-import Segment from './components/segment';
+import Stripe from './components/stripe';
 import Separator from './components/separator';
 import Showcase from './components/showcase';
 import Slides from './components/slides';
@@ -57,8 +57,8 @@ const Components = {
   // Loading,
   // PullRefresh,
   Rate,
-  Segment,
-  SegmentButton: Segment.Button,
+  Stripe,
+  StripeButton: Stripe.Button,
   Separator,
   Showcase,
   ShowcaseItem: Showcase.Item,

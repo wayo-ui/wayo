@@ -1,38 +1,49 @@
 <template>
   <button :class="classes" :style="styles" v-on="$listeners">
-    <wayo-icon v-if="icon" :name="icon"/>
+    <svg v-if="loading" width="42px" height="42px" 
+      class="wayo-button__loading-icon"
+      :transform="`scale(${loadingPathScale})`">
+      <circle class="wayo-button__loading-path" cx="21" cy="21" r="20" 
+        fill="none" stroke-width="2"
+        :stroke="loadingPathColor"></circle>
+    </svg>
+    <wayo-icon v-else-if="icon" :name="icon" class="wayo-button__icon"/>
     <slot></slot>
   </button>
 </template>
 
 <script>
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@constants';
 import WayoIcon from '@components/icon';
 
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Button`,
   props: {
     /**
      * @prop 类型
      * @type {string}
-     * @default default
+     * @default `primary`
      */
     type: {
       type: String,
-      default: 'default',
+      default: 'primary',
       validator: val => {
-        return ['default','primary','info','success','warning','danger'].indexOf(val)!==-1;
+        return ['primary','info','success','warning','danger'].indexOf(val)!==-1;
       }
     },
     /**
      * @prop 尺寸
      * @type {string}
-     * @default normal
+     * @default `default`
      */
     size: {
       type: String,
-      default: 'normal',
+      default: 'default',
       validator: val => {
-        return ['normal','large','small','mini','fit'].indexOf(val)!==-1;
+        return ['default','large','small','fit'].indexOf(val)!==-1;
       }
     },
     /**
@@ -50,6 +61,24 @@ export default {
      * @default false
      */
     loading: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * @prop 镂空按钮
+     * @type {boolean}
+     * @default `false`
+     */
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * @prop 圆边按钮
+     * @type {boolean}
+     * @default false
+     */
+    round: {
       type: Boolean,
       default: false
     },
@@ -78,7 +107,10 @@ export default {
      */
     bgColor: {
       type: [String,undefined],
-      default: undefined
+      default: undefined,
+      validator: val => {
+        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     },
     /**
      * @prop 字体颜色
@@ -87,7 +119,10 @@ export default {
      */
     fontColor: {
       type: [String,undefined],
-      default: undefined
+      default: undefined,
+      validator: val => {
+        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     },
     /**
      * @prop border颜色
@@ -96,7 +131,10 @@ export default {
      */
     borderColor: {
       type: [String,undefined],
-      default: undefined
+      default: undefined,
+      validator: val => {
+        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     }
   },
   computed: {
@@ -106,7 +144,11 @@ export default {
         `wayo-button-${this.type}`,
         `wayo-button_size_${this.size}`,
       ];
+      this.plain&&List.push('wayo-button_plain');
+      // fit尺寸不支持loading
+      this.loading&&this.size!=='fit'&&List.push('wayo-button_loading');
       this.disabled&&List.push('wayo-button_disabled');
+      this.round&&List.push('wayo-button_round');
       this.circle&&!this.$slots.default&&List.push('wayo-button_circle');
       return List.join(' ');
     },
@@ -114,8 +156,38 @@ export default {
       const List = [];
       this.bgColor&List.push(`background-color: ${this.bgColor};`);
       this.fontColor&List.push(`color: ${this.fontColor};`);
-      this.borderColor&List.push(`border-color: ${this.borderColor};`);
+      this.borderColor&List.push(`border: solid 1px ${this.borderColor};`);
       return List.join('');
+    },
+    loadingPathScale(){
+      switch(this.size){
+        case 'default': 
+          return 0.4;
+        case 'large': 
+          return 0.5;
+        case 'small': 
+          return 0.3;
+      }
+    },
+    loadingPathColor(){
+      if(this.fontColor){
+        return this.fontColor;
+      }
+      if(!this.plain){
+        return '#ffffff';
+      }
+      switch(this.type){
+        case 'primary':
+          return '#ed5026';
+        case 'info':
+          return '#067ffa';
+        case 'warning':
+          return '#f39800';
+        case 'danger':
+          return '#ff0000';
+        case 'success':
+          return '#67c23a';
+      }
     }
   },
   components: {

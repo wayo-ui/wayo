@@ -21,9 +21,9 @@ const Router = new VueRouter({
     name: 'icon',
     component: () => import('./routers/icon.vue')
   },{
-    path: '/segment',
-    name: 'segment',
-    component: () => import('./routers/segment.vue')
+    path: '/stripe',
+    name: 'stripe',
+    component: () => import('./routers/stripe.vue')
   },{
     path: '/image',
     name: 'image',

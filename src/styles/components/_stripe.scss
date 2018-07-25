@@ -1,0 +1,79 @@
+.wayo-stripe{
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+
+  &_disabled{
+    .wayo-stripe-button{
+      &_stroke{
+        border-color: $color-soft-grey;
+        color: $color-soft-grey;
+      }
+      &_fill{
+        background-color: $color-soft-grey;
+      }
+    }
+  }
+}
+
+.wayo-stripe_size{
+  &_default{
+    .wayo-stripe-button{
+      font-size: 13px;
+      padding: 0 15px;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+  &_small{
+    .wayo-stripe-button{
+      font-size: 11px;
+      padding: 0 10px;
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+  &_large{
+    .wayo-stripe-button{
+      font-size: 15px;
+      padding: 0 20px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+.wayo-stripe-button{
+  @extend .wayo-button;
+  display: block;
+  @include border-radius(0px);
+  &:first-child{
+    border-bottom: none;
+    @include border-radius(4px 4px 0 0);
+  }
+  &:last-child{
+    border-top: none;
+    @include border-radius(0 0 4px 4px);
+  }
+  &_stroke{
+    background-color: $color-white;
+    border: solid 1px $color-tomato;
+    color: $color-tomato;
+  }
+  &_fill{
+    @extend .wayo-button-primary;
+  }
+}
+
+.wayo-stripe-button__icon{
+  margin-right: -3px;
+}
+.wayo-stripe-button__txt{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
