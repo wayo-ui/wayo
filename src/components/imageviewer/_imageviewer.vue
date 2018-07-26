@@ -2,6 +2,7 @@
 <div class="wayo-imageviewer">
   <div class="wayo-imageviewer__mask" :style="maskStyle" @click.self="onClose"></div>
   <wayo-slides 
+    v-if="value.length>0"
     class="wayo-imageviewer__slides"
     loop
     indicator-type="none"
@@ -18,7 +19,9 @@
 <script>
 import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
 import WayoSlides from '@/components/slides';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}ImageViewer`,
   props: {

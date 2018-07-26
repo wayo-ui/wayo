@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `<div class="wayo-flex-box wayo-flex-box_direction_row wayo-flex-box_justify_start wayo-flex-box_align_unset" style="height: inherit; margin-left: -10px; margin-right: -10px;"></div>`;
+exports[` 1`] = `
+<div class="wayo-flex-box wayo-flex-box_direction_row wayo-flex-box_justify_start wayo-flex-box_align_unset" style="height: inherit; margin-left: -10px; margin-right: -10px;">
+  <div class="wayo-flex-cell"></div>
+</div>
+`;
 
 exports[` 2`] = `<div class="wayo-flex-cell"></div>`;

@@ -6,7 +6,10 @@ const LocalVue = createLocalVue();
 
 describe('Box', ()=>{
   const Wrapper = shallowMount(Flex.Box, {
-    localVue: LocalVue
+    localVue: LocalVue,
+    slots: {
+      default: [Flex.Cell]
+    }
   });
 
   test('classes', () =>{
@@ -46,6 +49,9 @@ describe('SnapShot Box', ()=>{
     localVue: LocalVue,
     propsData: {
       gutter: 20
+    },
+    slots: {
+      default: [Flex.Cell]
     }
   });
   expect(Wrapper).toMatchSnapshot();

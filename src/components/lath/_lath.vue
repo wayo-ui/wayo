@@ -6,7 +6,7 @@
     'wayo-lath_content_header':hasHeader&hasContent,
     'wayo-lath_inline':inline
   }"
-  :style="extraStyles">
+  :style="styles">
   <wayo-separator v-if="borderTop" absolute class="wayo-lath__separator-top"></wayo-separator>
   <wayo-icon class="wayo-lath__icon-head" v-if="icon"
     :name="icon" 
@@ -20,7 +20,9 @@
 <script>
 import WayoSeparator from '@/components/separator';
 import WayoIcon from '@/components/icon';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Lath`,
   props: {
@@ -84,13 +86,20 @@ export default {
   },
   data(){
     return {
+      // 尾部信息，供tail子组件修改
       tail: {},
+      // 是否含有header子组件，供header子组件修改
       hasHeader: false,
+      // 是否含有content子组件，供content子组件修改
       hasContent: false
     };
   },
   computed: {
-    extraStyles(){
+    /**
+     * @computed styles
+     * @type {string}
+     */
+    styles(){
       const Styles = [];
       let padding_right = 15;
       this.tail.icon&&(padding_right+=20);
