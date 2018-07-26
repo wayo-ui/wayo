@@ -64,9 +64,9 @@
   <h4>无动画</h4>
   <wayo-card>
     <wayo-slides animation="none">
-      <wayo-slide class="slides__item slides__item-1" @click="onAlert(1)">1</wayo-slide>
-      <wayo-slide class="slides__item slides__item-2" @click="onAlert(2)">2</wayo-slide>
-      <wayo-slide class="slides__item slides__item-3" @click="onAlert(3)">3</wayo-slide>
+      <wayo-slide class="slides__item slides__item-1">1</wayo-slide>
+      <wayo-slide class="slides__item slides__item-2">2</wayo-slide>
+      <wayo-slide class="slides__item slides__item-3">3</wayo-slide>
     </wayo-slides>
   </wayo-card>
   <wayo-card>
@@ -89,9 +89,7 @@
 <script>
 export default {
   methods: {
-    onAlert(msg){
-      alert(msg)
-    }
+    
   }
 };
 </script>

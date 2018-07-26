@@ -19,7 +19,7 @@
     </wayo-tab>
   </wayo-tabs>
   <h4>segment风格</h4>
-  <wayo-tabs segment align="center">
+  <wayo-tabs stripe align="center">
     <wayo-tab label="标签1" name="default_1">
       内容1
     </wayo-tab>
@@ -60,7 +60,6 @@
       内容8
     </wayo-tab>
   </wayo-tabs>
-  <h4>滑动切换</h4>
 </section>
 </template>
 

@@ -1,4 +1,7 @@
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Tab`,
   props: {

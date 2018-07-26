@@ -1,7 +1,7 @@
 <template>
 <div class="wayo-tab-bar" 
   :class="{
-    'wayo-tab-bar_segment':segment,
+    'wayo-tab-bar_stripe':stripe,
     'wayo-tab-bar_active':active
   }"
   @click="onClick"
@@ -15,7 +15,9 @@
 
 <script>
 import WayoIcon from '@/components/icon';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}TabBar`,
   props: {  
@@ -47,11 +49,11 @@ export default {
       required: true
     },
     /**
-     * @prop segment风格
+     * @prop stripe风格
      * @type {boolean}
      * @default `false`
      */
-    segment: {
+    stripe: {
       type: Boolean,
       default: false
     },
@@ -71,8 +73,8 @@ export default {
     }
   },
   mounted(){
-    // 非segment格式待渲染完毕之后获取自身offset和宽度，并同步到父组件
-    if(!this.segment){
+    // 非stripe格式待渲染完毕之后获取自身offset和宽度，并同步到父组件
+    if(!this.stripe){
       this.$nextTick().then(() => {
         this.$emit('update',this.name,{
           offset: this.$el.offsetLeft,

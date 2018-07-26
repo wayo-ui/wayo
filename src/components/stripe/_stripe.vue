@@ -1,6 +1,8 @@
 <script>
 import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Stripe`,
   props: {
@@ -18,14 +20,14 @@ export default {
     },
     /**
      * @prop 自定义颜色
-     * @type {string|undefined}
-     * @default `undefined`
+     * @type {string}
+     * @default ``
      */
     color: {
-      type: [String,undefined],
-      default: undefined,
+      type: String,
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
     },
     /**

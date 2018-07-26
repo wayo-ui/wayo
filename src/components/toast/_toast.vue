@@ -19,7 +19,9 @@
 
 <script>
 import WayoIcon from '@/components/icon';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Toast`,
   props: {

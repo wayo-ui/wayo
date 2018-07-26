@@ -350,7 +350,7 @@ export default {
       return <div class="wayo-slides__indicators">
         {VNodes.map((node,index)=>{
           return <Indicator
-            active={this.activeIndex===index}
+            active={this.activeIndex===index||(index===0&&this.activeIndex<=0)||(index===this.itemCount-1&&this.activeIndex>=this.itemCount)}
             index={index}
             type={type}></Indicator>;
         })}

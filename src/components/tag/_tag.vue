@@ -1,6 +1,5 @@
 <template>
-<div :class="classes"
-  :style="style">
+<div :class="classes" :style="style">
   <slot></slot>
 </div>
 </template>
@@ -8,21 +7,9 @@
 <script>
 import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
 
-const Types = [
-  'default',
-  'text'
-];
-const Sizes = [
-  'default',
-  'large',
-  'small'
-];
-const BORDER_RADIUS = {
-  default: 12,
-  large: 15,
-  small: 8
-};
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Tag`,
   props: {
@@ -35,7 +22,7 @@ export default {
       type: String,
       default: 'default',
       validator: val => {
-        return Types.indexOf(val) !== -1;
+        return ['default','primary','info','success','warning','danger'].indexOf(val) !== -1;
       }
     },
     /**
@@ -47,7 +34,7 @@ export default {
       type: String,
       default: 'default',
       validator: val => {
-        return Sizes.indexOf(val) !== -1;
+        return ['default','large','small','mini'].indexOf(val) !== -1;
       }
     },
     /**
@@ -69,24 +56,15 @@ export default {
       default: false
     },
     /**
-     * @prop 是否满宽
-     * @type {boolean}
-     * @default `false`
-     */
-    fit: {
-      type: Boolean,
-      default: false
-    },
-    /**
      * @prop 文案颜色
      * @type {string}
      * @default ``
      */
     textColor: {
       type: String,
-      default: '#5f5f5f',
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
     },
     /**
@@ -96,40 +74,60 @@ export default {
      */
     bgColor: {
       type: String,
-      default: '#f4f4f4',
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
+    },
+    /**
+     * @prop 自定义宽度
+     * @type {number}
+     * @default `0`
+     */
+    width: {
+      type: Number,
+      default: 0
+    },
+    /**
+     * @prop 自定义高度
+     * @type {number}
+     * @default `0`
+     */
+    height: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
     classes(){
       const List = [
         'wayo-tag',
-        `wayo-tag-${this.type}`,
+        `wayo-tag_type_${this.type}`,
         `wayo-tag_size_${this.size}`,
       ];
       this.round&&List.push('wayo-tag_round');
-      this.fit&&List.push('wayo-tag_fit');
       this.plain&&List.push('wayo-tag_plain');
       return List.join(' ');
     },
     style(){
       const Styles = [];
-      Styles.push(`color:${this.textColor};`);
-      if(!this.plain){
-        Styles.push(`background-color:${this.bgColor};`);
-      }else{
-        Styles.push(`border-color:${this.textColor};`);
+      if(this.textColor){
+        Styles.push(`color:${this.textColor};`);
+        this.plain&&Styles.push(`border-color:${this.textColor};`);
       }
-      
-      if(this.round){
-        const Radius = BORDER_RADIUS[this.size];
-        Styles.push(`
-        -webkit-border-radius:${Radius}px;
-        -moz-border-radius:${Radius}px;
-        -o-border-radius:${Radius}px;
-        border-radius:${Radius}px;`);
+      if(this.bgColor&&!this.plain){
+        Styles.push(`background-color:${this.bgColor};`);
+      }
+      if(this.width>0){
+        Styles.push(`width:${this.width}px;`);
+        Styles.push(`padding-left: 0;`);
+        Styles.push(`padding-right: 0;`);
+      }
+      if(this.height>0){
+        Styles.push(`height:${this.height}px;`);
+        Styles.push(`line-height:${this.height-2}px;`);
+        Styles.push(`padding-top: 0;`);
+        Styles.push(`padding-bottom: 0;`);
       }
       return Styles.join('');
     }

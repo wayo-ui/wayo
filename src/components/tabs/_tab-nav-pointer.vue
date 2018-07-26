@@ -3,6 +3,9 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}TabPointer`,
   props: {

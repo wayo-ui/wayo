@@ -3,16 +3,18 @@
 import Bar from './_tab-bar.vue';
 import Pointer from './_tab-nav-pointer.vue';
 import Separator from '@/components/separator';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Tabs`,
   props: {
     /**
-     * @prop segment风格标签
+     * @prop stripe风格标签
      * @type {boolean}
      * @default `false`
      */
-    segment: {
+    stripe: {
       type: Boolean,
       default: false
     },
@@ -180,13 +182,13 @@ export default {
       <div ref="nav" class={{
         'wayo-tab__nav': true,
         'wayo-tab__nav_flex': this.flex,
-        'wayo-tab__nav_segment': this.segment
+        'wayo-tab__nav_stripe': this.stripe
       }}
       style={{
         'text-align': this.align,
         'margin-left': `-${this.navTransform}px`
       }}>
-        {!this.segment&&<Pointer
+        {!this.stripe&&<Pointer
           offset={this.bars[this.current]&&this.bars[this.current].offset}
           width={this.bars[this.current]&&this.bars[this.current].width}></Pointer>}
         {this.barOptsList.map((bar,index) => {
@@ -195,12 +197,12 @@ export default {
             icon={bar.icon} 
             label={bar.label} 
             name={bar.name} 
-            segment={this.segment}
+            stripe={this.stripe}
             active={this.current===bar.name}
             onClicked={this.onBarCilcked}
             onUpdate={this.onUpdateBar}></Bar>;
         })}
-        {!this.segment&&<Separator class="wayo-tab__separator-nav" absolute></Separator>}
+        {!this.stripe&&<Separator class="wayo-tab__separator-nav" absolute></Separator>}
       </div>
     );
     // 内容面板

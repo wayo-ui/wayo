@@ -129,11 +129,12 @@ export default {
     });
   },
   render(h){
-    if(this.count === 0){
+    if(!this.$slots||!this.$slots.default&&!this.$slots.default.length === 0){
       return <div class="wayo-showcase"></div>;
     }
-    
-    this.calNavSize(this.barsOptsList[0].thumb);
+    if(this.count !== 0){
+      this.calNavSize(this.barsOptsList[0].thumb);
+    }
 
     // 操作区
     const Nav = (

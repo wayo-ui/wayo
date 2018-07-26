@@ -20,9 +20,6 @@
   position: relative;
   white-space: nowrap;
   transition: all 0.1s ease-in-out;
-  // &_segment{
-  //   text-align: center;
-  // }
   &-pointer{
     position: absolute;
     height: 2px;
@@ -56,7 +53,7 @@
     display: inline-block;
     vertical-align: middle;
   }
-  &_segment{
+  &_stripe{
     color: $color-tomato;
     background-color: $color-white;
     border: solid 1px $color-tomato;
