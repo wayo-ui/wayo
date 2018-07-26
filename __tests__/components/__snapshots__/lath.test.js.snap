@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Cases of Lath  1`] = `
+exports[`Snapshot of Lath  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -48,7 +48,7 @@ initialize {
 }
 `;
 
-exports[`Snapshot Cases of LathContent  1`] = `
+exports[`Snapshot of LathContent  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -217,7 +217,7 @@ initialize {
 }
 `;
 
-exports[`Snapshot Cases of LathHeader  1`] = `
+exports[`Snapshot of LathHeader  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -446,7 +446,7 @@ initialize {
 }
 `;
 
-exports[`Snapshot Cases of LathTail  1`] = `
+exports[`Snapshot of LathTail  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {

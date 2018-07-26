@@ -1,7 +1,9 @@
 <script>
 import Indicator from './_indicator.vue';
 
-/** @vue */
+/** 
+ * @vue
+ */
 export default {
   name: `${APPNAME}Slides`,
   props: {
@@ -136,8 +138,8 @@ export default {
   },
   watch: {
     manualTranslate(val){
-      // 只在开启循环模式下做出响应
-      if(!this.isLoop){
+      // 只在开启循环模式并且动画类型为slide时做出响应
+      if(!this.isLoop||this.animation!=='slide'){
         return;
       }
       switch(true){
@@ -164,8 +166,8 @@ export default {
       }
     },
     activeIndex(val){
-      // 只处理自动模式且无手动拖拽行为
-      if(!this.autoplay||this.manualTranslate!==0){
+      // 只处理slide动画自动模式且无手动拖拽行为
+      if(this.animation!=='slide'||!this.autoplay||this.manualTranslate!==0){
         return;
       }
       // 自动模式下切换至最后一张slide时将第一张偏移至其右侧
@@ -193,7 +195,7 @@ export default {
      * @param {number} index 激活目标索引值
      */
     activeItem(index){
-      if(this.isLoop&&this.activeIndex!==index){
+      if(this.animation==='slide'&&this.isLoop&&this.activeIndex!==index){
         this.activeIndex = index;
         if(index>=this.itemCount){
           this.$emit('change',0);
@@ -205,14 +207,16 @@ export default {
       }else{
         const TargetIndex = (() => {
           if(index>=this.itemCount){
-            return this.itemCount-1;
+            return this.isLoop?0:this.itemCount-1;
           }
           if(index<0){
-            return 0;
+            return this.isLoop?this.itemCount-1:0;
           }
           return index;
         })();
         if(this.activeIndex!==TargetIndex){
+          this.items[this.activeIndex].fadeOut(this.animation==='fade');
+          this.items[TargetIndex].fadeIn(this.animation==='fade');
           this.activeIndex = TargetIndex;
           this.$emit('change',TargetIndex);
         }
@@ -287,6 +291,10 @@ export default {
         // 再次取最外层容器宽度，以防止display:none造成的首次获取为0
         this.boxWidth = this.$el.clientWidth;
       }
+      if(this.animation !== 'slide'){
+        const Touches = ev.changedTouches||ev.touches;
+        this.panCurrentX = Touches[0].clientX;
+      }
       const PanGutter = Math.abs(this.manualTranslate/this.boxWidth);
 
       let panIndex = 0;
@@ -302,6 +310,9 @@ export default {
       // 重新启动自动切换
       this.resume();
     },
+    /**
+     * @method onWrapperTransitionEnd 响应transitionend事件，用于循环模式下修正子组件位置
+     */
     onWrapperTransitionEnd(){
       // 非循环模式下不作处理
       if(!this.isLoop){
@@ -321,7 +332,6 @@ export default {
       this.timer_resetLock = setTimeout(() => {
         this.lockAnimtion =false;
       },200);
-
     }
   },
   render(h){
@@ -334,7 +344,7 @@ export default {
 
     // 指示器
     const Indicators = (type => {
-      if(type==='none'){
+      if(type==='none'||this.itemCount<=1){
         return '';
       }
       return <div class="wayo-slides__indicators">
@@ -349,7 +359,12 @@ export default {
 
     // 内容实体
     const Wrapper = (() => {
-      if(VNodes.length>1&&(this.autoplay||this.animation==='slide')){
+      if(this.itemCount<=1){
+        return <div class="wayo-slides__wrapper">
+          {VNodes}
+        </div>;
+      }
+      if(this.animation==='slide'){
         const Translate = this.activeIndex*this.boxWidth+this.manualTranslate;
 
         return <div 
@@ -371,8 +386,11 @@ export default {
           {VNodes}
         </div>;
       }
-      if(VNodes.length<=1||this.animation === 'none'||this.animation === 'fade'){
-        return <div class="wayo-slides__wrapper">
+      if(this.animation === 'none'||this.animation === 'fade'){
+        return <div class="wayo-slides__wrapper wayo-slides__wrapper_stack"
+          onTouchstart={this.onPanStart}
+          onTouchend={this.onPanEnd}
+          onTouchcancel={this.onPanEnd}>
           {VNodes}
         </div>;
       }

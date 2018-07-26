@@ -5,7 +5,7 @@ import ImageViewer from '../../src/components/imageviewer';
 
 const LocalVue = createLocalVue();
 
-describe('Logic Cases', () => {
+describe('Logic', () => {
   const Wrapper = shallowMount(ImageViewer, {
     localVue: LocalVue
   });
@@ -35,7 +35,7 @@ describe('Logic Cases', () => {
   });
 });
 
-describe('Snapshot Cases', () => {
+describe('Snapshot', () => {
   const Wrapper = render(ImageViewer, {
     localVue: LocalVue
   });

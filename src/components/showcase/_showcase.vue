@@ -4,19 +4,22 @@ import ShowcaseBar from './_showcase-bar.vue';
 
 const MAX_NAV_HEIGHT = 160;
 
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Showcase`,
   props: {
     /**
      * @prop 操作区背景
      * @type {string}
-     * @default `undefined`
+     * @default ``
      */
     navBg: {
-      type: [String,undefined],
-      default: undefined,
+      type: String,
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val)||REG_IMAGE_URL.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val)||REG_IMAGE_URL.test(val);
       }
     }
   },
@@ -126,9 +129,12 @@ export default {
     });
   },
   render(h){
-    if(this.count!==0){
-      this.calNavSize(this.barsOptsList[0].thumb);
+    if(this.count === 0){
+      return <div class="wayo-showcase"></div>;
     }
+    
+    this.calNavSize(this.barsOptsList[0].thumb);
+
     // 操作区
     const Nav = (
       <div class="wayo-showcase__nav" style={this.navStyles}>

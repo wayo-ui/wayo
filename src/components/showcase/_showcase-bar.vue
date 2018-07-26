@@ -11,6 +11,9 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}ShowcaseBar`,
   props: {
@@ -52,6 +55,10 @@ export default {
     }
   },
   computed: {
+    /**
+     * @computed 图片样式
+     * @type {string}
+     */
     thumbStyles(){
       return [
         `width:${this.width*(this.active?1.25:1)}px;`,

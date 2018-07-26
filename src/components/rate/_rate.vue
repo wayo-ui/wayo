@@ -1,7 +1,7 @@
 <template>
 <div class="wayo-rate" :style="`font-size:${size}px;`">
   <template v-for="i in max">
-    <div v-if="halfScore===i" class="wayo-rate__halfbox"
+    <div v-if="halfScoreIndex===i" class="wayo-rate__halfbox"
       :style="`height:${size}px;width:${size}px;line-height:1;font-size:${size}px;`">
       <wayo-icon name="star-fill" class="wayo-rate-icon"  
       :key="`${randomKey}-${i}`"
@@ -21,7 +21,9 @@
 
 <script>
 import WayoIcon from '@/components/icon';
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Rate`,
   props: {
@@ -71,15 +73,6 @@ export default {
       default: 0
     },
     /**
-     * @prop 只读
-     * @type {boolean}
-     * @default `false`
-     */
-    readonly: {
-      type: Boolean,
-      default: false
-    },
-    /**
      * @prop 显示分值
      * @type {boolean}
      * @default `false`
@@ -109,21 +102,27 @@ export default {
   },
   data(){
     return {
-      randomKey: undefined
+      // 随机key
+      randomKey: Math.random().toString(16).split('.')[1]
     };
   },
   computed: {
-    halfScore(){
+    /**
+     * @computed 不足1分的索引值
+     * @type {number}
+     */
+    halfScoreIndex(){
       if(this.score%1>0){
         return parseInt(this.score)+1;
       }
       return -1;
     }
   },
-  mounted(){
-    this.randomKey = Math.random().toString(16).split('.')[1];
-  },
   methods: {
+    /**
+     * @method iconStyle 计算icon的样式
+     * @param {number} index 索引值
+     */
     iconStyle(index){
       if(this.score>=index){
         return [
@@ -132,9 +131,9 @@ export default {
         ].join('');
       }
       return [
-          `font-size:${this.size}px;`,
-          `color: ${this.unchosenColor};`
-        ].join('');;
+        `font-size:${this.size}px;`,
+        `color: ${this.unchosenColor};`
+      ].join('');;
     }
   },
   components: {

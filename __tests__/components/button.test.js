@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import { shallowMount,createLocalVue,mount } from '@vue/test-utils';
 import Button from '../../src/components/button';
 
-describe('Logic Cases', () => {
+describe('Logic', () => {
   const LocalVue = createLocalVue();
 
   const Wrapper = shallowMount(Button, {

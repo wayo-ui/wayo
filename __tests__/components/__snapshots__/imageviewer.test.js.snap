@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Cases  1`] = `
+exports[`Snapshot  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {

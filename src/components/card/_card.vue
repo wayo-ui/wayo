@@ -1,5 +1,5 @@
 <template>
-<div class="wayo-card">
+<div class="wayo-card" v-on="$listeners">
   <wayo-separator class="wayo-card__separator-top" absolute/>
   <slot></slot>
   <wayo-separator class="wayo-card__separator-bottom" absolute/>

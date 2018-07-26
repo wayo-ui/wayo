@@ -9,7 +9,7 @@ describe('SnapShot Cases',()=>{
   });  
 });
 
-describe('Logic Cases',()=>{
+describe('Logic',()=>{
   const LocalVue = createLocalVue();
 
   const Wrapper = shallowMount(Icon, {

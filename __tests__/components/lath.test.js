@@ -5,7 +5,7 @@ import Lath from '../../src/components/lath';
 
 const LocalVue = createLocalVue();
 
-describe('Logic Cases Of Lath', () => {
+describe('Logic Of Lath', () => {
   const Wrapper = shallowMount(Lath, {
     localVue: LocalVue
   });
@@ -75,7 +75,7 @@ describe('Logic Cases Of Lath', () => {
   });
 });
 
-describe('Snapshot Cases of Lath', () => {
+describe('Snapshot of Lath', () => {
   const Wrapper = render(Lath, {
     localVue: LocalVue
   });
@@ -85,7 +85,7 @@ describe('Snapshot Cases of Lath', () => {
   });
 });
 
-describe('Logic Cases Of LathHeader', () => {
+describe('Logic Of LathHeader', () => {
   const Wrapper = shallowMount(Lath.Header, {
     localVue: LocalVue
   });
@@ -113,7 +113,7 @@ describe('Logic Cases Of LathHeader', () => {
   });
 });
 
-describe('Snapshot Cases of LathHeader', () => {
+describe('Snapshot of LathHeader', () => {
   const Wrapper = render(Lath.Header, {
     localVue: LocalVue,
     propsData: {
@@ -127,7 +127,7 @@ describe('Snapshot Cases of LathHeader', () => {
   });
 });
 
-describe('Logic Cases Of LathContent', () => {
+describe('Logic Of LathContent', () => {
   const Wrapper = shallowMount(Lath.Content, {
     localVue: LocalVue,
     propsData: {
@@ -156,7 +156,7 @@ describe('Logic Cases Of LathContent', () => {
   });
 });
 
-describe('Snapshot Cases of LathContent', () => {
+describe('Snapshot of LathContent', () => {
   const Wrapper = render(Lath.Content, {
     localVue: LocalVue,
     propsData: {
@@ -169,7 +169,7 @@ describe('Snapshot Cases of LathContent', () => {
   });
 });
 
-describe('Logic Cases Of LathTail', () => {
+describe('Logic Of LathTail', () => {
   const Wrapper = shallowMount(Lath.Tail, {
     localVue: LocalVue
   });
@@ -184,7 +184,7 @@ describe('Logic Cases Of LathTail', () => {
   });
 });
 
-describe('Snapshot Cases of LathTail', () => {
+describe('Snapshot of LathTail', () => {
   const Wrapper = render(Lath.Tail, {
     localVue: LocalVue,
     propsData: {

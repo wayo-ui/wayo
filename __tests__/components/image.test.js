@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import { shallowMount,createLocalVue,mount } from '@vue/test-utils';
 import Image from '../../src/components/image';
 
-describe('Logic Cases', () => {
+describe('Logic', () => {
   const LocalVue = createLocalVue();
 
   const Wrapper = shallowMount(Image, {

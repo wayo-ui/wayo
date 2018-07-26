@@ -6,12 +6,15 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}Separator`,
   props: {
     /**
-     * @prop 标题
-     * @type {string|undefined}
+     * @prop 方向
+     * @type {string}
      * @default `row`
      */
     direction: {
@@ -22,7 +25,7 @@ export default {
       }
     },
     /**
-     * @prop 高度
+     * @prop 高度，direction为column时生效
      * @type {number}
      * @default `-1`
      */
@@ -51,10 +54,15 @@ export default {
   },
   data(){
     return {
+      // 设备dpr
       dpr: window.devicePixelRatio||1
     };
   },
   computed: {
+    /**
+     * @computed styles
+     * @type {string}
+     */
     styles(){
       const Styles = [`background-color:${this.color};`];
       if(this.direction==='column'){

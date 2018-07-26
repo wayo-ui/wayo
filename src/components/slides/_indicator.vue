@@ -1,13 +1,11 @@
 <template>
-<div :class="classes">
-</div>
+<div :class="classes"></div>
 </template>
 
 <script>
 /**
  * @vue
  */
- 
 export default {
   name: `${APPNAME}SlidesIndicator`,
   props: {
@@ -52,6 +50,10 @@ export default {
     }
   },
   computed: {
+    /**
+     * @computed classname
+     * @type {string}
+     */
     classes(){
       const List = [
         'wayo-slides__indicator',
