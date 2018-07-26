@@ -1,79 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Cases  1`] = `
+exports[`Snapshot Cases of Lath  1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
       "class": "wayo-lath",
       "data-server-rendered": "true",
     },
+    "children": Array [],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot Cases of LathContent  1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-lath__content",
+      "data-server-rendered": "true",
+    },
     "children": Array [
       Object {
-        "data": "",
-        "next": Object {
-          "data": " ",
-          "next": Object {
-            "data": "",
-            "next": Object {
-              "data": "  ",
-              "next": Object {
-                "data": "",
-                "next": null,
-                "parent": [Circular],
-                "prev": [Circular],
-                "type": "comment",
-              },
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "text",
-            },
-            "parent": [Circular],
-            "prev": [Circular],
-            "type": "comment",
-          },
-          "parent": [Circular],
-          "prev": [Circular],
-          "type": "text",
+        "attribs": Object {
+          "class": "wayo-lath__content-entity wayo-lath__content_single-line",
         },
-        "parent": [Circular],
-        "prev": null,
-        "type": "comment",
-      },
-      Object {
-        "data": " ",
-        "next": Object {
-          "data": "",
-          "next": Object {
-            "data": "  ",
-            "next": Object {
-              "data": "",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "comment",
-            },
+        "children": Array [
+          Object {
+            "data": "
+      content
+    ",
+            "next": null,
             "parent": [Circular],
-            "prev": [Circular],
+            "prev": null,
             "type": "text",
           },
-          "parent": [Circular],
-          "prev": [Circular],
-          "type": "comment",
-        },
-        "parent": [Circular],
-        "prev": Object {
-          "data": "",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": null,
-          "type": "comment",
-        },
-        "type": "text",
-      },
-      Object {
-        "data": "",
+        ],
+        "name": "p",
+        "namespace": "http://www.w3.org/1999/xhtml",
         "next": Object {
-          "data": "  ",
+          "data": " ",
           "next": Object {
             "data": "",
             "next": null,
@@ -86,23 +87,17 @@ initialize {
           "type": "text",
         },
         "parent": [Circular],
-        "prev": Object {
-          "data": " ",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": Object {
-            "data": "",
-            "next": [Circular],
-            "parent": [Circular],
-            "prev": null,
-            "type": "comment",
-          },
-          "type": "text",
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
         },
-        "type": "comment",
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
       },
       Object {
-        "data": "  ",
+        "data": " ",
         "next": Object {
           "data": "",
           "next": null,
@@ -112,23 +107,32 @@ initialize {
         },
         "parent": [Circular],
         "prev": Object {
-          "data": "",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": Object {
-            "data": " ",
-            "next": [Circular],
-            "parent": [Circular],
-            "prev": Object {
-              "data": "",
-              "next": [Circular],
+          "attribs": Object {
+            "class": "wayo-lath__content-entity wayo-lath__content_single-line",
+          },
+          "children": Array [
+            Object {
+              "data": "
+      content
+    ",
+              "next": null,
               "parent": [Circular],
               "prev": null,
-              "type": "comment",
+              "type": "text",
             },
-            "type": "text",
+          ],
+          "name": "p",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
           },
-          "type": "comment",
+          "x-attribsPrefix": Object {
+            "class": undefined,
+          },
         },
         "type": "text",
       },
@@ -137,31 +141,483 @@ initialize {
         "next": null,
         "parent": [Circular],
         "prev": Object {
-          "data": "  ",
+          "data": " ",
           "next": [Circular],
           "parent": [Circular],
           "prev": Object {
-            "data": "",
-            "next": [Circular],
-            "parent": [Circular],
-            "prev": Object {
-              "data": " ",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": Object {
-                "data": "",
-                "next": [Circular],
+            "attribs": Object {
+              "class": "wayo-lath__content-entity wayo-lath__content_single-line",
+            },
+            "children": Array [
+              Object {
+                "data": "
+      content
+    ",
+                "next": null,
                 "parent": [Circular],
                 "prev": null,
-                "type": "comment",
+                "type": "text",
               },
-              "type": "text",
+            ],
+            "name": "p",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
             },
-            "type": "comment",
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
           },
           "type": "text",
         },
         "type": "comment",
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot Cases of LathHeader  1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-lath__head",
+      "data-server-rendered": "true",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "wayo-lath__title",
+        },
+        "children": Array [
+          Object {
+            "data": "title",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+        ],
+        "name": "span",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "data": " ",
+          "next": Object {
+            "attribs": Object {
+              "class": "wayo-lath__subtitle",
+              "style": "margin-top:5px;",
+            },
+            "children": Array [
+              Object {
+                "data": "subtitle",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "style": undefined,
+            },
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "text",
+        },
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+      Object {
+        "data": " ",
+        "next": Object {
+          "attribs": Object {
+            "class": "wayo-lath__subtitle",
+            "style": "margin-top:5px;",
+          },
+          "children": Array [
+            Object {
+              "data": "subtitle",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+          ],
+          "name": "span",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
+            "style": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "class": undefined,
+            "style": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "class": "wayo-lath__title",
+          },
+          "children": Array [
+            Object {
+              "data": "title",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+          ],
+          "name": "span",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "class": undefined,
+          },
+        },
+        "type": "text",
+      },
+      Object {
+        "attribs": Object {
+          "class": "wayo-lath__subtitle",
+          "style": "margin-top:5px;",
+        },
+        "children": Array [
+          Object {
+            "data": "subtitle",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+        ],
+        "name": "span",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": Object {
+          "data": " ",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {
+              "class": "wayo-lath__title",
+            },
+            "children": Array [
+              Object {
+                "data": "title",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+          "type": "text",
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+          "style": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+          "style": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot Cases of LathTail  1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-lath__tail",
+      "data-server-rendered": "true",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "wayo-lath__tail-label",
+        },
+        "children": Array [
+          Object {
+            "data": "tail",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+        ],
+        "name": "span",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "data": " ",
+          "next": Object {
+            "attribs": Object {
+              "class": "wayo-lath__tail-icon",
+              "color": "",
+              "name": "bus",
+            },
+            "children": Array [],
+            "name": "wayo-icon",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "color": undefined,
+              "name": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "color": undefined,
+              "name": undefined,
+            },
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "text",
+        },
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+      Object {
+        "data": " ",
+        "next": Object {
+          "attribs": Object {
+            "class": "wayo-lath__tail-icon",
+            "color": "",
+            "name": "bus",
+          },
+          "children": Array [],
+          "name": "wayo-icon",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
+            "color": undefined,
+            "name": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "class": undefined,
+            "color": undefined,
+            "name": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "class": "wayo-lath__tail-label",
+          },
+          "children": Array [
+            Object {
+              "data": "tail",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+          ],
+          "name": "span",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "class": undefined,
+          },
+        },
+        "type": "text",
+      },
+      Object {
+        "attribs": Object {
+          "class": "wayo-lath__tail-icon",
+          "color": "",
+          "name": "bus",
+        },
+        "children": Array [],
+        "name": "wayo-icon",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": Object {
+          "data": " ",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {
+              "class": "wayo-lath__tail-label",
+            },
+            "children": Array [
+              Object {
+                "data": "tail",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+          "type": "text",
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+          "color": undefined,
+          "name": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+          "color": undefined,
+          "name": undefined,
+        },
       },
     ],
     "name": "div",

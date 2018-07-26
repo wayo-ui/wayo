@@ -1,11 +1,11 @@
 import 'babel-polyfill';
-import { shallow,createLocalVue,mount } from 'vue-test-utils';
+import { shallowMount,createLocalVue,mount } from '@vue/test-utils';
 import Image from '../../src/components/image';
 
 describe('Logic Cases', () => {
   const LocalVue = createLocalVue();
 
-  const Wrapper = shallow(Image, {
+  const Wrapper = shallowMount(Image, {
     localVue: LocalVue,
     propsData: {
       src: ''

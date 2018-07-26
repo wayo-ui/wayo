@@ -1,12 +1,12 @@
 import 'babel-polyfill';
-import { shallow,createLocalVue,mount } from 'vue-test-utils';
+import { shallowMount,createLocalVue,mount } from '@vue/test-utils';
 import { render } from '@vue/server-test-utils';
 import Lath from '../../src/components/lath';
 
 const LocalVue = createLocalVue();
 
-describe('Logic Cases', () => {
-  const Wrapper = mount(Lath, {
+describe('Logic Cases Of Lath', () => {
+  const Wrapper = shallowMount(Lath, {
     localVue: LocalVue
   });
 
@@ -60,12 +60,137 @@ describe('Logic Cases', () => {
       }
     });
     expect(Wrapper.vm.styles).toMatch(/padding\-right:95px;/);
+
+    Wrapper.setData({
+      hasHeader: true,
+      hasContent: false
+    });
+    expect(Wrapper.classes()).not.toContain('wayo-lath_content_header');
+
+    Wrapper.setData({
+      hasHeader: true,
+      hasContent: true
+    });
+    expect(Wrapper.classes()).toContain('wayo-lath_content_header');
   });
 });
 
-describe('Snapshot Cases', () => {
+describe('Snapshot Cases of Lath', () => {
   const Wrapper = render(Lath, {
     localVue: LocalVue
+  });
+
+  test('',() => {
+    expect(Wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Logic Cases Of LathHeader', () => {
+  const Wrapper = shallowMount(Lath.Header, {
+    localVue: LocalVue
+  });
+
+  test('display',()=>{
+    expect(Wrapper.vm.show).toBe(false);
+
+    Wrapper.setProps({
+      title: 'title',
+      subtitle: 'subtitle'
+    });
+    expect(Wrapper.vm.show).toBe(true);
+
+    Wrapper.setProps({
+      title: 'title',
+      subtitle: ''
+    });
+    expect(Wrapper.vm.show).toBe(true);
+
+    Wrapper.setProps({
+      title: '',
+      subtitle: 'subtitle'
+    });
+    expect(Wrapper.vm.show).toBe(true);
+  });
+});
+
+describe('Snapshot Cases of LathHeader', () => {
+  const Wrapper = render(Lath.Header, {
+    localVue: LocalVue,
+    propsData: {
+      title: 'title',
+      subtitle: 'subtitle'
+    }
+  });
+
+  test('',() => {
+    expect(Wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Logic Cases Of LathContent', () => {
+  const Wrapper = shallowMount(Lath.Content, {
+    localVue: LocalVue,
+    propsData: {
+      contentLineLimit: 2
+    }
+  });
+
+  test('attributes',()=>{
+    expect(Wrapper.vm.contentMaxHeight).toBe(34);
+    expect(Wrapper.vm.show).toBe(false);
+
+    Wrapper.setProps({
+      content: 'content'
+    });
+    expect(Wrapper.vm.show).toBe(true);
+    expect(Wrapper.vm.single_line_content).toBe(true);
+    expect(Wrapper.vm.content_oversize).toBe(false);
+  });
+
+  test('methods',()=>{
+    Wrapper.setData({
+      content_oversize: true
+    });
+    Wrapper.vm.expandContent();
+    expect(Wrapper.vm.content_oversize).toBe(false);
+  });
+});
+
+describe('Snapshot Cases of LathContent', () => {
+  const Wrapper = render(Lath.Content, {
+    localVue: LocalVue,
+    propsData: {
+      content: 'content'
+    }
+  });
+
+  test('',() => {
+    expect(Wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Logic Cases Of LathTail', () => {
+  const Wrapper = shallowMount(Lath.Tail, {
+    localVue: LocalVue
+  });
+
+  test('attributes',()=>{
+    expect(Wrapper.vm.show).toBe(false);
+
+    Wrapper.setProps({
+      icon: 'bus'
+    });
+    expect(Wrapper.vm.show).toBe(true);
+  });
+});
+
+describe('Snapshot Cases of LathTail', () => {
+  const Wrapper = render(Lath.Tail, {
+    localVue: LocalVue,
+    propsData: {
+      icon: 'bus',
+      label: 'tail'
+    }
   });
 
   test('',() => {

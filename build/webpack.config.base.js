@@ -72,10 +72,6 @@ module.exports = {
     alias: {
       '@': Config.SourceDir,
       '@styles': `${Config.SourceDir}/styles`,
-      '@utils': `${Config.SourceDir}/utils`,
-      '@mixins': `${Config.SourceDir}/mixins`,
-      '@locale': `${Config.SourceDir}/locale`,
-      '@directives': `${Config.SourceDir}/directives`,
       'vue': 'vue/dist/vue.esm.js'
     }
   }

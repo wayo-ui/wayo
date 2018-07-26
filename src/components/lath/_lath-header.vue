@@ -9,31 +9,38 @@
 </template>
 
 <script>
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}LathHeader`,
   props: {
     /**
      * @prop 标题
-     * @type {string|undefined}
+     * @type {string}
      * @default ``
      */
     title: {
       type: String,
-      default: undefined
+      default: ''
     },
     /**
      * @prop 副标题
-     * @type {string|undefined}
+     * @type {string}
      * @default ``
      */
     subtitle: {
       type: String,
-      default: undefined
+      default: ''
     }
   },
   computed: {
+    /**
+     * @computed 显示状态
+     * @type {boolean}
+     */
     show(){
-      const Result = this.title||this.subtitle||(this.$slots.default&&this.$slots.default.length>0);
+      const Result = !!(this.title||this.subtitle||(this.$slots.default&&this.$slots.default.length>0))||false;
       this.$parent.hasHeader = !!Result;
       return Result;
     }

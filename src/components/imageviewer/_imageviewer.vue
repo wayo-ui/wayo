@@ -52,7 +52,7 @@ export default {
       type: String,
       default: '#000000',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
     },
     /**

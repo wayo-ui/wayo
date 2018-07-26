@@ -1,23 +1,5 @@
-<template>
-<div class="wayo-lath" 
-  v-on="$listeners"
-  :class="{
-    'wayo-lath_icon':icon,
-    'wayo-lath_content_header':hasHeader&hasContent,
-    'wayo-lath_inline':inline
-  }"
-  :style="styles">
-  <wayo-separator v-if="borderTop" absolute class="wayo-lath__separator-top"></wayo-separator>
-  <wayo-icon class="wayo-lath__icon-head" v-if="icon"
-    :name="icon" 
-    :color="iconColor"
-    :class="`wayo-lath__icon-head_${iconPosition}`"/>
-  <slot></slot>
-  <wayo-separator v-if="borderBottom" absolute class="wayo-lath__separator-bottom"></wayo-separator>
-</div>
-</template>
-
 <script>
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
 import WayoSeparator from '@/components/separator';
 import WayoIcon from '@/components/icon';
 /**
@@ -55,21 +37,24 @@ export default {
     },
     /**
      * @prop 头部图标
-     * @type {string|undefined}
+     * @type {string}
      * @default ``
      */
     icon: {
       type: String,
-      default: undefined
+      default: ''
     },
     /**
      * @prop 头部图标颜色
-     * @type {string|undefined}
+     * @type {string}
      * @default ``
      */
     iconColor: {
       type: String,
-      default: undefined
+      default: '',
+      validator: val => {
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     },
     /**
      * @prop 头部图标定位
@@ -110,6 +95,72 @@ export default {
       padding_right>15&&Styles.push(`padding-right:${padding_right}px;`);
       return Styles.join('');
     }
+  },
+  render(h){
+    // 内置header
+    let slot_header = '';
+    // 内置content
+    let slot_content = '';
+    // 内置tail
+    let slot_tail = '';
+    // 其他slots
+    const Slot_other = [];
+
+    if(this.$slots&&this.$slots.default){
+      for(let i=0,len=this.$slots.default.length;i<len;i++){
+        const SlotItem = this.$slots.default[i];
+        if(/^vue\-component\-\d+\-WayoLathHeader$/.test(SlotItem.tag)){
+          slot_header = SlotItem;
+        }else if(/^vue\-component\-\d+\-WayoLathContent$/.test(SlotItem.tag)){
+          slot_content = SlotItem;
+        }else if(/^vue\-component\-\d+\-WayoLathTail$/.test(SlotItem.tag)){
+          slot_tail = SlotItem;
+        }else{
+          Slot_other.push(SlotItem);
+        }
+      }
+    }
+
+    const Slots = [slot_header,slot_content,...Slot_other,slot_tail];
+
+    // icon
+    if(this.icon){
+      Slots.unshift(<WayoIcon 
+        class={{
+          'wayo-lath__icon-head': true,
+          [`wayo-lath__icon-head_${this.iconPosition}`]: true
+        }}
+        name={this.icon}
+        color={this.iconColor}></WayoIcon>);
+    }
+    // border-top
+    if(this.borderTop){
+      Slots.unshift(<WayoSeparator
+        class='wayo-lath__separator-top'
+        absolute></WayoSeparator>);
+    }
+    // border-bottom
+    if(this.borderBottom){
+      Slots.push(<WayoSeparator
+        class='wayo-lath__separator-bottom'
+        absolute></WayoSeparator>);
+    }
+
+    const Attributes= {
+      attrs: this.$attrs,
+      on: this.$listeners
+    };
+
+    return <div 
+      class={{
+        'wayo-lath': true,
+        'wayo-lath_icon':!!this.icon,
+        'wayo-lath_content_header':this.hasHeader&&this.hasContent,
+        'wayo-lath_inline':this.inline
+      }}
+      style={this.styles}>
+      {Slots}
+    </div>;
   },
   components: {
     WayoIcon,

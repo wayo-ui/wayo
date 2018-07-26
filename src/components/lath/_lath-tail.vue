@@ -10,25 +10,32 @@
 </template>
 
 <script>
+import {REG_COLOR_HEX,REG_COLOR_RGBA} from '@/constants';
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}LathTail`,
   props: {
     /**
      * @prop 尾部图标
-     * @type {string|undefined}
-     * @default `undefined`
+     * @type {string}
+     * @default ``
      */
     icon: {
       type: String,
-      default: undefined
+      default: ''
     },/**
      * @prop 尾部图标颜色
-     * @type {string|undefined}
-     * @default `undefined`
+     * @type {string}
+     * @default ``
      */
     iconColor: {
       type: String,
-      default: undefined
+      default: '',
+      validator: val => {
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
     },
     /**
      * @prop 尾部标签文案
@@ -41,8 +48,12 @@ export default {
     }
   },
   computed: {
+    /**
+     * @computed 显示状态
+     * @type {boolean}
+     */
     show(){
-      return this.icon||this.label||(this.$slots.default&&this.$slots.default.length>0);
+      return !!(this.icon||this.label||(this.$slots.default&&this.$slots.default.length>0));
     }
   },
   watch: {

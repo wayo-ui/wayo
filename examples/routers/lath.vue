@@ -22,7 +22,7 @@
   </wayo-lath>
   <h4>自定义内容</h4>
   <wayo-lath>
-    <div slot="content" class="custom-content">
+    <div class="custom-content">
       <div class="custom-content__header">
         <span class="custom-content__uname">吃货甲</span>
         <div class="custom-content__rate">
@@ -53,7 +53,7 @@
   <wayo-lath icon="location" border-bottom>
     <wayo-lath-header subtitle="副标题" ></wayo-lath-header>
   </wayo-lath>
-  <wayo-lath border-bottom icon="bus" icon-color="red" icon-position="top">
+  <wayo-lath border-bottom icon="bus" icon-color="#ff0000" icon-position="top">
     <wayo-lath-header title="标题" subtitle="副标题" ></wayo-lath-header>
   </wayo-lath>
   <wayo-lath  border-bottom icon="phone" icon-position="top">

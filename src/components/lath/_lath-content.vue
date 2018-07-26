@@ -15,10 +15,11 @@
 </template>
 
 <script>
-
 const CONTENT_FONT_SIZE = 13;
 const CONTENT_LINE_HEIGHT = 17;
-
+/**
+ * @vue
+ */
 export default {
   name: `${APPNAME}LathContent`,
   props: {
@@ -55,17 +56,28 @@ export default {
   },
   data(){
     return {
+      // 是否为单行文案
       single_line_content: true,
+      // 超出行数限制时多行文案的缩减版
       content_short: '',
+      // 是否超出行数限制
       content_oversize: false
     };
   },
   computed: {
+    /**
+     * @computed 多行文案的高度上限
+     * @type {number}
+     */
     contentMaxHeight(){
       return CONTENT_LINE_HEIGHT*this.contentLineLimit;
     },
+    /**
+     * @computed 显示状态
+     * @type {boolean}
+     */
     show(){
-      const Result = this.content||(this.$slots.default&&this.$slots.default.length>0);
+      const Result = !!(this.content||(this.$slots.default&&this.$slots.default.length>0));
       this.$parent.hasContent = !!Result;
       return Result;
     }
@@ -79,6 +91,9 @@ export default {
     this.adapteContent();
   },
   methods: {
+    /**
+     * @method adapteContent 适配多行文案
+     */
     adapteContent(){
       if(!this.content||!this.$refs.content_entity){
         return;
@@ -98,6 +113,9 @@ export default {
         }
       });
     },
+    /**
+     * @method expandContent 展开多行文案
+     */
     expandContent(){
       this.content_oversize = false;
     }

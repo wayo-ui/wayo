@@ -1,12 +1,12 @@
 import 'babel-polyfill';
-import { shallow,createLocalVue,mount } from 'vue-test-utils';
+import { shallowMount,createLocalVue,mount } from '@vue/test-utils';
 import { render } from '@vue/server-test-utils';
 import ImageViewer from '../../src/components/imageviewer';
 
 const LocalVue = createLocalVue();
 
 describe('Logic Cases', () => {
-  const Wrapper = shallow(ImageViewer, {
+  const Wrapper = shallowMount(ImageViewer, {
     localVue: LocalVue
   });
 

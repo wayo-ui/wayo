@@ -1,10 +1,10 @@
 import 'babel-polyfill';
-import { shallow,createLocalVue } from 'vue-test-utils';
+import { shallowMount,createLocalVue } from '@vue/test-utils';
 import <%=UpperName%> from '../../src/components/<%=name%>';
 
 const LocalVue = createLocalVue();
 
-const Wrapper = shallow(<%=UpperName%>, {
+const Wrapper = shallowMount(<%=UpperName%>, {
   localVue: LocalVue
 });
 
