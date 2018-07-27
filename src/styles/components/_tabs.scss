@@ -1,7 +1,7 @@
 .wayo-tab{
   position: relative;
   overflow: hidden;
-  background-color: $color-white;
+  background-color: $color-white-1;
 }
 .wayo-tab__separator{
   &-top{
@@ -25,7 +25,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: $color-tomato;
+    background-color: $color-primary;
     transition: all 0.1s ease-in-out;
     z-index: 10;
   }
@@ -41,12 +41,12 @@
   padding: 14px 18px;
   display: inline-block;
   vertical-align: middle;
-  color: $color-black;
+  color: $color-font-primary;
   text-align: center;
   white-space: nowrap;
   box-sizing: border-box;
   &_active{
-    color: $color-tomato;
+    color: $color-primary;
   }
   &__label{
     font-weight: bold;
@@ -54,9 +54,9 @@
     vertical-align: middle;
   }
   &_stripe{
-    color: $color-tomato;
-    background-color: $color-white;
-    border: solid 1px $color-tomato;
+    color: $color-primary;
+    background-color: $color-white-1;
+    border: solid 1px $color-primary;
     padding: 5px 15px;
     &:nth-child(n+2){
       border-left: none;
@@ -68,8 +68,8 @@
       @include border-radius(0 4px 4px 0);
     }
     &.wayo-tab-bar_active{
-      color: $color-white;
-      background-color: $color-tomato;
+      color: $color-white-1;
+      background-color: $color-primary;
     }
   }
 }

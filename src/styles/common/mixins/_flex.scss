@@ -1,0 +1,97 @@
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-wrap($rule) {
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: $rule;
+  -moz-flex-wrap: $rule;
+  -o-flex-wrap: $rule;
+  flex-wrap: $rule;
+}
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -o-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -o-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -o-flex-basis: $width;
+  flex-basis: $width;
+}
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -o-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -o-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex($rule) {
+  -webkit-box-flex: $rule;
+  -moz-box-flex: $rule;
+  -o-box-flex: $rule;
+  -webkit-flex: $rule;
+  -moz-flex: $rule;
+  -o-flex: $rule;
+  flex: $rule;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -o-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -o-justify-content: $justify;
+  justify-content: $justify;
+  -o-flex-pack: $justify;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -o-align-content: $align;
+  align-content: $align;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -o-align-items: $align;
+  align-items: $align;
+}
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -o-align-self: $align;
+  align-self: $align;
+}

@@ -16,9 +16,9 @@
 .wayo-slides__indicator {
   display: inline-block;
   vertical-align: middle;
-  background-color: $color-lightest-grey;
+  background-color: $color-grey-7;
   &_active{
-    background-color: $color-tomato;
+    background-color: $color-red-3;
   }
   &_type{
     &_circle{

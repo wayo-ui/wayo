@@ -54,7 +54,7 @@ export default {
     left: 5px;
     i{
       font-size: 35px;
-      color: $color-light-grey !important;
+      color: $color-grey-1 !important;
       @include transform(rotate(180deg));
     }
   }

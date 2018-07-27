@@ -17,57 +17,57 @@
 }
 .wayo-tag_type{
   &_default{
-    background-color: $color-lightest-grey;
-    color: $color-heavyer-grey;
+    background-color: $color-grey-7;
+    color: $color-font-common;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-heavyer-grey;
-      border-color: $color-heavyer-grey;
+      background-color: $color-white-1;
+      color: $color-font-common;
+      border-color: $color-font-common;
     }
   }
   &_primary{
-    background-color: $color-tomato;
-    color: $color-white;
+    background-color: $color-primary;
+    color: $color-white-1;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-tomato;
-      border-color: $color-tomato;
+      background-color: $color-white-1;
+      color: $color-primary;
+      border-color: $color-primary;
     }
   }
   &_info{
-    background-color: $color-sky-blue;
-    color: $color-white;
+    background-color: $color-info;
+    color: $color-white-1;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-sky-blue;
-      border-color: $color-sky-blue;
+      background-color: $color-white-1;
+      color: $color-info;
+      border-color: $color-info;
     }
   }
   &_success{
-    background-color: $color-green;
-    color: $color-white;
+    background-color: $color-success;
+    color: $color-white-1;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-green;
-      border-color: $color-green;
+      background-color: $color-white-1;
+      color: $color-success;
+      border-color: $color-success;
     }
   }
   &_warning{
-    background-color: $color-orange;
-    color: $color-white;
+    background-color: $color-warning;
+    color: $color-white-1;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-orange;
-      border-color: $color-orange;
+      background-color: $color-white-1;
+      color: $color-warning;
+      border-color: $color-warning;
     }
   }
   &_danger{
-    background-color: $color-red;
-    color: $color-white;
+    background-color: $color-danger;
+    color: $color-white-1;
     &.wayo-tag_plain{
-      background-color: $color-white;
-      color: $color-red;
-      border-color: $color-red;
+      background-color: $color-white-1;
+      color: $color-danger;
+      border-color: $color-danger;
     }
   }
 }

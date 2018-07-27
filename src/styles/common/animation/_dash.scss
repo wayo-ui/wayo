@@ -1,0 +1,18 @@
+@include keyframes(dash){
+  0% {
+    stroke-dashoffset: 32;
+    stroke-dasharray: 2,60;
+  }
+  33% {
+    stroke-dashoffset: -92;
+    stroke-dasharray: 2,60;
+  }
+  66% {
+    stroke-dashoffset: -154;
+    stroke-dasharray: 42,20;
+  }
+  100% {
+    stroke-dasharray: 2,60;
+    stroke-dashoffset: -278;
+  }
+}

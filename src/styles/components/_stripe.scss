@@ -9,11 +9,11 @@
   &_disabled{
     .wayo-stripe-button{
       &_stroke{
-        border-color: $color-soft-grey;
-        color: $color-soft-grey;
+        border-color: $color-grey-2;
+        color: $color-grey-2;
       }
       &_fill{
-        background-color: $color-soft-grey;
+        background-color: $color-grey-2;
       }
     }
   }
@@ -60,9 +60,9 @@
     @include border-radius(0 0 4px 4px);
   }
   &_stroke{
-    background-color: $color-white;
-    border: solid 1px $color-tomato;
-    color: $color-tomato;
+    background-color: $color-white-1;
+    border: solid 1px $color-primary;
+    color: $color-primary;
   }
   &_fill{
     @extend .wayo-button-primary;
