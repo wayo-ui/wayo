@@ -25,13 +25,13 @@ export default {
     /**
      * @prop 类型
      * @type {string}
-     * @default `primary`
+     * @default `default`
      */
     type: {
       type: String,
-      default: 'primary',
+      default: 'default',
       validator: val => {
-        return ['primary','info','success','warning','danger'].indexOf(val)!==-1;
+        return ['default','primary','info','success','warning','danger'].indexOf(val)!==-1;
       }
     },
     /**
@@ -43,13 +43,13 @@ export default {
       type: String,
       default: 'default',
       validator: val => {
-        return ['default','large','small','fit'].indexOf(val)!==-1;
+        return ['default','medium','large','small','fit','mini'].indexOf(val)!==-1;
       }
     },
     /**
      * @prop 禁用状态
      * @type {boolean}
-     * @default false
+     * @default `false`
      */
     disabled: {
       type: Boolean,
@@ -58,7 +58,7 @@ export default {
     /**
      * @prop 加载状态
      * @type {boolean}
-     * @default false
+     * @default `false`
      */
     loading: {
       type: Boolean,
@@ -69,14 +69,14 @@ export default {
      * @type {boolean}
      * @default `false`
      */
-    plain: {
+    outline: {
       type: Boolean,
       default: false
     },
     /**
      * @prop 圆边按钮
      * @type {boolean}
-     * @default false
+     * @default `false
      */
     round: {
       type: Boolean,
@@ -85,7 +85,7 @@ export default {
     /**
      * @prop 圆形按钮
      * @type {boolean}
-     * @default false
+     * @default `false`
      */
     circle: {
       type: Boolean,
@@ -94,7 +94,7 @@ export default {
     /**
      * @prop 图标
      * @type {string}
-     * @default ''
+     * @default ``
      */
     icon: {
       type: String,
@@ -102,38 +102,74 @@ export default {
     },
     /**
      * @prop 背景色
-     * @type {string|undefined}
-     * @default ''
+     * @type {string}
+     * @default ``
      */
     bgColor: {
-      type: [String,undefined],
-      default: undefined,
+      type: String,
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
     },
     /**
      * @prop 字体颜色
-     * @type {string|undefined}
-     * @default ''
+     * @type {string}
+     * @default ``
      */
     fontColor: {
-      type: [String,undefined],
-      default: undefined,
+      type: String,
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
       }
     },
     /**
      * @prop border颜色
-     * @type {string|undefined}
-     * @default ''
+     * @type {string}
+     * @default ``
      */
     borderColor: {
-      type: [String,undefined],
-      default: undefined,
+      type: String,
+      default: '',
       validator: val => {
-        return REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+        return !val||REG_COLOR_HEX.test(val)||REG_COLOR_RGBA.test(val);
+      }
+    },
+    /**
+     * @prop 自定义宽度
+     * @type {number}
+     * @default `0`
+     */
+    width: {
+      type: Number,
+      default: 0,
+      validator: val => {
+        return val >=0;
+      }
+    },
+    /**
+     * @prop 自定义高度
+     * @type {number}
+     * @default `0`
+     */
+    height: {
+      type: Number,
+      default: 0,
+      validator: val => {
+        return val >=0;
+      }
+    },
+    /**
+     * @prop 自定义字号
+     * @type {number}
+     * @default `0`
+     */
+    fontSize: {
+      type: Number,
+      default: 0,
+      validator: val => {
+        return val >=0;
       }
     }
   },
@@ -148,12 +184,14 @@ export default {
         `wayo-button-${this.type}`,
         `wayo-button_size_${this.size}`,
       ];
-      this.plain&&List.push('wayo-button_plain');
+      this.outline&&List.push('wayo-button_outline');
       // fit尺寸不支持loading
       this.loading&&this.size!=='fit'&&List.push('wayo-button_loading');
-      this.disabled&&List.push('wayo-button_disabled');
       this.round&&List.push('wayo-button_round');
       this.circle&&!this.$slots.default&&List.push('wayo-button_circle');
+      if(this.disabled){
+        this.type==='default'?List.push('wayo-button_disabled'):List.push('wayo-button_disabled_typed');
+      }
       return List.join(' ');
     },
     /**
@@ -162,9 +200,12 @@ export default {
      */
     styles(){
       const List = [];
-      this.bgColor&List.push(`background-color: ${this.bgColor};`);
-      this.fontColor&List.push(`color: ${this.fontColor};`);
-      this.borderColor&List.push(`border: solid 1px ${this.borderColor};`);
+      this.bgColor&&List.push(`background-color: ${this.bgColor};`);
+      this.fontColor&&List.push(`color: ${this.fontColor};`);
+      this.borderColor&&List.push(`border: solid 1px ${this.borderColor};`);
+      this.width>0&&List.push(`width: ${this.width}px;`);
+      this.height>0&&List.push(`height: ${this.height}px;`);
+      this.fontSize>0&&List.push(`font-size: ${this.fontSize}px;`);
       return List.join('');
     },
     /**
@@ -189,7 +230,7 @@ export default {
       if(this.fontColor){
         return this.fontColor;
       }
-      if(!this.plain){
+      if(this.type!=='default'&&!this.outline){
         return '#ffffff';
       }
       switch(this.type){
@@ -203,6 +244,8 @@ export default {
           return '#ff0000';
         case 'success':
           return '#67c23a';
+        default: 
+          return '#333333';
       }
     }
   },

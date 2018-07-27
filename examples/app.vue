@@ -6,7 +6,9 @@
     </div>
     <span class="header-title">{{title}}</span>
   </header>
-  <router-view></router-view>
+  <section class="ex-content">
+    <router-view></router-view>
+  </section>
 </div>
 </template>
 <script>
@@ -32,8 +34,9 @@ export default {
 .ex{
   max-width: 414px;
   margin: 0 auto;
+  color: #333333;
   &.sub{
-    padding-top: 70px;
+    padding-top: 50px;
   }
 }
 .ex-header{
@@ -43,12 +46,11 @@ export default {
   left: 0;
   top: 0;
   text-align: center;
-  font-size: 18px;
-  height: 60px;
-  line-height: 60px;
-  border-bottom: solid 1px #999;
-  -webkit-box-shadow: 0px 1px 4px #ddd;
-  box-shadow: 0px 1px 4px #ddd;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0px -1px 5px #5f5f5f;
+  z-index: 99;
   .header-back{
     position: absolute;
     left: 5px;
@@ -58,5 +60,8 @@ export default {
       @include transform(rotate(180deg));
     }
   }
+}
+.ex-content{
+  padding: 15px;
 }
 </style>

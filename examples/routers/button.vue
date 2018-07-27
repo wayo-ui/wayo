@@ -3,64 +3,70 @@
   <p class="title">按钮类型</p>
   <ul class="list">
     <li class="item">
-      <wayo-button type="primary">主要</wayo-button>
+      <wayo-button type="default">默认按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="info">信息</wayo-button>
+      <wayo-button type="primary">主要按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="success">成功</wayo-button>
+      <wayo-button type="info">信息按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="warning">警告</wayo-button>
+      <wayo-button type="success">成功按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="danger">危险</wayo-button>
+      <wayo-button type="warning">警告按钮</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button type="danger">危险按钮</wayo-button>
     </li>
   </ul>
   <p class="title">图标</p>
   <ul class="list">
     <li class="item">
-      <wayo-button type="primary" icon="bus">公交</wayo-button>
+      <wayo-button type="primary" icon="bus">路线</wayo-button>
     </li>
     <li class="item">
       <wayo-button type="info" icon="map">地址</wayo-button>
     </li>
   </ul>
-  <p class="title">镂空</p>
+  <p class="title">描边模式(默认类型此模式无效)</p>
   <ul class="list">
     <li class="item">
-      <wayo-button type="primary" plain>主要</wayo-button>
+      <wayo-button type="primary" outline>主要按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="info" plain>信息</wayo-button>
+      <wayo-button type="info" outline>信息按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="success" plain>成功</wayo-button>
+      <wayo-button type="success" outline>成功按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="warning" plain>警告</wayo-button>
+      <wayo-button type="warning" outline>警告按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="danger" plain>危险</wayo-button>
+      <wayo-button type="danger" outline>危险按钮</wayo-button>
     </li>
   </ul>
-  <p class="title">圆边</p>
+  <p class="title">圆角</p>
   <ul class="list">
     <li class="item">
-      <wayo-button type="primary" round>主要</wayo-button>
+      <wayo-button type="default" round>默认按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="info" round>信息</wayo-button>
+      <wayo-button type="primary" round>主要按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="success" round>成功</wayo-button>
+      <wayo-button type="info" round>信息按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="warning" round>警告</wayo-button>
+      <wayo-button type="success" round>成功按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="danger" round>危险</wayo-button>
+      <wayo-button type="warning" round>警告按钮</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button type="danger" round>危险按钮</wayo-button>
     </li>
   </ul>
   <p class="title">圆形（不能含文字）</p>
@@ -82,56 +88,97 @@
     </li>
   </ul>
   <p class="title">禁用状态</p>
+  <p class="subtitle">默认类型（无语义）</p>
   <ul class="list">
     <li class="item">
-      <wayo-button size="default" disabled>默认</wayo-button>
+      <wayo-button disabled>默认按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="primary" disabled>主要</wayo-button>
+      <wayo-button outline disabled>默认+描边</wayo-button>
+    </li>
+  </ul>
+  <p class="subtitle">语义类型</p>
+  <ul class="list">
+    <li class="item">
+      <wayo-button type="primary" disabled>主要按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="info" disabled>信息</wayo-button>
+      <wayo-button type="info" disabled>信息按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="success" disabled>成功</wayo-button>
+      <wayo-button type="success" disabled>成功按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="warning" disabled>警告</wayo-button>
+      <wayo-button type="warning" disabled>警告按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button type="danger" disabled>危险</wayo-button>
+      <wayo-button type="danger" disabled>危险按钮</wayo-button>
     </li>
   </ul>
   <p class="title">加载状态</p>
   <ul class="list">
     <li class="item">
-      <wayo-button size="default" loading>默认</wayo-button>
+      <wayo-button size="default" loading>加载中</wayo-button>
+    </li>
+    <br>
+    <li class="item">
+      <wayo-button size="default" type="primary" loading>加载中</wayo-button>
     </li>
     <li class="item">
-      <wayo-button size="default" loading plain>默认</wayo-button>
+      <wayo-button size="default" type="primary" loading outline>加载中</wayo-button>
+    </li>
+    <br>
+    <li class="item">
+      <wayo-button size="default" type="info" loading>加载中</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="default" type="info" loading outline>加载中</wayo-button>
+    </li>
+    <br>
+    <li class="item">
+      <wayo-button size="default" type="success" loading>加载中</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="default" type="success" loading outline>加载中</wayo-button>
+    </li>
+    <br>
+    <li class="item">
+      <wayo-button size="default" type="warning" loading>加载中</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="default" type="warning" loading outline>加载中</wayo-button>
+    </li>
+    <br>
+    <li class="item">
+      <wayo-button size="default" type="danger" loading>加载中</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="default" type="danger" loading outline>加载中</wayo-button>
     </li>
   </ul>
   <p class="title">尺寸</p>
   <ul class="list">
     <li class="item">
-      <wayo-button size="default">默认</wayo-button>
+      <wayo-button>默认按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button size="large">large</wayo-button>
+      <wayo-button size="medium">Medium按钮</wayo-button>
     </li>
     <li class="item">
-      <wayo-button size="small">small</wayo-button>
+      <wayo-button size="large">Large按钮</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="small">Small按钮</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="mini">Mini按钮</wayo-button>
     </li>
     <li class="item fit">
-      <wayo-button size="fit">fit</wayo-button>
+      <wayo-button size="fit">Fit按钮</wayo-button>
     </li>
   </ul>
-  <p class="title">自定义颜色</p>
-  <ul class="list">
-    <li class="item">
-      <wayo-button size="default" bg-color="#48c6b0" font-color="#000000" border-color="#ff0000">默认</wayo-button>
-    </li>
-  </ul>
+  <p class="title">自定义颜色尺寸</p>
+  <wayo-button size="default" bg-color="#ffffff" font-color="#ed5026" border-color="#cccccc" :width="70" :height="40" :font-size="14">默认</wayo-button>
 </section>
 </template>
 <script>
@@ -141,16 +188,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sec{
-  padding: 0 15px;
   .title{
-    font-size: 16px;
-    height: 30px;
-    line-height: 30px;
-    border-bottom: solid 1px #999;
+    font-size: 14px;
     margin-bottom: 10px;
   }
-  .list{
-    padding: 0 5px;
+  .subtitle{
+    color: #5f5f5f;
+    padding-left: 5px;
+    font-size: 13px;
+    margin-top: -5px;
+    margin-bottom: 10px;
   }
   .item{
     margin-bottom: 10px;
