@@ -1,0 +1,57 @@
+@import '~@styles/common/index.scss';
+.ex{
+  max-width: 414px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  color: #333333;
+  &.sub{
+    padding-top: 50px;
+  }
+}
+.ex-header{
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0px -1px 5px #5f5f5f;
+  z-index: 99;
+  .header-back{
+    position: absolute;
+    left: 5px;
+    i{
+      font-size: 35px;
+      color: $color-grey-1 !important;
+      @include transform(rotate(180deg));
+    }
+  }
+}
+.sec{
+  padding: 5px 10px;
+  &.fill{
+    padding: 5px 0;
+  }
+  .title{
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .subtitle{
+    color: #5f5f5f;
+    padding-left: 5px;
+    font-size: 13px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  .item{
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+    &.fit{
+      display: block;
+    }
+  }
+}

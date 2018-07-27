@@ -18,7 +18,7 @@
       内容2
     </wayo-tab>
   </wayo-tabs>
-  <h4>segment风格</h4>
+  <h4>stripe风格</h4>
   <wayo-tabs stripe align="center">
     <wayo-tab label="标签1" name="default_1">
       内容1

@@ -1,5 +1,5 @@
 <template>
-<section class="sec sec-type">
+<section class="sec">
   <p class="title">按钮类型</p>
   <ul class="list">
     <li class="item">
@@ -159,6 +159,12 @@
   <p class="title">尺寸</p>
   <ul class="list">
     <li class="item">
+      <wayo-button size="mini">Mini按钮</wayo-button>
+    </li>
+    <li class="item">
+      <wayo-button size="small">Small按钮</wayo-button>
+    </li>
+    <li class="item">
       <wayo-button>默认按钮</wayo-button>
     </li>
     <li class="item">
@@ -166,13 +172,7 @@
     </li>
     <li class="item">
       <wayo-button size="large">Large按钮</wayo-button>
-    </li>
-    <li class="item">
-      <wayo-button size="small">Small按钮</wayo-button>
-    </li>
-    <li class="item">
-      <wayo-button size="mini">Mini按钮</wayo-button>
-    </li>
+    </li>    
     <li class="item fit">
       <wayo-button size="fit">Fit按钮</wayo-button>
     </li>
@@ -182,29 +182,5 @@
 </section>
 </template>
 <script>
-export default {
-
-};
+export default {};
 </script>
-<style lang="scss" scoped>
-.sec{
-  .title{
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  .subtitle{
-    color: #5f5f5f;
-    padding-left: 5px;
-    font-size: 13px;
-    margin-top: -5px;
-    margin-bottom: 10px;
-  }
-  .item{
-    margin-bottom: 10px;
-    display: inline-block;
-    &.fit{
-      display: block;
-    }
-  }
-}
-</style>

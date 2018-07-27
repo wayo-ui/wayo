@@ -8,7 +8,7 @@
   font-size: $font-size-common;
   @include border-radius(2px);
 
-  &_plain{
+  &_outline{
     border: solid 1px;
   }
   &_round{
@@ -19,7 +19,7 @@
   &_default{
     background-color: $color-grey-7;
     color: $color-font-common;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-font-common;
       border-color: $color-font-common;
@@ -28,7 +28,7 @@
   &_primary{
     background-color: $color-primary;
     color: $color-white-1;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-primary;
       border-color: $color-primary;
@@ -37,7 +37,7 @@
   &_info{
     background-color: $color-info;
     color: $color-white-1;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-info;
       border-color: $color-info;
@@ -46,7 +46,7 @@
   &_success{
     background-color: $color-success;
     color: $color-white-1;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-success;
       border-color: $color-success;
@@ -55,7 +55,7 @@
   &_warning{
     background-color: $color-warning;
     color: $color-white-1;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-warning;
       border-color: $color-warning;
@@ -64,7 +64,7 @@
   &_danger{
     background-color: $color-danger;
     color: $color-white-1;
-    &.wayo-tag_plain{
+    &.wayo-tag_outline{
       background-color: $color-white-1;
       color: $color-danger;
       border-color: $color-danger;

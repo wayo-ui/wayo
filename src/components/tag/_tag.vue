@@ -51,7 +51,7 @@ export default {
      * @type {boolean}
      * @default `false`
      */
-    plain: {
+    outline: {
       type: Boolean,
       default: false
     },
@@ -106,16 +106,16 @@ export default {
         `wayo-tag_size_${this.size}`,
       ];
       this.round&&List.push('wayo-tag_round');
-      this.plain&&List.push('wayo-tag_plain');
+      this.outline&&List.push('wayo-tag_outline');
       return List.join(' ');
     },
     style(){
       const Styles = [];
       if(this.textColor){
         Styles.push(`color:${this.textColor};`);
-        this.plain&&Styles.push(`border-color:${this.textColor};`);
+        this.outline&&Styles.push(`border-color:${this.textColor};`);
       }
-      if(this.bgColor&&!this.plain){
+      if(this.bgColor&&!this.outline){
         Styles.push(`background-color:${this.bgColor};`);
       }
       if(this.width>0){

@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="sec">
   <h4>默认</h4>
   <wayo-rate/>
   <h4>初始分值</h4>

@@ -215,8 +215,10 @@ export default {
           return index;
         })();
         if(this.activeIndex!==TargetIndex){
-          this.items[this.activeIndex].fadeOut(this.animation==='fade');
-          this.items[TargetIndex].fadeIn(this.animation==='fade');
+          if(this.animation!=='slide'){
+            this.items[this.activeIndex].fadeOut(this.animation==='fade');
+            this.items[TargetIndex].fadeIn(this.animation==='fade');
+          }
           this.activeIndex = TargetIndex;
           this.$emit('change',TargetIndex);
         }

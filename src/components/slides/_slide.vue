@@ -33,6 +33,7 @@ export default {
      */
     styles(){
       let list = [];
+ 
       if(this.opacity !== undefined){
         list.push(`opacity:${this.opacity};`);
       }
@@ -71,7 +72,7 @@ export default {
      * @method fadeOut 渐隐，供父组件调用
      */
     fadeOut(animate){
-      if(this.animate){
+      if(animate){
         this.fade = true;
         this.opacity = 0;
       }else{
@@ -83,7 +84,7 @@ export default {
      * @method fadeIn 渐显，供父组件调用
      */
     fadeIn(animate){
-      if(this.animate){
+      if(animate){
         this.fade = true;
         this.opacity = 1;
       }else{

@@ -1,7 +1,9 @@
+import './styles/index.scss';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import Wayo from 'wayo';
+import Home from './routers/home.vue';
 
 Vue.use(VueRouter);
 Vue.use(Wayo);
@@ -11,7 +13,7 @@ const Router = new VueRouter({
   routes: [{
     path: '/',
     name: 'home',
-    component: () => import('./routers/home.vue')
+    component: Home
   },{
     path: '/button',
     name: 'button',
