@@ -27,7 +27,7 @@ export default {
       thumb: this.thumb
     });
   },
-  render(){
+  render(h){
     return <div class={{
       'wayo-showcase__panel': true,
       'wayo-showcase__panel_active':this.active

@@ -135,7 +135,7 @@ export default {
       this.availableWidth = this.width-(this.childrenCount-1)*this.gutter;
     }
   },
-  render(){
+  render(h){
     const VNodes = this.$slots&&this.$slots.default&&this.$slots.default.filter(item => {
       return /^vue-component-\d+-WayoFlexCell$/.test(item.tag);
     });

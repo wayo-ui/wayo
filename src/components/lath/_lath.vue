@@ -96,7 +96,7 @@ export default {
       return Styles.join('');
     }
   },
-  render(){
+  render(h){
     // 内置header
     let slot_header = '';
     // 内置content

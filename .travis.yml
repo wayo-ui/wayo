@@ -6,8 +6,6 @@ branches:
   only:
   - master
   - dev
-before_script:
-  - npm install
 cache:
   directories:
     - "node_modules"

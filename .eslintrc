@@ -34,6 +34,7 @@
     "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
     "func-style": [2, "declaration"],
     "vue/jsx-uses-vars": 2,
-    "vue/no-side-effects-in-computed-propertie": 0
+    "vue/no-side-effects-in-computed-propertie": 0,
+    "no-unused-vars": 0
   }
 }

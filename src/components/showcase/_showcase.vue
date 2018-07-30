@@ -128,7 +128,7 @@ export default {
       this.count>0&&this.showItem(1);
     });
   },
-  render(){
+  render(h){
     if(!this.$slots||!this.$slots.default||this.$slots.default.length === 0){
       return <div class="wayo-showcase"></div>;
     }

@@ -76,7 +76,7 @@ describe('Logic Of Lath', () => {
 });
 
 describe('Snapshot of Lath', () => {
-  const Wrapper = render(Lath, {
+  const Wrapper = mount(Lath, {
     localVue: LocalVue
   });
 
@@ -114,7 +114,7 @@ describe('Logic Of LathHeader', () => {
 });
 
 describe('Snapshot of LathHeader', () => {
-  const Wrapper = render(Lath.Header, {
+  const Wrapper = mount(Lath.Header, {
     localVue: LocalVue,
     propsData: {
       title: 'title',
@@ -157,7 +157,7 @@ describe('Logic Of LathContent', () => {
 });
 
 describe('Snapshot of LathContent', () => {
-  const Wrapper = render(Lath.Content, {
+  const Wrapper = mount(Lath.Content, {
     localVue: LocalVue,
     propsData: {
       content: 'content'

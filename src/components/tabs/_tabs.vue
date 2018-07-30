@@ -176,7 +176,7 @@ export default {
       }
     });
   },
-  render(){
+  render(h){
     // 标签容器
     const Nav = (
       <div ref="nav" class={{

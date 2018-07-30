@@ -115,7 +115,7 @@ export default {
       this.$emit('click');
     }
   },
-  render(){
+  render(h){
     const ClassList = ['wayo-stripe'];
     if(this.width<=0||this.height<=0){
       ClassList.push(`wayo-stripe_size_${this.size}`);
