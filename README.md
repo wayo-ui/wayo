@@ -2,6 +2,12 @@
 
 轻量的移动端Vue组件库。
 
+[![Build Status](https://travis-ci.org/wayo-ui/wayo.svg?branch=master)](https://travis-ci.org/wayo-ui/wayo)
+[![npm version](https://badge.fury.io/js/wayo.svg)](https://badge.fury.io/js/wayo)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/wayo-ui/wayo/blob/master/LICENSE)
+
+
+
 ## 安装
 ```bash
 npm install wayo --save-dev
