@@ -15,5 +15,5 @@ export default {
   components: {
     WayoSeparator
   }
-}
+};
 </script>

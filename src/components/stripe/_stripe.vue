@@ -115,7 +115,7 @@ export default {
       this.$emit('click');
     }
   },
-  render(h){
+  render(){
     const ClassList = ['wayo-stripe'];
     if(this.width<=0||this.height<=0){
       ClassList.push(`wayo-stripe_size_${this.size}`);
@@ -134,7 +134,7 @@ export default {
     }
 
     const VNodes = this.$slots&&this.$slots.default&&this.$slots.default.filter(item => {
-      return /^vue\-component\-\d+\-WayoStripeButton$/.test(item.tag);
+      return /^vue-component-\d+-WayoStripeButton$/.test(item.tag);
     });
 
     const Attributes= {
@@ -147,7 +147,7 @@ export default {
       style={StyleList.join('')}
       {...Attributes}>
       {VNodes}
-    </div>
+    </div>;
   }
 };
 </script>

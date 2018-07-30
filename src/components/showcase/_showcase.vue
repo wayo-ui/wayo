@@ -94,7 +94,7 @@ export default {
      * @type {number}
      */
     navWrapperOffset(){
-      return this.width/2 - ((this.thumbWidth+20)*(this.activeIndex-1)+(this.thumbWidth*1.25+10)/2)
+      return this.width/2 - ((this.thumbWidth+20)*(this.activeIndex-1)+(this.thumbWidth*1.25+10)/2);
     },
     /**
      * @computed nav样式
@@ -105,7 +105,7 @@ export default {
       if(this.navBg){
         if(REG_COLOR_HEX.test(this.navBg)||REG_COLOR_RGBA.test(this.navBg)){
           List.push(`background-color:${this.navBg};`);
-          List.push(`background-image:none;`);
+          List.push('background-image:none;');
         }else{
           List.push(`background-image:url(${this.navBg});`);
         }
@@ -128,7 +128,7 @@ export default {
       this.count>0&&this.showItem(1);
     });
   },
-  render(h){
+  render(){
     if(!this.$slots||!this.$slots.default||this.$slots.default.length === 0){
       return <div class="wayo-showcase"></div>;
     }

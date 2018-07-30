@@ -16,8 +16,7 @@ module.exports = {
       loader: 'babel-loader',
       options: {
         sourceMap: true,
-      },
-      exclude: /node_modules/
+      }
     }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',

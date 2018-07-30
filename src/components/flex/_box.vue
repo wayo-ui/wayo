@@ -135,9 +135,9 @@ export default {
       this.availableWidth = this.width-(this.childrenCount-1)*this.gutter;
     }
   },
-  render(h){
+  render(){
     const VNodes = this.$slots&&this.$slots.default&&this.$slots.default.filter(item => {
-      return /^vue\-component\-\d+\-WayoFlexCell$/.test(item.tag);
+      return /^vue-component-\d+-WayoFlexCell$/.test(item.tag);
     });
 
     this.childrenCount = VNodes.length;
@@ -148,10 +148,10 @@ export default {
     };
 
     return <div 
-        class={this.classes}
-        style={this.styles}
-        {...Attributes}>
-        {VNodes}
+      class={this.classes}
+      style={this.styles}
+      {...Attributes}>
+      {VNodes}
     </div>;
   }
 };

@@ -96,7 +96,7 @@ export default {
       return Styles.join('');
     }
   },
-  render(h){
+  render(){
     // 内置header
     let slot_header = '';
     // 内置content
@@ -109,11 +109,11 @@ export default {
     if(this.$slots&&this.$slots.default){
       for(let i=0,len=this.$slots.default.length;i<len;i++){
         const SlotItem = this.$slots.default[i];
-        if(/^vue\-component\-\d+\-WayoLathHeader$/.test(SlotItem.tag)){
+        if(/^vue-component-\d+-WayoLathHeader$/.test(SlotItem.tag)){
           slot_header = SlotItem;
-        }else if(/^vue\-component\-\d+\-WayoLathContent$/.test(SlotItem.tag)){
+        }else if(/^vue-component-\d+-WayoLathContent$/.test(SlotItem.tag)){
           slot_content = SlotItem;
-        }else if(/^vue\-component\-\d+\-WayoLathTail$/.test(SlotItem.tag)){
+        }else if(/^vue-component-\d+-WayoLathTail$/.test(SlotItem.tag)){
           slot_tail = SlotItem;
         }else{
           Slot_other.push(SlotItem);
@@ -158,7 +158,8 @@ export default {
         'wayo-lath_content_header':this.hasHeader&&this.hasContent,
         'wayo-lath_inline':this.inline
       }}
-      style={this.styles}>
+      style={this.styles}
+      {...Attributes}>
       {Slots}
     </div>;
   },

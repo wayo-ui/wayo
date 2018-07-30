@@ -10,7 +10,9 @@
     <div class="wayo-toast__content">
       <span v-if="typeof message === 'string'" class="wayo-toast__message">{{message}}</span>
       <template v-else>
-        <span v-for="item in message" class="wayo-toast__message">{{item}}</span>
+        <span v-for="(item,index) in message" 
+          class="wayo-toast__message"
+          :key="`message-${index}`">{{item}}</span>
       </template>
     </div>
   </div>

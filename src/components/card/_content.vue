@@ -10,5 +10,5 @@
  */
 export default {
   name: `${APPNAME}CardContent`
-}
+};
 </script>

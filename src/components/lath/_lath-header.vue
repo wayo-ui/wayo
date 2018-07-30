@@ -41,8 +41,12 @@ export default {
      */
     show(){
       const Result = !!(this.title||this.subtitle||(this.$slots.default&&this.$slots.default.length>0))||false;
-      this.$parent.hasHeader = !!Result;
       return Result;
+    }
+  },
+  watch: {
+    show(val){
+      this.$parent.hasHeader = !!val;
     }
   }
 };

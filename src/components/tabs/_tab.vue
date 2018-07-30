@@ -57,7 +57,7 @@ export default {
     // 向父组件添加内容面板信息（自身）
     this.$parent.addPanel(this.name,this);
   },
-  render(h){
+  render(){
     return <div 
       class={{
         'wayo-tab-panel': true,

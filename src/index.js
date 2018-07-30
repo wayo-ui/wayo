@@ -45,11 +45,11 @@ const Components = {
   Toast
 };
 
-const install = function(Vue, opts = {}) {
+function install(Vue) {
   for(const key in Components){
     Vue.component(Components[key].name, Components[key]);
   }
-};
+}
 
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {

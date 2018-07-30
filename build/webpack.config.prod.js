@@ -30,6 +30,11 @@ module.exports = Merge(BasicWebpackConfig,{
   },
   module: {
     rules: [{
+      enforce: 'pre',
+      test: /\.(js|vue)$/,
+      loader: 'eslint-loader',
+      exclude: /node_modules/
+    },{
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',

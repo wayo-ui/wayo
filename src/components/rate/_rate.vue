@@ -1,7 +1,8 @@
 <template>
 <div class="wayo-rate" :style="`font-size:${size}px;`">
-  <template v-for="i in max">
+  <template v-for="(i,index) in max">
     <div v-if="halfScoreIndex===i" class="wayo-rate__halfbox"
+      :key="`halfbox-${index}`"
       :style="`height:${size}px;width:${size}px;line-height:1;font-size:${size}px;`">
       <wayo-icon name="star-fill" class="wayo-rate-icon"  
       :key="`${randomKey}-${i}`"
@@ -15,6 +16,7 @@
       :style="iconStyle(i)"/>
     </template>
     <label class="wayo-rate__score" v-if="showScore"
+      :key="`score-${index}`"
       :style="`font-size:${this.labelSize||this.size}px;`">{{score}}{{scoreLabel}}</label>
 </div>
 </template>
@@ -133,7 +135,7 @@ export default {
       return [
         `font-size:${this.size}px;`,
         `color: ${this.unchosenColor};`
-      ].join('');;
+      ].join('');
     }
   },
   components: {

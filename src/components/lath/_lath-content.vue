@@ -78,13 +78,15 @@ export default {
      */
     show(){
       const Result = !!(this.content||(this.$slots.default&&this.$slots.default.length>0));
-      this.$parent.hasContent = !!Result;
       return Result;
     }
   },
   watch: {
     content(){
       this.adapteContent();
+    },
+    show(val){
+      this.$parent.hasContent = !!val;
     }
   },
   mounted() {

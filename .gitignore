@@ -3,6 +3,5 @@ npm-debug.log*
 /node_modules
 .tmp
 /coverage
-/dist
 /docs
 /examples/dist

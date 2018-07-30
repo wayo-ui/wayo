@@ -120,14 +120,14 @@ export default {
       }
       if(this.width>0){
         Styles.push(`width:${this.width}px;`);
-        Styles.push(`padding-left: 0;`);
-        Styles.push(`padding-right: 0;`);
+        Styles.push('padding-left: 0;');
+        Styles.push('padding-right: 0;');
       }
       if(this.height>0){
         Styles.push(`height:${this.height}px;`);
         Styles.push(`line-height:${this.height-2}px;`);
-        Styles.push(`padding-top: 0;`);
-        Styles.push(`padding-bottom: 0;`);
+        Styles.push('padding-top: 0;');
+        Styles.push('padding-bottom: 0;');
       }
       return Styles.join('');
     }

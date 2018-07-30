@@ -106,5 +106,5 @@ export default {
     WayoSlides,
     WayoSlide: WayoSlides.Slide
   }
-}
+};
 </script>

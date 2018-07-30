@@ -27,7 +27,7 @@ export default {
       thumb: this.thumb
     });
   },
-  render(h){
+  render(){
     return <div class={{
       'wayo-showcase__panel': true,
       'wayo-showcase__panel_active':this.active
@@ -49,5 +49,5 @@ export default {
       this.active = false;
     }
   }
-}
+};
 </script>

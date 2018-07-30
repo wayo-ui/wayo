@@ -1,10 +1,9 @@
 {
   "root": true,
+  "parser": "vue-eslint-parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    },
-    "ecmaVersion": 6,
+    "parser": "babel-eslint",
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "env": {
@@ -12,15 +11,29 @@
     "commonjs": true,
     "es6": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/essential"
+  ],
   "plugins": ["vue"],
+  "globals": {
+    "VERSION": true,
+    "APPNAME": true
+  },
   "rules": {
-    "indent": ["error", 4, {
-      "SwitchCase": 1
-    }],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
+    "indent": [2, 2,{ "SwitchCase": 1 }],
+    "brace-style": [2, "1tbs"],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "comma-style": [2, "last"],
+    "one-var": [2, "never"],
+    "no-console": 1,
+    "no-use-before-define": [2, "nofunc"],
+    "no-underscore-dangle": 0,
+    "no-constant-condition": 0,
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "func-style": [2, "declaration"],
     "vue/jsx-uses-vars": 2,
-    "no-console": ["error"]
+    "vue/no-side-effects-in-computed-propertie": 0
   }
 }

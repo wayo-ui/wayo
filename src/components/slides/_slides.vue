@@ -336,14 +336,14 @@ export default {
       },200);
     }
   },
-  render(h){
+  render(){
     if(!this.$slots||!this.$slots.default||this.$slots.default.length === 0){
       return <div class="wayo-slides"></div>;
     }
 
     // 有效slide子组件
     const VNodes = this.$slots.default.filter(node => {
-      return /^vue\-component\-\d+\-WayoSlide$/.test(node.tag);
+      return /^vue-component-\d+-WayoSlide$/.test(node.tag);
     });
 
     this.itemCount = VNodes.length;
@@ -421,5 +421,5 @@ export default {
   components: {
     Indicator
   }
-}
+};
 </script>

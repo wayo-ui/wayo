@@ -34,7 +34,7 @@ class ToastEntity {
       this.toast = new (Vue.extend(ToastComponent))({
         el: document.createElement('div')
       });
-      document.body.appendChild(this.toast.$el);;
+      document.body.appendChild(this.toast.$el);
       ToastEntity.instance = this;
     }
     ToastEntity.instance.config(opts);
@@ -113,7 +113,7 @@ Toast.success = message => {
     message
   }));
   Instance.show();
-}
+};
 /**
  * @api 
  * @function loading 加载提示
@@ -129,7 +129,7 @@ Toast.loading = message => {
     message
   }));
   Instance.show();
-}
+};
 /**
  * @api 
  * @function fail 失败提示
@@ -145,7 +145,7 @@ Toast.fail = message => {
     message
   }));
   Instance.show();
-}
+};
 
 /**
  * @function install 安装回调，供vue初始化使用

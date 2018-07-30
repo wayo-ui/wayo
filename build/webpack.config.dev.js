@@ -17,7 +17,7 @@ module.exports = Merge(BasicWebpackConfig, {
     host: '0.0.0.0',
     inline: true,
     clientLogLevel: 'error',
-    // contentBase: Path.resolve(__dirname,'../dist'),
+    contentBase: Path.resolve(__dirname,'../dist'),
     index: 'index.html'
   },
   module: {
@@ -46,7 +46,7 @@ module.exports = Merge(BasicWebpackConfig, {
     }),
     new Webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: "'development'"
+        NODE_ENV: '"development"'
       },
       'VERSION': JSON.stringify(`${Config.Version}`),
       'APPNAME': JSON.stringify(`${Config.Appname}`)
