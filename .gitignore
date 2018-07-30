@@ -5,3 +5,4 @@ npm-debug.log*
 /coverage
 /docs
 /examples/dist
+package-lock.json

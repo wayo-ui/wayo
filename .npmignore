@@ -12,3 +12,4 @@ jest.config.json
 .babelrc
 .eslintrc
 .eslintignore
+package-lock.json

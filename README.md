@@ -11,6 +11,7 @@ npm install wayo --save-dev
 ```javascript
 import Vue from 'vue';
 import Wayo from 'wayo';
+import './node_modules/wayo/dist/wayo.min.css';
 
 Vue.use(Wayo);
 ```
@@ -23,4 +24,4 @@ Vue.use(Wayo);
 欢迎您为Wayo的成长提供一份力量，在此之前，请先阅读[Wayo贡献指南](./CONTRIBUTING.md)。
 
 ## LICENSE
-[MIT](./LICENSE);
+[MIT](./LICENSE)
