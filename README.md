@@ -1,4 +1,6 @@
 # Wayo
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo?ref=badge_shield)
+
 
 轻量的移动端Vue组件库。
 
@@ -25,3 +27,5 @@ Vue.use(Wayo);
 
 ## LICENSE
 [MIT](./LICENSE)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo?ref=badge_large)
