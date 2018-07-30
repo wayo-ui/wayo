@@ -1,12 +1,10 @@
 # Wayo
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo?ref=badge_shield)
-
 
 轻量的移动端Vue组件库。
 
 [![Build Status](https://travis-ci.org/wayo-ui/wayo.svg?branch=master)](https://travis-ci.org/wayo-ui/wayo)
 [![npm version](https://badge.fury.io/js/wayo.svg)](https://badge.fury.io/js/wayo)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/wayo-ui/wayo/blob/master/LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwayo-ui%2Fwayo?ref=badge_shield)
 
 
 
