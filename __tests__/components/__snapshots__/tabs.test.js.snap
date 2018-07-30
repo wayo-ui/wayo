@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot tab 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-tab-panel",
+      "data-server-rendered": "true",
+      "style": "display:none;",
+    },
+    "children": Array [],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+      "style": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+      "style": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot tab bar 1`] = `
+<div class="wayo-tab-bar">
+  <!---->
+  <label class="wayo-tab-bar__label">label</label>
+</div>
+`;
+
+exports[`Snapshot tab nav pointer 1`] = `<div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);"></div>`;
+
+exports[`Snapshot tabs 1`] = `
+<div class="wayo-tab">
+  <div class="wayo-tab__nav" style="text-align: left; margin-left: -0px;">
+    <div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);"></div>
+    <i class="wayo-separator wayo-separator_direction_row wayo-separator_absolute wayo-tab__separator-nav" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
+  </div>
+  <div class="wayo-tab__content"></div>
+</div>
+`;

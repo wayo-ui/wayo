@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot showcase 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-showcase",
+      "data-server-rendered": "true",
+    },
+    "children": Array [],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot showcase bar 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-showcase__navbar",
+      "data-server-rendered": "true",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "wayo-showcase__thumb-box",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "wayo-showcase__thumb-img",
+              "src": "http://map.sogou.com/logo.png",
+              "style": "width:90px;visibility:hidden;",
+            },
+            "children": Array [],
+            "name": "img",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "src": undefined,
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "src": undefined,
+              "style": undefined,
+            },
+          },
+        ],
+        "name": "div",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`Snapshot showcase item 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "wayo-showcase__panel",
+      "data-server-rendered": "true",
+    },
+    "children": Array [],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "data-server-rendered": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

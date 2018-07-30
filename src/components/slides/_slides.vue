@@ -337,6 +337,10 @@ export default {
     }
   },
   render(h){
+    if(!this.$slots||!this.$slots.default||this.$slots.default.length === 0){
+      return <div class="wayo-slides"></div>;
+    }
+
     // 有效slide子组件
     const VNodes = this.$slots.default.filter(node => {
       return /^vue\-component\-\d+\-WayoSlide$/.test(node.tag);
