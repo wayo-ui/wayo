@@ -14,10 +14,9 @@
     <wayo-icon name="star-fill" class="wayo-rate__icon" v-else
       :key="`${randomKey}-${i}`"
       :style="iconStyle(i)"/>
-    </template>
-    <label class="wayo-rate__score" v-if="showScore"
-      :key="`score-${index}`"
-      :style="`font-size:${this.labelSize||this.size}px;`">{{score}}{{scoreLabel}}</label>
+  </template>
+  <label class="wayo-rate__score" v-if="showScore"
+    :style="`font-size:${this.labelSize||this.size}px;`">{{score}}{{scoreLabel}}</label>
 </div>
 </template>
 

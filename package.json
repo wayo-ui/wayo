@@ -26,7 +26,8 @@
     "build-example": "./node_modules/.bin/webpack --config ./build/webpack.config.example.js",
     "test": "./node_modules/.bin/jest --config ./jest.config.json",
     "lint": "./node_modules/.bin/eslint --ext js,vue src/",
-    "new": "node ./bin/generator.js"
+    "new": "node ./bin/generator.js",
+    "prepublish": "npm run test&&npm run lint"
   },
   "license": "MIT",
   "bugs": {
