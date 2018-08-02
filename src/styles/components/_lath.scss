@@ -98,3 +98,8 @@
     }
   }
 }
+.wayo-lath__head {
+  &+.wayo-lath__content{
+    margin-top: 5px;
+  }
+}

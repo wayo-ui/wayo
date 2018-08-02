@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnapShot Cases Block 1`] = `
+<div class="wayo-block">
+  <i class="wayo-separator wayo-block__separator-top wayo-separator_direction_row wayo-separator_absolute" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
+  <i class="wayo-separator wayo-block__separator-bottom wayo-separator_direction_row wayo-separator_absolute" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
+</div>
+`;
+
+exports[`SnapShot Cases content 1`] = `<div class="wayo-block__content"></div>`;
+
+exports[`SnapShot Cases header 1`] = `
+<div class="wayo-block__header">
+  <i class="wayo-separator wayo-block__separator-bottom wayo-separator_direction_row wayo-separator_absolute" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
+</div>
+`;
+
+exports[`SnapShot Cases title 1`] = `<div class="wayo-block__title"></div>`;

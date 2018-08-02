@@ -1,22 +1,22 @@
 import 'babel-polyfill';
 import { mount } from '@vue/test-utils';
-import Card from '../../src/components/card';
+import Block from '../../src/components/block';
 
 describe('SnapShot Cases',()=>{
-  test('card',()=>{
-    const Wrapper = mount(Card);
+  test('Block',()=>{
+    const Wrapper = mount(Block);
     expect(Wrapper).toMatchSnapshot();
   });
   test('title',()=>{
-    const Wrapper = mount(Card.Title);
+    const Wrapper = mount(Block.Title);
     expect(Wrapper).toMatchSnapshot();
   });
   test('header',()=>{
-    const Wrapper = mount(Card.Header);
+    const Wrapper = mount(Block.Header);
     expect(Wrapper).toMatchSnapshot();
   });
   test('content',()=>{
-    const Wrapper = mount(Card.Content);
+    const Wrapper = mount(Block.Content);
     expect(Wrapper).toMatchSnapshot();
   });
   
