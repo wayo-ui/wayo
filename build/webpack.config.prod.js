@@ -1,12 +1,12 @@
 const Webpack = require('webpack');
 const Merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const Config = require('./config');
 const BasicWebpackConfig = require('./webpack.config.base.js');
 
-module.exports = Merge(BasicWebpackConfig,{
+module.exports = Merge(BasicWebpackConfig, {
   devtool: false,
   mode: 'production',
   entry: {
@@ -34,28 +34,27 @@ module.exports = Merge(BasicWebpackConfig,{
       test: /\.(js|vue)$/,
       loader: 'eslint-loader',
       exclude: /node_modules/
-    },{
+    }, {
       test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-          loader: 'css-loader',
-          options: {
-            minimize: true
-          }
-        },'sass-loader']
-      })
+      use: [MiniCssExtractPlugin.loader, {
+        loader: 'css-loader',
+        options: {
+          minimize: true
+        }
+      }, 'sass-loader']
     }]
   },
   plugins: [
     new Webpack.BannerPlugin(`WAYO version ${Config.Version}`),
-    new CleanWebpackPlugin(Config.DistDir,{
+    new CleanWebpackPlugin(Config.DistDir, {
       root: Config.RootDir
     }),
-    new ExtractTextPlugin("wayo.min.css"),
+    new MiniCssExtractPlugin({
+      filename: 'wayo.min.css'
+    }),
     new Webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: "'production'"
+        NODE_ENV: '"production"'
       },
       'VERSION': JSON.stringify(`${Config.Version}`),
       'APPNAME': JSON.stringify(`${Config.Appname}`)

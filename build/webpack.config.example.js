@@ -46,7 +46,7 @@ module.exports = Merge(BasicWebpackConfig, {
     // new ExtractTextPlugin("index.min.css"),
     new Webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: "'production'"
+        NODE_ENV: '"production"'
       },
       'VERSION': JSON.stringify(`${Config.Version}`),
       'APPNAME': JSON.stringify(`${Config.Appname}`)
