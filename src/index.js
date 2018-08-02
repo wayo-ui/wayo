@@ -1,7 +1,7 @@
 import './styles/index.scss';
 
 import Button from './components/button';
-import Card from './components/card';
+import Block from './components/block';
 import Flex from './components/flex';
 import Icon from './components/icon';
 import Image from './components/image';
@@ -18,10 +18,10 @@ import Toast from './components/toast';
 
 const Components = {
   Button,
-  Card,
-  CardTitle: Card.Title,
-  CardHeader: Card.Header,
-  CardContent: Card.Content,
+  Block,
+  CardTitle: Block.Title,
+  CardHeader: Block.Header,
+  CardContent: Block.Content,
   FlexBox: Flex.Box,
   FlexCell: Flex.Cell,
   Icon,

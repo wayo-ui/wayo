@@ -1,5 +1,5 @@
 <template>
-<div class="wayo-card__content">
+<div class="wayo-block__content">
   <slot></slot>
 </div>
 </template>
@@ -9,6 +9,6 @@
  * @vue
  */
 export default {
-  name: `${APPNAME}CardContent`
+  name: `${APPNAME}BlockContent`
 };
 </script>

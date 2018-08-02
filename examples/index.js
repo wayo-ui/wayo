@@ -51,9 +51,9 @@ const Router = new VueRouter({
     name: 'separator',
     component: () => import('./routers/separator.vue')
   },{
-    path: '/card',
-    name: 'card',
-    component: () => import('./routers/card.vue')
+    path: '/block',
+    name: 'block',
+    component: () => import('./routers/block.vue')
   },{
     path: '/tabs',
     name: 'tabs',

@@ -1,35 +1,35 @@
 <template>
 <section class="sec fill">
   <p class="title">基本使用</p>
-  <wayo-card>
-    <wayo-card-content>
-      <wayo-card-title>标题</wayo-card-title>
+  <wayo-block>
+    <wayo-block-content>
+      <wayo-block-title>标题</wayo-block-title>
       <p>内容内容内容内容内容内容内容内容内容内容内容</p>
-    </wayo-card-content>
-  </wayo-card>
+    </wayo-block-content>
+  </wayo-block>
   <p class="title">标题栏</p>
-  <wayo-card>
-    <wayo-card-header>
+  <wayo-block>
+    <wayo-block-header>
       标题
-    </wayo-card-header>
-    <wayo-card-content>
-      <wayo-card-title>标题</wayo-card-title>
+    </wayo-block-header>
+    <wayo-block-content>
+      <wayo-block-title>标题</wayo-block-title>
       <p>内容内容内容内容内容内容内容内容内容内容内容</p>
-    </wayo-card-content>
-  </wayo-card>
+    </wayo-block-content>
+  </wayo-block>
   <p class="title">列表</p>
-  <wayo-card>
+  <wayo-block>
     <wayo-lath icon="clock" content="内容内容内容内容内容内容内容内容内容内容内容" border-bottom>
       <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
     </wayo-lath>
     <wayo-lath icon="location">
       <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
     </wayo-lath>
-  </wayo-card>
+  </wayo-block>
   <p class="title">索引</p>
-  <wayo-card>
-    <wayo-card-content>
-      <wayo-card-title>周边找</wayo-card-title>
+  <wayo-block>
+    <wayo-block-content>
+      <wayo-block-title>周边找</wayo-block-title>
       <wayo-flex-box justify="space-between">
         <wayo-flex-cell class="search__cell" :span="0">
           美食
@@ -47,10 +47,10 @@
           更多
         </wayo-flex-cell>
       </wayo-flex-box>
-    </wayo-card-content>
-  </wayo-card>
+    </wayo-block-content>
+  </wayo-block>
   <p class="title">自定义内容</p>
-  <wayo-card>
+  <wayo-block>
     <wayo-lath border-bottom>
       <wayo-lath-header title="评价"></wayo-lath-header>
       <wayo-lath-tail icon="arrow-right" label="1139条"></wayo-lath-tail>
@@ -80,7 +80,7 @@
         </wayo-flex-box>
       </div>
   </wayo-lath>
-  </wayo-card>
+  </wayo-block>
 </section>
 </template>
 <script>

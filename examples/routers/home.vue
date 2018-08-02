@@ -20,7 +20,7 @@
           <li class="subitem"><router-link to="/rate">Rate-评分</router-link></li>
           <li class="subitem"><router-link to="/flex">Flex-弹性容器</router-link></li>
           <li class="subitem"><router-link to="/separator">Separator-1像素直线</router-link></li>
-          <li class="subitem"><router-link to="/card">Card-卡片</router-link></li>
+          <li class="subitem"><router-link to="/block">Block-区域</router-link></li>
           <li class="subitem"><router-link to="/tabs">Tabs-标签页</router-link></li>
           <li class="subitem"><router-link to="/lath">Lath-满宽横条</router-link></li>
           <li class="subitem"><router-link to="/toast">Toast-短提示</router-link></li>

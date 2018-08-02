@@ -16,7 +16,7 @@ export default {
     /**
      * @prop 宽度
      * @type {number}
-     * @default `70`
+     * @default `default`
      */
     type: {
       type: String,

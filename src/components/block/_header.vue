@@ -1,7 +1,7 @@
 <template>
-<div class="wayo-card__header">
+<div class="wayo-block__header">
   <slot></slot>
-  <wayo-separator class="wayo-card__separator-bottom" absolute/>
+  <wayo-separator class="wayo-block__separator-bottom" absolute/>
 </div>
 </template>
 
@@ -11,7 +11,7 @@ import WayoSeparator from '@/components/separator';
  * @vue
  */
 export default {
-  name: `${APPNAME}CardHeader`,
+  name: `${APPNAME}BlockHeader`,
   components: {
     WayoSeparator
   }
