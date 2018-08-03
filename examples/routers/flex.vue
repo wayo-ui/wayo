@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="box">
   <h4>栅格</h4>
   <wayo-flex-box class="box">
     <wayo-flex-cell class="cell" :span="12">
@@ -53,6 +53,14 @@
     </wayo-flex-cell>
   </wayo-flex-box>
   <h4>列间距</h4>
+  <wayo-flex-box :gutter="20"  wrap>
+    <wayo-flex-cell :span="6" class="cell">
+      span: 6
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="6" class="cell">
+      span: 6
+    </wayo-flex-cell>
+  </wayo-flex-box>
   <wayo-flex-box :gutter="20" justify="center">
     <wayo-flex-cell :span="3" class="cell">
       span: 3
@@ -203,10 +211,11 @@ export default {
   background-color: #ed5026;
   height: 30px;
   line-height: 28px;
-  border: dashed 1px #999;
   box-sizing: border-box;
-  padding: 0 5px;
   font-size: 12px;
+  &:nth-child(even){
+    background-color: #f39800;
+  }
   &-column{
     width: 33.33%
   }

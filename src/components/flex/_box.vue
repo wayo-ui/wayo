@@ -138,7 +138,7 @@ export default {
   render(h){
     const VNodes = this.$slots&&this.$slots.default&&this.$slots.default.filter(item => {
       return /^vue-component-\d+-WayoFlexCell$/.test(item.tag);
-    });
+    })||[];
 
     this.childrenCount = VNodes.length;
 

@@ -108,19 +108,6 @@ describe('Logic', () => {
       loading: true
     });
     expect(Wrapper.classes()).toContain('wayo-button_loading');
-    expect(Wrapper.vm.loadingPathScale).toBe(0.4);
-    Wrapper.setProps({
-      size: 'fit'
-    });
-    expect(Wrapper.classes()).not.toContain('wayo-button_loading');
-    Wrapper.setProps({
-      size: 'large'
-    });
-    expect(Wrapper.vm.loadingPathScale).toBe(0.5);
-    Wrapper.setProps({
-      size: 'small'
-    });
-    expect(Wrapper.vm.loadingPathScale).toBe(0.3);
   });
 
   test('styles', () =>{
