@@ -68,8 +68,8 @@ describe('Cell', ()=>{
     Wrapper.setData({
       padding: 10
     });
-    expect(Wrapper.vm.styles).toContain('margin-top:10px;');
-    expect(Wrapper.vm.styles).toContain('margin-bottom:10px;');
+    expect(Wrapper.vm.styles).toContain('padding-top:10px;');
+    expect(Wrapper.vm.styles).toContain('padding-bottom:10px;');
   });
 });
 
