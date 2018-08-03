@@ -2,10 +2,12 @@
   <button :class="classes" :style="styles" v-on="$listeners">
     <svg v-if="loading" width="42px" height="42px" 
       class="wayo-button__loading-icon"
-      :transform="`scale(${loadingPathScale})`">
-      <circle class="wayo-button__loading-path" cx="21" cy="21" r="20" 
-        fill="none" stroke-width="2"
-        :stroke="loadingPathColor"></circle>
+      :style="loadingPathStyle">
+      <g>
+        <circle class="wayo-button__loading-path" cx="21" cy="21" r="20" 
+          fill="none" stroke-width="2"
+          :stroke="loadingPathColor"></circle>
+      </g>
     </svg>
     <wayo-icon v-else-if="icon" :name="icon" class="wayo-button__icon"/>
     <slot></slot>
@@ -212,15 +214,23 @@ export default {
      * @computed 加载icon缩放比
      * @type {number}
      */
-    loadingPathScale(){
-      switch(this.size){
-        case 'default': 
-          return 0.4;
-        case 'large': 
-          return 0.5;
-        case 'small': 
-          return 0.3;
-      }
+    loadingPathStyle(){
+      const Scale = (() => {
+        switch(this.size){
+          case 'default': 
+            return 0.4;
+          case 'large': 
+            return 0.5;
+          case 'small': 
+            return 0.3;
+        }
+      })();
+      return [
+        `-webkit-transform:scale(${Scale})`,
+        `-moz-transform:scale(${Scale})`,
+        `-o-transform:scale(${Scale})`,
+        `transform:scale(${Scale})`
+      ].join(';');
     },
     /**
      * @computed 加载icon颜色

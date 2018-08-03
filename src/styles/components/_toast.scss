@@ -67,6 +67,9 @@
   }
 }
 
+.wayo-toast__loading-icon{
+  @include transform(scale(0.6));
+}
 #wayo-toast__loading-path{
   stroke-dasharray: 2,60;
   stroke-dashoffset: -32;

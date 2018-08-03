@@ -4,7 +4,7 @@
   <div class="wayo-toast__box">
     <wayo-icon v-if="type==='success'" name="smile" class="wayo-toast__icon"/>
     <wayo-icon v-else-if="type==='fail'" name="cry" class="wayo-toast__icon"/>
-    <svg v-else-if="type==='loading'" width='42px' height='42px' transform="scale(0.6)">
+    <svg v-else-if="type==='loading'" width='42px' height='42px' class="wayo-toast__loading-icon">
       <circle id='wayo-toast__loading-path' cx='21' cy='21' r='20' stroke='#fff' fill='none' stroke-width='2'></circle>
     </svg>
     <div class="wayo-toast__content">
