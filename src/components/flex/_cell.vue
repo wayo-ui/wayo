@@ -61,7 +61,7 @@ export default {
         if(this.$parent.width===0){
           this.$parent.calWidth();
         }
-        return `${(this.span/MAX_SPAN*this.$parent.availableWidth).toFixed(2)-0.01}px`;
+        return `${(this.span/MAX_SPAN*this.$parent.width).toFixed(2)-0.01}px`;
       })();
       Styles.push(`-webkit-flex-basis:${Basis};`);
       Styles.push(`-moz-flex-basis:${Basis};`);
@@ -80,11 +80,11 @@ export default {
 
       if(this.padding>0){
         if(/row/.test(this.$parent.direction)){
-          Styles.push(`margin-left:${this.padding}px;`);
-          Styles.push(`margin-right:${this.padding}px;`);
+          Styles.push(`padding-left:${this.padding}px;`);
+          Styles.push(`padding-right:${this.padding}px;`);
         }else{
-          Styles.push(`margin-top:${this.padding}px;`);
-          Styles.push(`margin-bottom:${this.padding}px;`);
+          Styles.push(`padding-top:${this.padding}px;`);
+          Styles.push(`padding-bottom:${this.padding}px;`);
         }
       }
       
