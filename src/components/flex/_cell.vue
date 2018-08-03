@@ -1,6 +1,7 @@
 <template>
 <div class="wayo-flex-cell"
-  :style="styles">
+  :style="styles"
+  v-on="$listeners">
   <slot></slot>
 </div>
 </template>

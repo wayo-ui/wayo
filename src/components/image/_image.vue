@@ -6,7 +6,8 @@
       :class="{'wayo-image__box_border':border}"
       :style="styles">
       <img class="wayo-image__img" v-show="loaded" 
-      :src="src"/>
+        :class="`wayo-image__img_${sizeType} ${clip?'wayo-image__img_clip':''}`"
+        :src="src"/>
       <div class="wayo-image__info" v-if="info">
         <span class="wayo-image__info-placeholder">{{info}}</span>
         <p class="wayo-image__info-content">{{info}}</p>
@@ -23,6 +24,15 @@
 export default {
   name: `${APPNAME}Image`,
   props: {
+    /**
+     * @prop 宽高不等的图片是否剪裁
+     * @type {boolean}
+     * @default true
+     */
+    clip: {
+      type: Boolean,
+      default: false
+    },
     /**
      * @prop 宽度
      * @type {number}
@@ -99,10 +109,29 @@ export default {
   data(){
     return {
       // 加载完成标记
-      loaded: false
+      loaded: false,
+      // 图片尺寸
+      imageSize: {
+        width: 0,
+        height: 0
+      }
     };
   },
   computed: {
+    /**
+     * @computed 图片尺寸类型 long-宽>高；high-高>宽；square-正方形
+     * @type {string}
+     */
+    sizeType(){
+      switch(true){
+        case this.imageSize.width>this.imageSize.height:
+          return 'long';
+        case this.imageSize.width<this.imageSize.height:
+          return 'high';
+        default:
+          return 'square';
+      }
+    },
     /**
      * @computed 尺寸
      * @type {Object}
@@ -147,6 +176,10 @@ export default {
       const TmpImage = new Image();
       TmpImage.onload = () => {
         this.loaded = true;
+        this.imageSize = {
+          width: TmpImage.width,
+          height: TmpImage.height
+        };
       };
       TmpImage.src = this.src;
     }
