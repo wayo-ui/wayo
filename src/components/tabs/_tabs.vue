@@ -79,6 +79,7 @@ export default {
       current: '',
       // 标签超出边界情况下，标签容器的左偏移量，正
       navTransform: 0,
+      navOffsetLeft: 0,
       // 最外层容器宽度
       boxWidth: 0,
       // 标签容器宽度
@@ -140,7 +141,9 @@ export default {
      */
     onUpdateBar(name,opts){
       this.navWidth += opts.width||0;
-      this.$set(this.bars,name,Object.assign({...this.bars[name]},opts));
+      this.$set(this.bars,name,Object.assign({...this.bars[name]},opts,{
+        offset: opts.offset - this.navOffsetLeft
+      }));
     },
     /**
      * @method transformNav 标签超出边界情况下，计算标签容器的左偏移量
@@ -173,6 +176,7 @@ export default {
       if(FirstPanel){
         this.showPanel(FirstPanel.name);
         this.boxWidth = this.$el.clientWidth;
+        this.navOffsetLeft = this.$refs.nav.getBoundingClientRect().left;
       }
     });
   },
@@ -189,8 +193,8 @@ export default {
         'margin-left': `-${this.navTransform}px`
       }}>
         {!this.stripe&&<Pointer
-          offset={this.bars[this.current]&&this.bars[this.current].offset}
-          width={this.bars[this.current]&&this.bars[this.current].width}></Pointer>}
+          offset={this.bars[this.current]&&this.bars[this.current].offset||0}
+          width={this.bars[this.current]&&this.bars[this.current].width||0}></Pointer>}
         {this.barOptsList.map((bar,index) => {
           this.bars[bar.name].index = index;
           return <Bar

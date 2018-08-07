@@ -18,6 +18,7 @@
     "stage-3"
   ],
   "plugins": [
+    "transform-object-assign",
     "transform-es5-property-mutators",
     "syntax-dynamic-import",
     "transform-vue-jsx",

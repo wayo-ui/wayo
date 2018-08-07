@@ -76,9 +76,10 @@ export default {
     // 非stripe格式待渲染完毕之后获取自身offset和宽度，并同步到父组件
     if(!this.stripe){
       this.$nextTick().then(() => {
+        const Box = this.$el.getBoundingClientRect();
         this.$emit('update',this.name,{
-          offset: this.$el.offsetLeft,
-          width: this.$el.clientWidth
+          offset: Box.left,
+          width: Box.width
         });
       });
     }

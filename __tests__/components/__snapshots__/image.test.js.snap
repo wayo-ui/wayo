@@ -3,7 +3,7 @@
 exports[`SnapShot Cases image 1`] = `
 <div class="wayo-image" style="width: 70px;">
   <div class="wayo-image__box wayo-image__box_border" style="width: 70px; height: 70px; line-height: 68px;">
-    <img src="" class="wayo-image__img" style="display: none;">
+    <img src="" class="wayo-image__img wayo-image__img_square " style="display: none;">
     <!---->
   </div>
   <!---->
