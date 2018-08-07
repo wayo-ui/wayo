@@ -29,7 +29,7 @@ export default {
       type: Number,
       default: 12,
       validator: val => {
-        return val%1===0&&val<=12&&val>=0;
+        return val<=12&&val>=0;
       }
     },
     /**
