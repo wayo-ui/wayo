@@ -111,7 +111,22 @@ export default {
         // 超出行数限制
         if(RealHeight>this.contentLineLimit*CONTENT_LINE_HEIGHT){
           this.content_oversize = true;
-          this.content_short = this.content.substr(0,Math.floor(this.$refs.content_entity.offsetWidth/CONTENT_FONT_SIZE)*3-5)+'...';
+          const MaxWidth = Math.floor(this.$refs.content_entity.offsetWidth*3);
+          if(/[^\x00-\xff]/.test(this.content)){
+            let width = 0;
+            let index = 0;
+            while(width<MaxWidth){
+              if(/[^\x00-\xff]/.test(this.content[index])){
+                width+=CONTENT_FONT_SIZE;
+              }else{
+                width+=CONTENT_FONT_SIZE*0.5;
+              }
+              index++;
+            }
+            this.content_short = this.content.substr(0,index-5)+'...';
+          }else{
+            this.content_short = this.content.substr(0,Math.floor(MaxWidth/CONTENT_FONT_SIZE-5))+'...';
+          }
         }
       });
     },

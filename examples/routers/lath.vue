@@ -18,7 +18,7 @@
     <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
   </wayo-lath>
   <wayo-lath class="item">
-    <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
+    <wayo-lath-content content="周六,周日 11:00-14:00 17:00-21:00 周一至周五 11:30-14:00 17:00-21:00周一至周五 11:30-14:00 17:00-21:00周一至周五 11:30-14:00 17:00-21:00周一至周五 11:30-14:00 17:00-21:00"></wayo-lath-content>
   </wayo-lath>
   <h4>自定义内容</h4>
   <wayo-lath>
