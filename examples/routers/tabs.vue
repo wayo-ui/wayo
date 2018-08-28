@@ -1,7 +1,7 @@
 <template>
 <section>
   <h4>基本使用</h4>
-  <wayo-tabs>
+  <wayo-tabs flex :pointer-width="65">
     <wayo-tab label="标签1" name="default_1">
       内容1
     </wayo-tab>

@@ -65,6 +65,13 @@ export default {
       validator: val => {
         return ['left','center','right'].indexOf(val) !== -1;
       }
+    },
+    pointerWidth: {
+      type: Number,
+      default: 0,
+      validator: val => {
+        return val >= 0;
+      }
     }
   },
   data(){
@@ -194,7 +201,8 @@ export default {
       }}>
         {!this.stripe&&<Pointer
           offset={this.bars[this.current]&&this.bars[this.current].offset||0}
-          width={this.bars[this.current]&&this.bars[this.current].width||0}></Pointer>}
+          width={this.pointerWidth}
+          fullwidth={(this.bars[this.current]&&this.bars[this.current].width)}></Pointer>}
         {this.barOptsList.map((bar,index) => {
           this.bars[bar.name].index = index;
           return <Bar

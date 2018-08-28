@@ -136,7 +136,7 @@ describe('Logic Of LathContent', () => {
   });
 
   test('attributes',()=>{
-    expect(Wrapper.vm.contentMaxHeight).toBe(34);
+    expect(Wrapper.vm.contentMaxHeight).toBe(42);
     expect(Wrapper.vm.show).toBe(false);
 
     Wrapper.setProps({

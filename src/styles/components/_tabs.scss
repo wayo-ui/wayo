@@ -25,9 +25,17 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: $color-primary;
     transition: all 0.1s ease-in-out;
     z-index: 10;
+    &-bar{
+      background-color: $color-primary;
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
   }
   &_flex{
     .wayo-tab-bar{
@@ -49,7 +57,6 @@
     color: $color-primary;
   }
   &__label{
-    font-weight: bold;
     display: inline-block;
     vertical-align: middle;
   }

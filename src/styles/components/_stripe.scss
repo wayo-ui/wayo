@@ -21,27 +21,36 @@
 
 .wayo-stripe_size{
   &_default{
+    font-size: $font-size-default;
     .wayo-stripe-button{
-      font-size: $font-size-default;
       padding: 0 15px;
       height: 25px;
       line-height: 25px;
+      &_stroke{
+        line-height: 23px;
+      }
     }
   }
   &_small{
+    font-size: $font-size-mini;
     .wayo-stripe-button{
-      font-size: $font-size-mini;
       padding: 0 10px;
       height: 20px;
       line-height: 20px;
+      &_stroke{
+        line-height: 18px;
+      }
     }
   }
   &_large{
+    font-size: $font-size-large;
     .wayo-stripe-button{
-      font-size: $font-size-large;
       padding: 0 20px;
       height: 30px;
       line-height: 30px;
+      &_stroke{
+        line-height: 28px;
+      }
     }
   }
 }

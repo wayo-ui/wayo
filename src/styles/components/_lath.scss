@@ -63,6 +63,7 @@
   &__title{
     color: $color-font-primary;
     font-size: 15px;
+    font-weight: bold;
     line-height: 1;
     display: block;
   }
@@ -85,8 +86,8 @@
     &-entity{
       overflow: hidden;
       margin: 0;
-      line-height: 17px;
-      margin: -2px 0;
+      line-height: 21px;
+      margin: -4px 0;
     }
     &-action{
       position: absolute;
@@ -95,6 +96,9 @@
       margin: 0;
       padding: 0;
       text-align: right;
+      height: 17px;
+      line-height: 17px;
+      background-color: $color-white-1;
       color: $color-info;
     }
   }

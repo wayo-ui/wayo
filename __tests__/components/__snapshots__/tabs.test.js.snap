@@ -58,12 +58,18 @@ exports[`Snapshot tab bar 1`] = `
 </div>
 `;
 
-exports[`Snapshot tab nav pointer 1`] = `<div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);"></div>`;
+exports[`Snapshot tab nav pointer 1`] = `
+<div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);">
+  <i class="wayo-tab__nav-pointer-bar" style="width: 0px;"></i>
+</div>
+`;
 
 exports[`Snapshot tabs 1`] = `
 <div class="wayo-tab">
   <div class="wayo-tab__nav" style="text-align: left; margin-left: -0px;">
-    <div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);"></div>
+    <div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);">
+      <i class="wayo-tab__nav-pointer-bar" style="width: 0px;"></i>
+    </div>
     <i class="wayo-separator wayo-separator_direction_row wayo-separator_absolute wayo-tab__separator-nav" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
   </div>
   <div class="wayo-tab__content"></div>

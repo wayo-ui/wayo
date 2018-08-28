@@ -1,5 +1,8 @@
 <template>
-<div class="wayo-tab__nav-pointer" :style="style"></div>
+<div class="wayo-tab__nav-pointer" :style="style">
+  <i class="wayo-tab__nav-pointer-bar" 
+    :style="`width:${width||fullwidth}px;`"></i>
+</div>
 </template>
 
 <script>
@@ -19,11 +22,20 @@ export default {
       default: 0
     },
     /**
-     * @prop 宽度
+     * @prop 显示宽度
      * @type {number}
      * @default `0`
      */
     width: {
+      type: Number,
+      default: 0
+    },
+    /**
+     * @prop 实际宽度
+     * @type {number}
+     * @default `0`
+     */
+    fullwidth: {
       type: Number,
       default: 0
     }
@@ -31,7 +43,7 @@ export default {
   computed: {
     style(){
       return [
-        `width:${this.width}px;`,
+        `width:${this.fullwidth}px;`,
         `-webkit-transform: translateX(${this.offset}px);`,
         `-moz-transform: translateX(${this.offset}px);`,
         `-o-transform: translateX(${this.offset}px);`,

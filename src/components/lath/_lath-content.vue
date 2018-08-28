@@ -16,7 +16,7 @@
 
 <script>
 const CONTENT_FONT_SIZE = 13;
-const CONTENT_LINE_HEIGHT = 17;
+const CONTENT_LINE_HEIGHT = 21;
 /**
  * @vue
  */
@@ -123,9 +123,9 @@ export default {
               }
               index++;
             }
-            this.content_short = this.content.substr(0,index-5)+'...';
+            this.content_short = this.content.substr(0,index-10)+'...';
           }else{
-            this.content_short = this.content.substr(0,Math.floor(MaxWidth/CONTENT_FONT_SIZE-5))+'...';
+            this.content_short = this.content.substr(0,Math.floor(MaxWidth/CONTENT_FONT_SIZE-10))+'...';
           }
         }
       });
