@@ -57,7 +57,7 @@ export default {
   data(){
     return {
       // 是否为单行文案
-      single_line_content: true,
+      single_line_content: false,
       // 超出行数限制时多行文案的缩减版
       content_short: '',
       // 是否超出行数限制
@@ -104,6 +104,7 @@ export default {
         const RealHeight = this.$refs.content_entity.offsetHeight;
         // 单行
         if(RealHeight<=CONTENT_LINE_HEIGHT){
+          this.single_line_content = true;
           return;
         }
         // 多行

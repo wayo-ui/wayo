@@ -143,7 +143,7 @@ describe('Logic Of LathContent', () => {
       content: 'content'
     });
     expect(Wrapper.vm.show).toBe(true);
-    expect(Wrapper.vm.single_line_content).toBe(true);
+    expect(Wrapper.vm.single_line_content).toBe(false);
     expect(Wrapper.vm.content_oversize).toBe(false);
   });
 
