@@ -36,6 +36,16 @@
     "vue/jsx-uses-vars": 2,
     "vue/no-side-effects-in-computed-propertie": 0,
     "no-unused-vars": 0,
-    "no-control-regex": 0
+    "no-control-regex": 0,
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": {
+        "array": false,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": true,
+        "object": false
+      }
+    }]
   }
 }

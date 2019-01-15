@@ -1,8 +1,8 @@
 <template>
 <div class="wayo-block" v-on="$listeners">
-  <wayo-separator class="wayo-block__separator-top" absolute/>
+  <wayo-separator v-if="borderFront" class="wayo-block__separator-top" absolute/>
   <slot></slot>
-  <wayo-separator class="wayo-block__separator-bottom" absolute/>
+  <wayo-separator v-if="borderRear" class="wayo-block__separator-bottom" absolute/>
 </div>
 </template>
 
@@ -13,6 +13,16 @@ import WayoSeparator from '@/components/separator';
  */
 export default {
   name: `${APPNAME}Block`,
+  props: {
+    borderFront: {
+      type: Boolean,
+      default: true
+    },
+    borderRear: {
+      type: Boolean,
+      default: true
+    }
+  },
   components: {
     WayoSeparator
   }

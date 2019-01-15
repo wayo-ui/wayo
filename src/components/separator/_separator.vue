@@ -36,11 +36,11 @@ export default {
     /**
      * @prop 颜色
      * @type {string}
-     * @default `#cccccc`
+     * @default `#ededed`
      */
     color: {
       type: String,
-      default: '#cccccc'
+      default: '#ededed'
     },
     /**
      * @prop 绝对定位

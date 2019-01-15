@@ -6,6 +6,10 @@
       <label class="cell__label">clock</label>
     </wayo-flex-cell>
     <wayo-flex-cell :span="4" class="cell">
+      <wayo-icon name="wheel"/>
+      <label class="cell__label">wheel</label>
+    </wayo-flex-cell>
+    <wayo-flex-cell :span="4" class="cell">
       <wayo-icon name="cny"/>
       <label class="cell__label">cny</label>
     </wayo-flex-cell>
