@@ -6,7 +6,9 @@
       :style="`${content_oversize?`height:${contentMaxHeight}px;`:''}`">
       {{content_oversize?content_short:content}}
     </p>
-    <p class="wayo-lath__content-action" ref="content_action" v-if="content_oversize"
+    <p class="wayo-lath__content-hint" v-if='hint'>{{hint}}</p>
+    <p class="wayo-lath__content-action" ref="content_action" 
+      v-if="showExpandLabel&&content_oversize"
       @click.stop="expandContent">
       {{contentExpandLabel}}
     </p>
@@ -33,6 +35,15 @@ export default {
       default: ''
     },
     /**
+     * @prop 内容提示信息
+     * @type {string}
+     * @default ``
+     */
+    hint: {
+      type: String,
+      default: ''
+    },
+    /**
      * @prop 内容文案的行数限制，超出部分隐藏并显示展开按钮
      * @type {number}
      * @default `3`
@@ -43,6 +54,15 @@ export default {
       validator: val => {
         return val>0&&val%1===0;
       }
+    },
+    /**
+     * @prop 内容文案超出行数限制是是够显示展开按钮
+     * @type {boolean}
+     * @default `false`
+     */
+    showExpandLabel: {
+      type: Boolean,
+      default: true
     },
     /**
      * @prop 内容文案展开按钮的文案

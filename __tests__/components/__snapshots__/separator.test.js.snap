@@ -6,7 +6,7 @@ initialize {
     "attribs": Object {
       "class": "wayo-separator wayo-separator_direction_row ",
       "data-server-rendered": "true",
-      "style": "background-color:#cccccc;-webkit-transform:scaleY(1);-moz-transform:scaleY(1);-ms-transform:scaleY(1);transform:scaleY(1);",
+      "style": "background-color:#ededed;-webkit-transform:scaleY(1);-moz-transform:scaleY(1);-ms-transform:scaleY(1);transform:scaleY(1);",
     },
     "children": Array [],
     "name": "i",
@@ -57,7 +57,7 @@ initialize {
     "attribs": Object {
       "class": "wayo-separator wayo-separator_direction_column wayo-separator_absolute",
       "data-server-rendered": "true",
-      "style": "background-color:#cccccc;height:50px;-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);",
+      "style": "background-color:#ededed;height:50px;-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);",
     },
     "children": Array [],
     "name": "i",

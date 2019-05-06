@@ -70,7 +70,7 @@ exports[`Snapshot tabs 1`] = `
     <div class="wayo-tab__nav-pointer" style="width: 0px; transform: translateX(0px);">
       <i class="wayo-tab__nav-pointer-bar" style="width: 0px;"></i>
     </div>
-    <i class="wayo-separator wayo-separator_direction_row wayo-separator_absolute wayo-tab__separator-nav" style="background-color: rgb(204, 204, 204); transform: scaleY(1);"></i>
+    <i class="wayo-separator wayo-separator_direction_row wayo-separator_absolute wayo-tab__separator-nav" style="background-color: rgb(237, 237, 237); transform: scaleY(1);"></i>
   </div>
   <div class="wayo-tab__content"></div>
 </div>

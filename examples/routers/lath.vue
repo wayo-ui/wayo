@@ -18,7 +18,7 @@
     <wayo-lath-content content="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"></wayo-lath-content>
   </wayo-lath>
   <wayo-lath class="item">
-    <wayo-lath-content content="4月1日-10月31日06:30-18:00；11月1日-次年3月31日07:00-17:00；园中园开放时间：4月1日至10月31日：8:30-17:00最晚离园时间：20:00； 11月1日至次年3月31日，9:00-16:00，最晚离园时间：19:00。。"></wayo-lath-content>
+    <wayo-lath-content content="4月1日-10月31日06:30-18:00；11月1日-次年3月31日07:00-17:00；园中园开放时间：4月1日至10月31日：8:30-17:00最晚离园时间：20:00； 11月1日至次年3月31日，9:00-16:00，最晚离园时间：19:00。" hint="（请在规定时间内游览）" :showExpandLabel='false'></wayo-lath-content>
   </wayo-lath>
   <h4>自定义内容</h4>
   <wayo-lath>
